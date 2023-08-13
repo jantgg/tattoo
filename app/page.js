@@ -1,5 +1,12 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import Link from 'next/link';
+
+
+export const metadata = {
+  title: 'Da Paolo Ristorante',
+  description: 'The best restaurant in Puerto Banus',
+}
 
 export default function Home() {
   return (
@@ -10,12 +17,11 @@ export default function Home() {
           <code className={styles.code}>app/page.js</code>
         </p>
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/services"
+     
           >
-            By{' '}
+            CLICK AQUI KILLO{' '}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -24,11 +30,12 @@ export default function Home() {
               height={24}
               priority
             />
-          </a>
+          </Link>
         </div>
       </div>
 
       <div className={styles.center}>
+       
         <Image
           className={styles.logo}
           src="/next.svg"
