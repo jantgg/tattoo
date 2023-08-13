@@ -4,12 +4,14 @@ import Link from "next/link";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import logo from "../../images/logo.png";
+import '/styles/navbar.css';
+import 'bootstrap/dist/css/bootstrap.css'
 
 export default function Navbar  () {
   // i need state hook to manage some data in
-  const [selected, setSelected] = React.useState(null);
+  const [selected, setSelected] = useState(null);
   const isDesktop = window.innerWidth >= 1000;
-  const [isInView, setIsInView] = React.useState(false);
+  const [isInView, setIsInView] = useState(true);
 
 
   const scrollToBottom = () => {
@@ -25,9 +27,17 @@ export default function Navbar  () {
     });
   };
 
+  const currentPath = window.location.pathname;
 
   useEffect(() => {
+    if (currentPath !== "/") {
+      setIsInView(false);
+    }
+  
+  }, []);
 
+  useEffect(() => {
+    if (window.location.pathname === "/") {
       // Verificar si currentPath no es "/"
       gsap.registerPlugin(ScrollTrigger);
       gsap.utils.toArray(".navbar-scrolled").forEach(function (elem) {
@@ -49,11 +59,11 @@ export default function Navbar  () {
           },
         });
       });
-    
+    }
   }, []);
 
   return (
-    <div className="">
+ 
       <nav
         style={{ zIndex: "99" }}
         className={`navbar mynav navbar-expand-lg mx-auto navbar-scrolled col-12  ${
@@ -70,7 +80,7 @@ export default function Navbar  () {
               scrollToTop();
             }}
           >
-            <img src={logo} className="size-logo-nav" />
+           HOLA
           </Link>
           <div></div>
           <button
@@ -84,7 +94,7 @@ export default function Navbar  () {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i class="fa-solid fa-bars"></i>
+            <i className="fa-solid fa-bars"></i>
           </button>
           <div className=" collapse navbar-collapse " id="navbarNavDropdown">
             <ul className={`navbar-nav ms-auto ${isInView ? " " : " "}`}>
@@ -126,6 +136,6 @@ export default function Navbar  () {
           </div>
         </div>
       </nav>
-    </div>
+ 
   );
 };
