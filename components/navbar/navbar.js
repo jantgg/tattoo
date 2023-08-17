@@ -1,18 +1,36 @@
-"use client"
-import React, {useEffect, useState, useNavigate} from "react";
+"use client";
+import React, { useEffect, useState, useNavigate } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import logo from "../../images/logo.png";
-import '/styles/navbar.css';
-import 'bootstrap/dist/css/bootstrap.css'
+import "./navbar.css";
+import "bootstrap/dist/css/bootstrap.css";
 
-export default function Navbar  () {
+export default function Navbar() {
   // i need state hook to manage some data in
   const [selected, setSelected] = useState(null);
   const isDesktop = window.innerWidth >= 1000;
-  const [isInView, setIsInView] = useState(true);
+  const [isInView, setIsInView] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState("up"); // Estado para almacenar la dirección del scroll
+  const [prevScrollPos, setPrevScrollPos] = useState(0); // Estado para almacenar la posición anterior del scroll
 
+  const handleScroll = () => {
+    const currentScrollPos =
+      window.scrollY || document.documentElement.scrollTop;
+    setScrollDirection(currentScrollPos > prevScrollPos ? "down" : "up");
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    // Agregar un event listener para el evento de scroll al elemento window
+    window.addEventListener("scroll", handleScroll);
+
+    // Eliminar el event listener cuando se desmonte el componente para evitar pérdidas de memoria
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
 
   const scrollToBottom = () => {
     window.scrollTo({
@@ -26,14 +44,12 @@ export default function Navbar  () {
       behavior: "smooth",
     });
   };
-
   const currentPath = window.location.pathname;
 
   useEffect(() => {
     if (currentPath !== "/") {
       setIsInView(false);
     }
-  
   }, []);
 
   useEffect(() => {
@@ -63,29 +79,33 @@ export default function Navbar  () {
   }, []);
 
   return (
- 
+   
       <nav
         style={{ zIndex: "99" }}
-        className={`navbar mynav navbar-expand-lg mx-auto navbar-scrolled col-12  ${
-          isInView ? " bg-gradient-1 py-5" : " bg-white-gradient shadowed "
-        }`}
+        className={`navbar mynav navbar-expand-lg  navbar-scrolled   ${
+          isInView
+            ? " bg-gradient-1 py-3 col-12"
+            : " bg-white-gradient shadowed mt-3 mynav2"
+        }
+        ${scrollDirection === "down" ? "hided" : ""}
+        `}
       >
-        <div className="container-fluid col-11 ">
+        <div className={`container-fluid  ${isInView ? "col-11" : "col-12"}`}>
           <Link
-            href="/services"
-            className={`container-logo-navbar mx-auto${
+            href="/"
+            className={`navbar-tittle mx-auto text-black no-deco${
               isDesktop ? " ms-5" : " ms-2"
-            } ${isInView ? " hided" : ""}`}
+            } ${isInView ? " " : ""}`}
             onClick={() => {
               scrollToTop();
             }}
           >
-           HOLA
+            Da Paolo
           </Link>
           <div></div>
           <button
-            className={`navbar-toggler toggle-color ${
-              isInView ? " toggle-color-white" : " toggle-color-black"
+            className={`navbar-toggler  toggle-color-black ${
+              isInView ? " " : " "
             }`}
             type="button"
             data-bs-toggle="collapse"
@@ -94,48 +114,60 @@ export default function Navbar  () {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i className="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars"></i>
           </button>
           <div className=" collapse navbar-collapse " id="navbarNavDropdown">
             <ul className={`navbar-nav ms-auto ${isInView ? " " : " "}`}>
-              <div className="nav-item ">
-                <Link
-                 href="/services"
-                  target="_blank"
-                  className={`nav-link mx-2 me-5 px-2 line  ${
-                    selected === 0 && ""
-                  } ${isInView ? " text-white" : "  text-black"}`}
-                  onClick={() => {}}
-                >
-                  CITA PREVIA
-                </Link>
-              </div>
+             
+
               <div className="nav-item">
                 <Link
                   href="/services"
                   className={`nav-link mx-2 me-5 px-2 line  ${
                     selected === 1 && ""
-                  } ${isInView ? " text-white" : "  text-black"}`}
+                  } ${isInView ? " text-black" : "  text-black"}`}
                   onClick={() => {}}
                 >
-                  MOTOS DE OCASIÓN
+                  Menu
                 </Link>
               </div>
               <div className="nav-item">
                 <Link
-                 href="/services"
+                  href="/services"
                   className={`nav-link  mx-2 me-5 px-2 line ${
                     selected === 2 && ""
-                  } ${isInView ? " text-white" : "  text-black"}`}
+                  } ${isInView ? " text-black" : "  text-black"}`}
                   onClick={() => scrollToBottom()}
                 >
-                  CONTACTO
+                  Where are we?
+                </Link>
+              </div>
+              <div className="nav-item">
+                <Link
+                  href="/services"
+                  className={`nav-link  mx-2 me-5 px-2 line ${
+                    selected === 2 && ""
+                  } ${isInView ? " text-black" : "  text-black"}`}
+                  onClick={() => scrollToBottom()}
+                >
+                  Reservations
+                </Link>
+              </div>
+              <div className="nav-item ">
+                <Link
+                  href="/about"
+                  className={`nav-link mx-2 me-5 px-2 line  ${
+                    selected === 0 && ""
+                  } ${isInView ? " text-black" : "  text-black"}`}
+                  onClick={() => {}}
+                >
+                  About
                 </Link>
               </div>
             </ul>
           </div>
         </div>
       </nav>
- 
+   
   );
-};
+}

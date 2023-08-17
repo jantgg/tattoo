@@ -3,21 +3,260 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
 }
-
-.section1{
-  width: 100vw;
+.section1 {
+  position: relative;
+  width: 100%;
   height: 100vh;
-  background-image: url('https://res.cloudinary.com/dsbp8pqdb/image/upload/v1686848392/pexels-andr%C3%A9-ulysses-de-salis-3727271_ljh2cw.jpg');
+  background-color: rgb(255, 255, 255);
   background-size: cover;
+  background-position: center;
+}
+.marmol {
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692280962/da-paolo/fondo_marmol_utsatr.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.sub-section1 {
+  position: absolute;
+}
+.plato {
+  height: 80vh;
+  margin-top: 13vh;
+
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692280610/da-paolo/pexels-vincent-rivaud-2147491_k2wzft.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+}
+.presentation {
+  margin-top: 7vh;
+  padding-left: 2vw;
+  padding-top: 15vh;
+  z-index: 2;
+}
+.presentation h1 {
+  color: rgb(218, 165, 32);
+  font-size: 4vw !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 900;
+}
+.presentation h2 {
+  padding-top: 1vh;
+  color: rgb(0, 0, 0);
+  font-size: 2vw !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.presentation p {
+  padding-top: 1vh;
+  padding-bottom: 3vh;
+  padding-left: 0.2vw;
+  color: rgb(0, 0, 0);
+  font-size: 1.3vw !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+}
+.button {
+  text-decoration: none;
+  color: rgb(218, 165, 32);
+  border: 3px solid rgb(218, 165, 32);
+  padding: 10px;
+  font-size: 1.5vw;
+  border-radius: 10px;
+  margin-left: 1vh;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.button:hover {
+  box-shadow: 0 0 10px rgb(218, 165, 32);
+}
+.section2 {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  justify-content: space-evenly;
+}
+.top-deco{
+  margin-bottom: 2vh;
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692305511/da-paolo/top_szg3aj.png");
+  background-size: cover;
+  background-position: center;
+  height: 5vh;
+  opacity: 0.6;
+}
+.section2 h1 {
+  text-align: center;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  padding-bottom: 3vh;
+  font-size: 2vw;
+  color: rgb(218, 165, 32);
+}
+.second-text {
+  text-align: center;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  padding-bottom: 3vh;
+  color: rgb(59, 59, 59);
+}
+.card1 {
+  height: 35vh;
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692287370/da-paolo/pexels-monica-turlui-7218637_oksmgz.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+}
+.card2 {
+  height: 35vh;
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692287368/da-paolo/pexels-vincent-rivaud-2471171_kdw4ov.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+}
+.card3 {
+  height: 35vh;
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692287422/da-paolo/pexels-samed-bayrak-16148537_svlweh.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+}
+.card-tittles {
+  text-align: center;
+  margin-top: 54%;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.golden {
+  color: rgb(218, 165, 32);
+}
+.decoleft {
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692297601/da-paolo/leafleft_bxlz9q.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.decoright {
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692297601/da-paolo/leafright_t8k34i.png");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.interlude {
+  margin-top: 7vh;
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692280015/da-paolo/Marbella3_hvrtsv.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 35vh;
+  cursor: default;
+}
+.reserva {
+  text-decoration: none;
+  text-align: center;
+  color: rgb(218, 165, 32);
+  font-size: 3vw;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  margin-top: 12vh;
+  background-color: rgb(255, 255, 255);
+  height: 9vh;
+  border-top: 3px solid rgb(218, 165, 32);
+  border-bottom: 3px solid rgb(218, 165, 32);
+  border-radius: 5px;
+  opacity: 0;
+}
+.section3 {
+
+ background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692306481/da-paolo/fondito_nenpzu.jpg"); 
+  background-size: cover;
+  background-position: center;
+  margin-top: 10vh;
+  width: 100%;
+  z-index: 3;
+}
+.section3 h1 {
+  text-align: center;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  padding-bottom: 3vh;
+  font-size: 2vw;
+  color: rgb(218, 165, 32);
+}
+.second-text-3 {
+  text-align: center;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  padding-bottom: 3vh;
+  color: rgb(59, 59, 59);
+}
+.mid-deco{
+  margin-top: 2vh;
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692305512/da-paolo/mid_mdglxk.png");
+  background-size: cover;
+  background-position: center;
+  height: 5vh;
+  opacity: 0.6;
+}
+.sub-section3 {
+  margin-top: 5vh;
+  margin-bottom: 10vh;
 }
 
+.sub-text {
+  padding-top: 1vh;
+  font-size: 1.3vw !important;
+  color: rgb(59, 59, 59);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.sub-text-h2-r {
+  padding-top: 5vh;
+  text-align: left;
+  font-size: 1.6vw !important;
+  color: rgb(218, 165, 32);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.sub-text-h2-l {
+  padding-top: 5vh;
+  text-align: left;
+  font-size: 1.6vw !important;
+  color: rgb(218, 165, 32);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
+.sub-img-1 {
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692280015/da-paolo/Marbella3_hvrtsv.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 3;
+  height: 50vh;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+}
+.sub-img-2 {
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692278946/da-paolo/da-paolo_gsurii.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 3;
+  height: 50vh;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+}
+.sub-img-3 {
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692304188/da-paolo/pexels-mat-brown-1395967_hnhln1.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 3;
+  height: 50vh;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+}
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-
 }
 
 @media (prefers-reduced-motion) {
@@ -36,7 +275,6 @@
     grid-template-columns: repeat(2, 50%);
   }
 }
-
 
 @keyframes rotate {
   from {
