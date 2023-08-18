@@ -1,8 +1,57 @@
-.main {
+body {
+  margin: 0;
+}
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+.header {
+  height: 110%;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+.parallax-container {
+  height: 16vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+.interlude-img {
+  position: absolute;
+  height: 1000px !important;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transform: translateZ(-5px) scale(1.51);
+}
+.header-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transform: translateZ(-10px) scale(2.01);
+}
+
+.header-tittle {
+  color: rgb(183, 41, 41);
+  font-size: 12vw !important;
+  font-weight: 900;
+}
+.header-h2 {
+  color: rgb(183, 41, 41);
+  font-size: 2vw !important;
+  font-weight: 900;
+  text-align: center;
 }
 .section1 {
   position: relative;
@@ -40,12 +89,7 @@
   padding-top: 15vh;
   z-index: 2;
 }
-.presentation h1 {
-  color: rgb(218, 165, 32);
-  font-size: 4vw !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-weight: 900;
-}
+
 .presentation h2 {
   padding-top: 1vh;
   color: rgb(0, 0, 0);
@@ -62,92 +106,119 @@
   font-style: italic;
 }
 .button {
+  display: inline-block;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   text-decoration: none;
-  color: rgb(218, 165, 32);
-  border: 3px solid rgb(218, 165, 32);
-  padding: 10px;
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(241, 241, 241);
+  font-weight: 500;
   font-size: 1.5vw;
-  border-radius: 10px;
-  margin-left: 1vh;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out; 
 }
 .button:hover {
-  box-shadow: 0 0 10px rgb(218, 165, 32);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  transform: translateX(17px); 
+
 }
 .section2 {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  background-color: rgb(183, 41, 41) !important;
   justify-content: space-evenly;
+  background-color: white;
+  height: auto;
 }
-.top-deco{
+.section2-bg {
+  background-color: rgb(183, 41, 41);
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+/* .top-deco {
   margin-bottom: 2vh;
   background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692305511/da-paolo/top_szg3aj.png");
   background-size: cover;
   background-position: center;
   height: 5vh;
   opacity: 0.6;
-}
+} */
 .section2 h1 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-align: left;
+  font-weight: 900;
+  padding-bottom: 3vh;
+  font-size: 3.5vw;
+  color: rgb(239, 239, 239);
+}
+.section2 h2 {
   text-align: center;
   font-weight: 500;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   font-style: italic;
   padding-bottom: 3vh;
-  font-size: 2vw;
-  color: rgb(218, 165, 32);
+  color: rgb(16, 16, 16);
+  line-height: 2.9rem;
 }
-.second-text {
-  text-align: center;
+.section2 p {
+  padding-left: 3rem;
+  padding-right: 7rem;
+  text-align: left;
   font-weight: 500;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  font-style: italic;
   padding-bottom: 3vh;
-  color: rgb(59, 59, 59);
+  font-size: 1.5vw;
+  color: rgb(0, 0, 0);
+  line-height: 4.4rem;
 }
+
 .card1 {
-  height: 35vh;
-  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692287370/da-paolo/pexels-monica-turlui-7218637_oksmgz.jpg");
+  height: 70vh;
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692393460/pexels-natasha-filippovskaya-4394612_z1lpab_duhxsx.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
-}
+  transform: rotate(-90deg);
+} /*
 .card2 {
-  height: 35vh;
+  height: 45vh;
   background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692287368/da-paolo/pexels-vincent-rivaud-2471171_kdw4ov.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
 }
 .card3 {
-  height: 35vh;
+  height: 45vh;
   background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692287422/da-paolo/pexels-samed-bayrak-16148537_svlweh.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
-}
+} */
 .card-tittles {
   text-align: center;
-  margin-top: 54%;
+  margin-top: 4%;
   font-weight: bold;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(183, 41, 41);
   padding-top: 3px;
   padding-bottom: 3px;
+  font-size: 2vw;
 }
-.golden {
-  color: rgb(218, 165, 32);
+.card-img-food {
+  z-index: 2;
 }
+
 .decoleft {
   background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692297601/da-paolo/leafleft_bxlz9q.png");
   background-repeat: no-repeat;
   background-position: right;
+  opacity: 0.6;
 }
 .decoright {
   background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692297601/da-paolo/leafright_t8k34i.png");
   background-repeat: no-repeat;
   background-position: left;
+  opacity: 0.6;
 }
 .interlude {
-  margin-top: 7vh;
   background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692280015/da-paolo/Marbella3_hvrtsv.jpg");
   background-size: cover;
   background-position: center;
@@ -157,7 +228,7 @@
 .reserva {
   text-decoration: none;
   text-align: center;
-  color: rgb(218, 165, 32);
+  color: rgb(183, 41, 41);
   font-size: 3vw;
   font-style: italic;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -165,14 +236,13 @@
   margin-top: 12vh;
   background-color: rgb(255, 255, 255);
   height: 9vh;
-  border-top: 3px solid rgb(218, 165, 32);
-  border-bottom: 3px solid rgb(218, 165, 32);
+  border-top: 3px solid rgb(183, 41, 41);
+  border-bottom: 3px solid rgb(183, 41, 41);
   border-radius: 5px;
   opacity: 0;
 }
 .section3 {
-
- background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692306481/da-paolo/fondito_nenpzu.jpg"); 
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692306481/da-paolo/fondito_nenpzu.jpg");
   background-size: cover;
   background-position: center;
   margin-top: 10vh;
@@ -181,12 +251,10 @@
 }
 .section3 h1 {
   text-align: center;
-  font-weight: 500;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  font-style: italic;
+  font-weight: 900;
   padding-bottom: 3vh;
-  font-size: 2vw;
-  color: rgb(218, 165, 32);
+  font-size: 2.5vw;
+  color: rgb(183, 41, 41);
 }
 .second-text-3 {
   text-align: center;
@@ -195,8 +263,9 @@
   font-style: italic;
   padding-bottom: 3vh;
   color: rgb(59, 59, 59);
+  line-height: 2.9rem;
 }
-.mid-deco{
+.mid-deco {
   margin-top: 2vh;
   background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692305512/da-paolo/mid_mdglxk.png");
   background-size: cover;
@@ -213,21 +282,21 @@
   padding-top: 1vh;
   font-size: 1.3vw !important;
   color: rgb(59, 59, 59);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
 }
 .sub-text-h2-r {
   padding-top: 5vh;
   text-align: left;
-  font-size: 1.6vw !important;
-  color: rgb(218, 165, 32);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.8vw !important;
+  color: rgb(183, 41, 41);
+  font-weight: 700;
 }
 .sub-text-h2-l {
   padding-top: 5vh;
   text-align: left;
-  font-size: 1.6vw !important;
-  color: rgb(218, 165, 32);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.8vw !important;
+  color: rgb(183, 41, 41);
+  font-weight: 700;
 }
 
 .sub-img-1 {

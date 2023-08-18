@@ -7,10 +7,9 @@
 .mynav {
   position: fixed !important;
   top: 0;
-  z-index: 99;
+ 
   transition: padding 0.5s ease, background-color 0.5s ease;
-  width: 100vw;
-
+  width: 100%;
 }
 .no-deco{
   text-decoration: none;
@@ -50,7 +49,7 @@
   bottom: 5px;
   left: 0px;
   transform: scaleX(0);
-  background: rgb(218, 165, 32);
+  background: rgb(0, 0, 0);
   transform-origin: bottom right;
   transition: transform 0.5s ease-out;
 }
@@ -70,10 +69,11 @@
   background-color: rgba(0, 0, 0, 0);
 }
 .bg-gradient-1 {
-  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  background-color:  rgb(183, 41, 41);;
+  /* background-image: linear-gradient(to bottom,  rgb(183, 41, 41),  rgb(183, 41, 41)); */
 }
 .bg-white-gradient {
-  background-color: rgb(255, 255, 255);
+  background-color:  rgb(255, 255, 255);;
 }
 
 .navbar-dark .navbar-toggler {
@@ -85,7 +85,8 @@
   size:10vw;
 }
   .mynav {
-    font-size: 1vw;
+    font-size: 1.1vw;
+    font-weight: 700;
   }
 }
 

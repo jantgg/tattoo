@@ -2,10 +2,12 @@
 import { useClient } from "next/client";
 import Head from "next/head";
 import "./globals.css";
+import { useState } from "react";
 
 import { Merriweather } from "next/font/google";
 import Navbar from "@/components/navbar/navbar";
 import "bootstrap/dist/css/bootstrap.css";
+import useScrollPosition from "app/hooks/usescrollposition.js";
 
 import Script from "next/script";
 const inter = Merriweather({
@@ -15,6 +17,8 @@ const inter = Merriweather({
 })
 
 export default function RootLayout({ children }) {
+  const scrollPosition = useScrollPosition();
+
   return (
     <html lang="en" className={inter.className}>
       <Head>
@@ -26,7 +30,7 @@ export default function RootLayout({ children }) {
         />
       </Head>
       <body className={inter.className}>
-        <Navbar />
+      <Navbar scrollPosition={scrollPosition} />
         {children}
       </body>
     </html>

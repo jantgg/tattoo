@@ -7,76 +7,63 @@ import logo from "../../images/logo.png";
 import "./navbar.css";
 import "bootstrap/dist/css/bootstrap.css";
 
-export default function Navbar() {
-  // i need state hook to manage some data in
+export default function Navbar({scrollPosition}) {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1000);
+  const [isInView, setIsInView] = useState(scrollPosition < 200);
+  const [scrollDirection, setScrollDirection] = useState("up");
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [selected, setSelected] = useState(null);
-  const isDesktop = window.innerWidth >= 1000;
-  const [isInView, setIsInView] = useState(false);
-  const [scrollDirection, setScrollDirection] = useState("up"); // Estado para almacenar la dirección del scroll
-  const [prevScrollPos, setPrevScrollPos] = useState(0); // Estado para almacenar la posición anterior del scroll
 
   const handleScroll = () => {
-    const currentScrollPos =
-      window.scrollY || document.documentElement.scrollTop;
+    const wrapperElement = document.querySelector(".wrapper");
+    const currentScrollPos = wrapperElement.scrollTop;
     setScrollDirection(currentScrollPos > prevScrollPos ? "down" : "up");
     setPrevScrollPos(currentScrollPos);
   };
 
   useEffect(() => {
-    // Agregar un event listener para el evento de scroll al elemento window
-    window.addEventListener("scroll", handleScroll);
+    const wrapperElement = document.querySelector(".wrapper");
+    wrapperElement.addEventListener("scroll", handleScroll);
 
-    // Eliminar el event listener cuando se desmonte el componente para evitar pérdidas de memoria
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      wrapperElement.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
 
   const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
+    const wrapperElement = document.querySelector(".wrapper");
+    wrapperElement.scrollTo({
+      top: wrapperElement.scrollHeight,
       behavior: "smooth",
     });
   };
+
   const scrollToTop = () => {
-    window.scrollTo({
+    const wrapperElement = document.querySelector(".wrapper");
+    wrapperElement.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
+
   const currentPath = window.location.pathname;
 
   useEffect(() => {
     if (currentPath !== "/") {
       setIsInView(false);
     }
-  }, []);
+  }, [currentPath]);
 
-  useEffect(() => {
-    if (window.location.pathname === "/") {
-      // Verificar si currentPath no es "/"
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.utils.toArray(".navbar-scrolled").forEach(function (elem) {
-        ScrollTrigger.create({
-          trigger: elem,
-          start: "top 100%",
-          end: "bottom 0%",
-          onEnter: () => {
-            setIsInView(true); // Establecer el estado en true cuando se cumple la condición
-          },
-          onLeave: () => {
-            setIsInView(false); // Establecer el estado en false cuando no se cumple la condición
-          },
-          onEnterBack: () => {
-            setIsInView(true);
-          },
-          onLeaveBack: () => {
-            setIsInView(false);
-          },
-        });
-      });
-    }
-  }, []);
+
+
+    useEffect(() => {
+      console.log(scrollPosition);
+      if (scrollPosition < 200) {
+        setIsInView(true);
+      } else {
+        setIsInView(false);}
+    }, [scrollPosition]);
+
 
   return (
    
@@ -95,7 +82,7 @@ export default function Navbar() {
             href="/"
             className={`navbar-tittle mx-auto text-black no-deco${
               isDesktop ? " ms-5" : " ms-2"
-            } ${isInView ? " " : ""}`}
+            } ${isInView ? "hided " : ""}`}
             onClick={() => {
               scrollToTop();
             }}

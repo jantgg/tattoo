@@ -1,7 +1,14 @@
+"use client";
 import Image from "next/image";
-import marmolimg from "images/fondo marmol.jpg";
+import marmolimg from "images/fondomarmol.jpg";
+import puerto from "images/puerto.jpg";
+import puerto2 from "images/food2.jpg";
+import food3 from "images/food3.jpg";
+import pizza from "images/fondopizza.jpg";
+import logo from "images/dapaolo-logo.png";
 import Link from "next/link";
 import "./page.css";
+import { useEffect, useState } from "react";
 
 export const metadata = {
   title: "Da Paolo Ristorante",
@@ -9,9 +16,34 @@ export const metadata = {
 };
 
 export default function Home() {
+  useEffect(() => {
+    const wrapperElement = document.querySelector(".wrapper");
+    const handleScroll = () => {
+      // Realiza las operaciones necesarias en respuesta al scroll dentro del wrapper
+    };
+    wrapperElement.addEventListener("scroll", handleScroll);
+
+    return () => {
+      wrapperElement.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <main className="main">
-      <div className="section1 d-flex">
+    <main className="wrapper">
+      <div id="header" className="header flex-column">
+        <Image
+          src={pizza}
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className="header-img"
+          alt="marmoled background"
+        />
+
+        <h1 className="header-tittle">Da Paolo </h1>
+        <h2 className="header-h2 col-10"> Restaurant - Pizzeria</h2>
+      </div>
+      {/* <div className="section1 d-flex">
         <div className="marmol"></div>
         <div className="sub-section1 row col-12 marmol">
           {" "}
@@ -34,57 +66,86 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div>
-      <div className="section2 row col-12">
-      <div className="top-deco col-2 mx-auto"></div>
-        <h1 className="col-12">Take a look at our delicious dishes </h1>
-        <div className="col-12 d-flex">
+      </div> */}
+      <div className="section2 row col-12 mx-0">
+        <div className="col-6 d-flex">
           {" "}
-          <h2 className="col-7 second-text mx-auto">
-            "From Our Kitchen to Your Heart: An exquisite Compilation of Classic
-            Mediterranean Cuisine" - <strong> The Chef</strong>
-          </h2>
+          <div className="col-11 card1 mx-auto">
+            {" "}
+            {/* <h2 className="col-7 second-text mx-auto">
+            "From our kitchen to your table: An exquisite compilation of classic
+            mediterranean cuisine" <br></br> <strong>- The Chef</strong>
+          </h2> */}
+          </div>
         </div>
-        <div className="col-2 decoleft"></div>
-        <div className="col-2 card1 px-0">
+
+        <div className="col-6 flex-column section2-bg">
+          {" "}
+          <h1 className="col-12 mt-3">
+            Discover the true mediterranean cuisine{" "}
+          </h1>
+          <p>
+            Our menu is a tribute to the rich <strong>culinary heritage</strong>{" "}
+            of the Mediterranean region. Each dish is carefully crafted with{" "}
+            <strong>handpicked ingredients</strong> that accentuate the natural
+            and vibrant flavors of the area. From exquisite{" "}
+            <strong>fresh</strong> salads to <strong>flavorful</strong> main
+            courses, each bite will transport you to sunny shores and sea
+            breezes.
+          </p>{" "}
+          <div className="ms-5">
+            {" "}
+            <a href="/menu" className="button mx-auto">
+              See our menu &#x27A1;
+            </a>
+          </div>
+        </div>
+
+        {/* <div className="col-2 decoleft"></div> */}
+        {/* <div className="col-3 card1 px-0">
           <h2 className="card-tittles mx-auto">
-            <Link href="/menu" className="no-deco golden ">
-              Pastas
+            <Link href="/menu" className="no-deco text-black ">
+              Dishes
             </Link>
           </h2>
         </div>
-        <div className="col-2 card2 px-0">
+        <div className="col-3 card2 px-0">
           <h2 className="card-tittles mx-auto">
             {" "}
-            <Link href="/menu" className="no-deco golden">
-              Pizzas
+            <Link href="/menu" className="no-deco text-black">
+              Pizza
             </Link>
           </h2>
         </div>
-        <div className="col-2 card3 px-0">
+        <div className="col-3 card3 px-0">
           <h2 className="card-tittles mx-auto">
             {" "}
-            <Link href="/menu" className="no-deco golden">
-              Cocktails
+            <Link href="/menu" className="no-deco text-black">
+              Cocktail
             </Link>
           </h2>
-        </div>
-        <div className="col-2 decoright"></div>
+        </div> */}
+        {/* <div className="col-2 decoright"></div> */}
       </div>
-      <div className="interlude col-12 d-flex">
-        <a href="/reservas" className="reserva col-5 mx-auto">
-          {" "}
-          Make a reservation
-        </a>
+      <div className="parallax-container">
+        <Image
+          src={puerto2}
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className="interlude-img"
+          alt="puerto banus image"
+        />
       </div>
-      <div className="section3 flex-column col-12">
-        <h1 className="px-0">Get to know us better</h1>
+      <div className="section3 flex-column col-12 pt-5">
+        <div className="mid-deco col-2 mx-auto"></div>
+        <h1 className="px-0 pt-4">Get to know us better</h1>
         <h2 className="second-text-3 col-7 mx-auto">
           "Discover a waterfront haven in Puerto Banús, where our Italian
           restaurant marries classic Mediterranean flavors with an exclusive
           terrace experience."
         </h2>
-        <div className="mid-deco col-2 mx-auto"></div>
+
         <div className="col-12 row sub-section3">
           <div className="col-6 d-flex">
             {" "}
@@ -109,10 +170,10 @@ export default function Home() {
           <div className="col-6">
             {" "}
             <h2 className="col-8 ms-auto sub-text-h2-r ps-4">
-            Time-honored classics with a modern twist
+              Time-honored classics with a modern twist
             </h2>
             <p className="col-8 ms-auto ps-4 pt-3 sub-text">
-            Indulge in a curated collection of classic Mediterranean dishes
+              Indulge in a curated collection of classic Mediterranean dishes
               that have been lovingly crafted by our talented chefs. Each plate
               tells a story of time-honored recipes, handed down through
               generations, and infused with a touch of modern creativity. Our
@@ -126,8 +187,7 @@ export default function Home() {
             <div className="col-6 me-auto sub-img-2"></div>
           </div>
         </div>
-       
-     
+
         <div className="col-12 row sub-section3">
           <div className="col-6 d-flex">
             {" "}
