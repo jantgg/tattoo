@@ -1,0 +1,11 @@
+:root {
+  
+    --font-lato: 'Lato', sans-serif;
+  }
+  
+
+     
+ p {
+    font-family: var(--font-lato);
+  }
+  

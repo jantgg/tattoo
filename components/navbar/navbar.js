@@ -110,9 +110,9 @@ export default function Navbar({scrollPosition}) {
               <div className="nav-item">
                 <Link
                   href="/services"
-                  className={`nav-link mx-2 me-5 px-2 line  ${
+                  className={`nav-link mx-2 me-5 px-2   ${
                     selected === 1 && ""
-                  } ${isInView ? " text-white" : "  text-black"}`}
+                  } ${isInView ? " text-white line" : "  text-black line2"}`}
                   onClick={() => {}}
                 >
                   Menu
@@ -121,9 +121,9 @@ export default function Navbar({scrollPosition}) {
               <div className="nav-item">
                 <Link
                   href="/services"
-                  className={`nav-link  mx-2 me-5 px-2 line ${
+                  className={`nav-link  mx-2 me-5 px-2  ${
                     selected === 2 && ""
-                  } ${isInView ? " text-white" : "  text-black"}`}
+                  } ${isInView ? " text-white line" : "  text-black line2"}`}
                   onClick={() => scrollToBottom()}
                 >
                   Where are we?
@@ -132,9 +132,9 @@ export default function Navbar({scrollPosition}) {
               <div className="nav-item">
                 <Link
                   href="/services"
-                  className={`nav-link  mx-2 me-5 px-2 line ${
+                  className={`nav-link  mx-2 me-5 px-2  ${
                     selected === 2 && ""
-                  } ${isInView ? " text-white" : "  text-black"}`}
+                  } ${isInView ? " text-white line" : "  text-black line2"}`}
                   onClick={() => scrollToBottom()}
                 >
                   Reservations
@@ -143,9 +143,9 @@ export default function Navbar({scrollPosition}) {
               <div className="nav-item ">
                 <Link
                   href="/about"
-                  className={`nav-link mx-2 me-5 px-2 line  ${
+                  className={`nav-link mx-2 me-5 px-2   ${
                     selected === 0 && ""
-                  } ${isInView ? " text-white" : "  text-black"}`}
+                  } ${isInView ? " text-white line" : "  text-black line2"}`}
                   onClick={() => {}}
                 >
                   About

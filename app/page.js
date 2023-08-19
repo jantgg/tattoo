@@ -1,14 +1,8 @@
 "use client";
 import Image from "next/image";
-import marmolimg from "images/fondomarmol.jpg";
-import puerto from "images/puerto.jpg";
-import puerto2 from "images/food2.jpg";
-import food3 from "images/food3.jpg";
 import pizza from "images/fondopizza.jpg";
 import madera from "images/madera.jpg";
 import masa from "images/masa.jpg";
-import logo from "images/dapaolo-logo.png";
-import Link from "next/link";
 import "./page.css";
 import Slider from "components/slider/slider";
 import { useEffect, useState } from "react";
@@ -43,7 +37,7 @@ export default function Home() {
           alt="marmoled background"
         />
 
-        <h1 className="header-tittle">Da Paolo </h1>
+        <h1 className={` header-tittle`}>Da Paolo </h1>
         <h2 className="header-h2 col-10"> Restaurant - Pizzeria</h2>
       </div>
       {/* <div className="section1 d-flex">
@@ -81,7 +75,7 @@ export default function Home() {
           <h1 className="col-12 mt-3">
             Discover the true mediterranean cuisine{" "}
           </h1>
-          <p>
+          <p className="lato">
             Our menu is a tribute to the rich <strong>culinary heritage</strong>{" "}
             of the Mediterranean region. Each dish is carefully crafted with{" "}
             <strong>handpicked ingredients</strong> that accentuate the natural

@@ -27,7 +27,6 @@
 }
 .btn-father {
   text-align: right;
-
 }
 .boton {
   background-color: rgba(0, 0, 0, 0);
@@ -53,37 +52,36 @@
   transform: rotate(-90deg) translateX(-5vh);
 }
 .img-slider-2 {
-    height: 70vh;
-    background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692452534/da-paolo/pexels-monica-turlui-7218637_oksmgz_naidov.jpg");
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
-    transform: rotate(-90deg) translateX(-5vh);
-  }
-  .img-slider-3 {
-    height: 70vh;
-    background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692452580/da-paolo/pexels-fauxels-3184193_fbdwn3_cvrffi.jpg");
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
-    transform: rotate(-90deg) translateX(-5vh);
-  }
-  .button-slider {
-    display: inline-block;
-    margin-left: 5vw;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    border: 3px solid rgb(241, 241, 241);
-    font-weight: 500;
-    font-size: 1.5vw;
-    transition: transform 0.3s ease-in-out; 
-  }
-  .button-slider:hover {
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-    transform: translateX(17px); 
-  
-  }
+  height: 70vh;
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692452534/da-paolo/pexels-monica-turlui-7218637_oksmgz_naidov.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+  transform: rotate(-90deg) translateX(-5vh);
+}
+.img-slider-3 {
+  height: 70vh;
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692452580/da-paolo/pexels-fauxels-3184193_fbdwn3_cvrffi.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+  transform: rotate(-90deg) translateX(-5vh);
+}
+.button-slider {
+  display: inline-block;
+  margin-left: 5vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(241, 241, 241);
+  font-weight: 500;
+  font-size: 1.5vw;
+  transition: transform 0.3s ease-in-out;
+}
+.button-slider:hover {
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  transform: translateX(17px);
+}

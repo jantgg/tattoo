@@ -150,6 +150,7 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .presentation p {
+  font-family: var(--font-roboto-mono);
   padding-top: 1vh;
   padding-bottom: 3vh;
   padding-left: 0.2vw;
