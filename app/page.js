@@ -5,9 +5,12 @@ import puerto from "images/puerto.jpg";
 import puerto2 from "images/food2.jpg";
 import food3 from "images/food3.jpg";
 import pizza from "images/fondopizza.jpg";
+import madera from "images/madera.jpg";
+import masa from "images/masa.jpg";
 import logo from "images/dapaolo-logo.png";
 import Link from "next/link";
 import "./page.css";
+import Slider from "components/slider/slider";
 import { useEffect, useState } from "react";
 
 export const metadata = {
@@ -70,13 +73,7 @@ export default function Home() {
       <div className="section2 row col-12 mx-0">
         <div className="col-6 d-flex">
           {" "}
-          <div className="col-11 card1 mx-auto">
-            {" "}
-            {/* <h2 className="col-7 second-text mx-auto">
-            "From our kitchen to your table: An exquisite compilation of classic
-            mediterranean cuisine" <br></br> <strong>- The Chef</strong>
-          </h2> */}
-          </div>
+          <div className="col-11 card1 mx-auto"> </div>
         </div>
 
         <div className="col-6 flex-column section2-bg">
@@ -129,15 +126,19 @@ export default function Home() {
       </div>
       <div className="parallax-container">
         <Image
-          src={puerto2}
+          src={madera}
           layout="fill"
           objectFit="cover"
           quality={100}
           className="interlude-img"
           alt="puerto banus image"
         />
+        <h1 className="interlude-tittle">
+          "From our kitchen to your table: An exquisite compilation of classic
+          mediterranean cuisine" <br></br> - The Chef{" "}
+        </h1>
       </div>
-      <div className="section3 flex-column col-12 pt-5">
+      {/* <div className="section3 flex-column col-12 pt-5">
         <div className="mid-deco col-2 mx-auto"></div>
         <h1 className="px-0 pt-4">Get to know us better</h1>
         <h2 className="second-text-3 col-7 mx-auto">
@@ -206,11 +207,35 @@ export default function Home() {
               atmosphere that effortlessly complements the beauty of its
               surroundings. Join us to embark on a culinary voyage that connects
               your heart to the Mediterranean soul, where every moment is a
-              celebration of la dolce vita
+              celebration of la dolce vita.
             </p>
           </div>
         </div>
+      </div> */}
+      <div className="section3 col-12">
+        <Slider />
       </div>
+      <div className="parallax-container2">
+        <Image
+          src={masa}
+          layout="responsive"
+          objectFit="cover"
+          quality={100}
+          className="interlude2-img"
+          alt="man knead dough"
+        />
+        <div className="col-12 flex-cloumn">
+          {" "}
+          <h1 className="interlude-tittle-2">
+            Indulge in a culinary experience like no other
+          </h1>
+          
+        </div>
+      </div>
+      <div className="footer"><h2 className="interlude-text">
+            "Discover a waterfront haven in Puerto Banús, where Mediterranean classics marries classic Mediterranean flavors with an exclusive
+            terrace experience." - Chief.
+          </h2></div>
     </main>
   );
 }

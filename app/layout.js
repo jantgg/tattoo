@@ -3,6 +3,7 @@ import { useClient } from "next/client";
 import Head from "next/head";
 import "./globals.css";
 import { useState } from "react";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import { Merriweather } from "next/font/google";
 import Navbar from "@/components/navbar/navbar";
@@ -28,6 +29,10 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
           rel="stylesheet"
         />
+         <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
       </Head>
       <body className={inter.className}>
       <Navbar scrollPosition={scrollPosition} />

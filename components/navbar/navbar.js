@@ -112,7 +112,7 @@ export default function Navbar({scrollPosition}) {
                   href="/services"
                   className={`nav-link mx-2 me-5 px-2 line  ${
                     selected === 1 && ""
-                  } ${isInView ? " text-black" : "  text-black"}`}
+                  } ${isInView ? " text-white" : "  text-black"}`}
                   onClick={() => {}}
                 >
                   Menu
@@ -123,7 +123,7 @@ export default function Navbar({scrollPosition}) {
                   href="/services"
                   className={`nav-link  mx-2 me-5 px-2 line ${
                     selected === 2 && ""
-                  } ${isInView ? " text-black" : "  text-black"}`}
+                  } ${isInView ? " text-white" : "  text-black"}`}
                   onClick={() => scrollToBottom()}
                 >
                   Where are we?
@@ -134,7 +134,7 @@ export default function Navbar({scrollPosition}) {
                   href="/services"
                   className={`nav-link  mx-2 me-5 px-2 line ${
                     selected === 2 && ""
-                  } ${isInView ? " text-black" : "  text-black"}`}
+                  } ${isInView ? " text-white" : "  text-black"}`}
                   onClick={() => scrollToBottom()}
                 >
                   Reservations
@@ -145,7 +145,7 @@ export default function Navbar({scrollPosition}) {
                   href="/about"
                   className={`nav-link mx-2 me-5 px-2 line  ${
                     selected === 0 && ""
-                  } ${isInView ? " text-black" : "  text-black"}`}
+                  } ${isInView ? " text-white" : "  text-black"}`}
                   onClick={() => {}}
                 >
                   About
