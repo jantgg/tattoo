@@ -99,12 +99,14 @@ body {
   color: rgb(183, 41, 41);
   font-size: 12vw !important;
   font-weight: 900;
+   text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .header-h2 {
   color: rgb(183, 41, 41);
   font-size: 2vw !important;
   font-weight: 900;
   text-align: center;
+   text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .section1 {
   position: relative;
@@ -166,16 +168,19 @@ body {
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  border: 3px solid rgb(241, 241, 241);
-  font-weight: 500;
+  color: rgb(0, 0, 0);
+  border: 3px solid rgb(0, 0, 0);
+  background-color: rgb(222, 222, 222);
+  font-weight: 600;
   font-size: 1.5vw;
   transition: transform 0.3s ease-in-out; 
 }
 .button:hover {
   box-shadow: 0 0 10px rgb(0, 0, 0);
   transform: translateX(17px); 
-
+  color: rgb(227, 227, 227);
+  border: 3px solid rgb(224, 224, 224);
+  background-color: rgba(21, 21, 21, 0.851);
 }
 .section2 {
   background-color: rgb(183, 41, 41) !important;
@@ -204,24 +209,24 @@ body {
   font-weight: 900;
   padding-bottom: 3vh;
   font-size: 3.5vw;
-  color: rgb(239, 239, 239);
+  color: rgb(0, 0, 0);
 }
 .section2 h2 {
   text-align: center;
   font-weight: 500;
   font-style: italic;
   padding-bottom: 3vh;
-  color: rgb(16, 16, 16);
+  color: rgb(162, 162, 162);
   line-height: 2.9rem;
 }
 .section2 p {
   padding-left: 3rem;
   padding-right: 7rem;
   text-align: left;
-  font-weight: 500;
+  font-weight: 400;
   padding-bottom: 3vh;
   font-size: 1.5vw;
-  color: rgb(0, 0, 0);
+  color: rgb(222, 222, 222);
   line-height: 4.4rem;
 }
 

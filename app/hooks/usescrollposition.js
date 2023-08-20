@@ -5,17 +5,17 @@ const useScrollPosition = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
-    const wrapperElement = document.querySelector(".wrapper");
-    const currentScrollPos = wrapperElement.scrollTop;
+    const mainElement = document.querySelector("main");
+    const currentScrollPos = mainElement.scrollTop;
     setScrollPosition(currentScrollPos);
   };
 
   useEffect(() => {
-    const wrapperElement = document.querySelector(".wrapper");
-    wrapperElement.addEventListener("scroll", handleScroll);
+    const mainElement = document.querySelector("main");
+    mainElement.addEventListener("scroll", handleScroll);
 
     return () => {
-      wrapperElement.removeEventListener("scroll", handleScroll);
+      mainElement.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

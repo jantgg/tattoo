@@ -15,37 +15,36 @@ export default function Navbar({scrollPosition}) {
   const [selected, setSelected] = useState(null);
 
   const handleScroll = () => {
-    const wrapperElement = document.querySelector(".wrapper");
-    const currentScrollPos = wrapperElement.scrollTop;
+    const mainElement = document.querySelector("main");
+    const currentScrollPos = mainElement.scrollTop;
     setScrollDirection(currentScrollPos > prevScrollPos ? "down" : "up");
     setPrevScrollPos(currentScrollPos);
   };
-
+  
   useEffect(() => {
-    const wrapperElement = document.querySelector(".wrapper");
-    wrapperElement.addEventListener("scroll", handleScroll);
-
+    const mainElement = document.querySelector("main");
+    mainElement.addEventListener("scroll", handleScroll);
+  
     return () => {
-      wrapperElement.removeEventListener("scroll", handleScroll);
+      mainElement.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
-
+  
   const scrollToBottom = () => {
-    const wrapperElement = document.querySelector(".wrapper");
-    wrapperElement.scrollTo({
-      top: wrapperElement.scrollHeight,
+    const mainElement = document.querySelector("main");
+    mainElement.scrollTo({
+      top: mainElement.scrollHeight,
       behavior: "smooth",
     });
   };
-
+  
   const scrollToTop = () => {
-    const wrapperElement = document.querySelector(".wrapper");
-    wrapperElement.scrollTo({
+    const mainElement = document.querySelector("main");
+    mainElement.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
-
   const currentPath = window.location.pathname;
 
   useEffect(() => {

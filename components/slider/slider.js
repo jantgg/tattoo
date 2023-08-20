@@ -60,7 +60,7 @@ export default function Slider() {
           {" "}
           {currentIndex === 0 ? (
             <>
-              <h1>Discover us</h1>
+              <h1>Get to know us</h1>
               <p>
                 Welcome to our exquisite Italian restaurant nestled in the heart
                 of Puerto Banús, where the charm of Mediterranean <strong>flavors comes
@@ -93,11 +93,11 @@ export default function Slider() {
               <h1>Inviting ambiance for every occasion</h1>
               <p>
                 Whether you're seeking an intimate dinner for two or a joyous
-                gathering with friends, our restaurant offers a warm and
-                inviting atmosphere that effortlessly complements the beauty of
-                its surroundings. Join us to embark on a culinary voyage that
+                gathering with friends, our restaurant offers a <strong>warm</strong> and
+                <strong> inviting atmosphere</strong> that effortlessly complements the beauty of
+                its surroundings. Join us to embark on a <strong>culinary voyage</strong> that
                 connects your heart to the Mediterranean soul, where every
-                moment is a celebration of la dolce vita.
+                moment is a <strong>celebration of la dolce vita.</strong>
               </p>
               
             {" "}
@@ -114,6 +114,7 @@ export default function Slider() {
             className={` boton-i  ${currentIndex === 0 ? " hide" : " "}`}
             onClick={handlePrevClick}
             disabled={currentIndex === 0}
+            aria-label="press to backward"
           >
             <i className="fa-solid fa-chevron-left"></i>
           </button>
@@ -122,6 +123,7 @@ export default function Slider() {
             className={` boton-i  ms-5 ${currentIndex === 2 ? " hide" : " "}`}
             onClick={handleNextClick}
             disabled={currentIndex === 2}
+            aria-label="press to forward"
           >
             <i className="fa-solid fa-chevron-right"></i>
           </button>

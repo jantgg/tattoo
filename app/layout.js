@@ -16,13 +16,21 @@ const inter = Merriweather({
   display: 'swap',
   weight: '300',
 })
+export const metadata = {
+  title: "Da Paolo",
+  description: "The best restaurant in Puerto Banus",
+};
 
 export default function RootLayout({ children }) {
   const scrollPosition = useScrollPosition();
 
   return (
     <html lang="en" className={inter.className}>
-      <Head>
+      <head>
+        <title>Da Paolo</title>
+        <description>The best restaurant in Puerto Banus</description>
+        <meta name="description" content="The best restaurant in Puerto Banus and the only with terrace"></meta>
+        <meta name="theme-color" content="red"></meta>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -33,7 +41,7 @@ export default function RootLayout({ children }) {
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
-      </Head>
+      </head>
       <body className={inter.className}>
       <Navbar scrollPosition={scrollPosition} />
         {children}
