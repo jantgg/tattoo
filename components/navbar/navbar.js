@@ -108,7 +108,7 @@ export default function Navbar({scrollPosition}) {
 
               <div className="nav-item">
                 <Link
-                  href="/services"
+                  href="/menu"
                   className={`nav-link mx-2 me-5 px-2   ${
                     selected === 1 && ""
                   } ${isInView ? " text-white line" : "  text-black line2"}`}

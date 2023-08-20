@@ -66,8 +66,7 @@ body {
   font-size: 8vw !important;
   font-weight: 900;
   text-align: center;
-   text-shadow: 0 0 10px rgb(0, 0, 0);
-
+  text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .header-h2-m {
   color: rgb(229, 229, 229);
@@ -75,8 +74,6 @@ body {
   font-weight: 900;
   text-align: center;
   text-shadow: 0 0 10px rgb(0, 0, 0);
-
-  
 }
 .interlude-tittle-2 {
   margin-top: 7vh;
@@ -122,25 +119,129 @@ body {
   background-color: rgba(21, 21, 21, 0.851);
 }
 .section2-m {
-  background-color: rgb(183, 41, 41) !important;
+  background-color: rgb(183, 41, 41);
   justify-content: space-evenly;
   background-color: white;
   height: auto;
-padding-right: 5vh;
-padding-left: 5vh;
+  position: relative;
+  display: flex;
+  transition: background-color 0.5s ease-in-out;
 }
-
+.gored {
+  background-color: rgb(183, 41, 41) !important;
+}
+.gowhite {
+  background-color: rgb(228, 228, 228) !important;
+}
+.goblack {
+  background-color: rgb(22, 22, 22) !important;
+}
 .card-m {
-  height: 50vh;
-  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692393460/pexels-natasha-filippovskaya-4394612_z1lpab_duhxsx.jpg");
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  min-height: 50vh;
+  background-color: brown;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
   margin-bottom: -5vh;
   margin-top: -5vh;
-  flex: 0 0 auto;
-    width: 16.66666667%;
-    cursor: pointer;
+  width: 22%;
+  flex: 0 0 auto; 
+  cursor: pointer;
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+}
+.card-m::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1; 
+  transition: opacity 0.4s ease-in-out;
+}
+
+.card1-m::before {
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692561229/da-paolo/pexels-karthik-reddy-397913_dqvzvr.jpg");
+  /* Cambia a la URL de tu primera imagen */
+}
+
+.card2-m::before {
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692287370/da-paolo/pexels-monica-turlui-7218637_oksmgz.jpg");
+  /* Cambia a la URL de tu segunda imagen */
+}
+
+.card3-m::before {
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692287368/da-paolo/pexels-vincent-rivaud-2471171_kdw4ov.jpg");
+  /* Cambia a la URL de tu tercera imagen */
+}
+
+.card4-m::before {
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692561229/da-paolo/pexels-isabella-mendes-338713_yon3pi.jpg");
+  /* Cambia a la URL de tu cuarta imagen */
+}
+.card-m-active::before {
+  opacity: 0;
+}
+.card-m-disabled::before {
+  opacity: 0;
+}
+
+.card-m-active {
+  width: 70%;
+  height: auto;
+}
+.card-m-active .cardp {
+  opacity: 1;
+  overflow: hidden;
+  max-height: none;
+  z-index: 1;
+}
+.card-m-active .verticalText {
+  margin-left: 0vh;
+  width: 10%;
+}
+.card-m-disabled {
+  width: 5%;
+  opacity: 1;
+}
+.card-m-disabled .verticalText {
+  margin-left: 0vh;
+  width: 100%;
+  z-index: 1;
+}
+
+.verticalText {
+  margin-left: 3vh;
+  padding-top: 5vh;
+  writing-mode: vertical-rl; /* Cambia el modo de escritura vertical */
+  text-orientation: mixed; /* Permite que las letras estén orientadas correctamente */
+  /* Rota el texto 180 grados */
+  align-items: center;
+  font-size: 4vw;
+  color:rgb(232, 232, 232);
+  z-index: 1;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.cardp {
+  color: rgb(255, 255, 255);
+  font-size: 3vw;
+  opacity: 0;
+  overflow: hidden;
+  display: block;
+  max-height: 50vh;
+  z-index: 1;
+  position: relative;
+}
+.xbutton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgb(225, 225, 225);
+  z-index: 2;
+  background-color: rgba(183, 41, 41, 0);
+  border: none;
 }
 
 .footer {

@@ -10,52 +10,60 @@ export default function Menu() {
   const [currentCard, setCurrentCard] = useState(null);
 
   const handleCard = (e) => {
-    const cardId = e.target.id;
+    const cardId = e.currentTarget.id; // Usa currentTarget en lugar de target
     setCurrentCard(cardId);
   };
 
+  useEffect(() => {
+    const container = document.querySelector(".card-container");
+    const handleClick = (e) => {
+      if (e.target.classList.contains("card-m")) {
+        handleCard(e);
+      }
+    };
+    container.addEventListener("click", handleClick);
+    return () => {
+      container.removeEventListener("click", handleClick);
+    };
+  }, []); // Agrega una dependencia vacía para asegurar que el efecto se ejecute solo una vez
+
   const getCardClassName = (cardId) => {
+    let cardSpecificClass = "";
+  
+    if (cardId === "card1") {
+      cardSpecificClass = "card1-m";
+    } else if (cardId === "card2") {
+      cardSpecificClass = "card2-m";
+    } else if (cardId === "card3") {
+      cardSpecificClass = "card3-m";
+    } else if (cardId === "card4") {
+      cardSpecificClass = "card4-m";
+    }
+  
     if (currentCard === cardId) {
-      return "card-m card-m-active";
+      return `card-m card-m-active row ${cardSpecificClass}`;
     } else if (currentCard === null) {
-      return "card-m";
+      return `card-m px-0 d-flex ${cardSpecificClass}`;
     } else {
-      return "card-m card-m-disabled";
+      return `card-m card-m-disabled ${cardSpecificClass}`;
     }
   };
-
-  const handleReset = () => {
-    setCurrentCard(null);
-  };
-
-  // const mycards = document.querySelectorAll(".card-m");
-  // mycards.forEach(card => {
-  //   card.addEventListener("click", handleCard);
-  // });
-
-  const mycards = document.querySelectorAll(".card-m");
-
-  mycards.forEach((card) => {
-    card.addEventListener("click", (e) => {
-      handleCard(e);
-    });
-  });
 
   useEffect(() => {
     const mainElement = document.querySelector("main");
     const handleScroll = () => {};
     mainElement.addEventListener("scroll", handleScroll);
-
     return () => {
       mainElement.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <main className="wrapper-m">
       <div id="header" className="header-m flex-column">
         <Image
           src={pizza}
-          layout="responsive"
+          layout="fill"
           objectFit="cover"
           quality={100}
           className="header-img-m"
@@ -71,50 +79,64 @@ export default function Menu() {
             We invite you to explore our diverse menu and immerse yourself in an
             unforgettable culinary experience.
           </div>
-          <button
-            onClick={() => {
-              handleReset();
-            }}
-          >
-            ILLOOO
-          </button>
+         
         </h2>
       </div>
-      <div className="section2-m row col-12 mx-0 justify-content-between">
+      <div
+        className={`section2-m row col-12 mx-0 card-container ${
+          currentCard !== null ? "goblack" : "gored"
+        }`}
+      >
         <div
           className={getCardClassName("card1")}
           id="card1"
           onClick={handleCard}
         >
-          Card 1
+          <h1 className="verticalText col-2 px-0"> Breakfast</h1>
+          <div className="col-9 px-0">
+            <div className="cardp">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation(); // Evita que el evento se propague hacia arriba
+                  setCurrentCard(null);
+                }}
+                className="xbutton"
+              >
+                X
+              </button>
+              hola
+            </div>
+          </div>
         </div>
         <div
           className={getCardClassName("card2")}
           id="card2"
           onClick={handleCard}
         >
-          Card 2
+          <h1 className="verticalText col-2 px-0"> Dishes</h1>
+          <div className="col-9 px-0">
+            <p className="cardp">hola</p>
+          </div>
         </div>
         <div
           className={getCardClassName("card3")}
           id="card3"
           onClick={handleCard}
         >
-          Card 3
+          <h1 className="verticalText col-2 px-0"> Pizza</h1>
+          <div className="col-9 px-0">
+            <p className="cardp">hola</p>
+          </div>
         </div>
         <div
           className={getCardClassName("card4")}
           id="card4"
           onClick={handleCard}
         >
-          Card 4
-        </div>
-        <div
-          className={getCardClassName("card5")}
-          id="card5"
-          onClick={handleCard}
-        >
-          Card 5
+          <h1 className="verticalText col-2 px-0"> Cocktail</h1>
+          <div className="col-9 px-0">
+            <p className="cardp">hola</p>
+          </div>
         </div>
       </div>
       <div className="parallax-container2">

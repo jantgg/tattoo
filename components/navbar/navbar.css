@@ -3,6 +3,7 @@
 }
 .hided {
   opacity: 0;
+  display: none;
 }
 .mynav {
   position: fixed !important;
