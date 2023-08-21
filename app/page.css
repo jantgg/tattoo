@@ -16,6 +16,14 @@ body {
   transform-style: preserve-3d;
   z-index: -1;
 }
+.header-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transform: translateZ(-10px) scale(2.01);
+}
 .parallax-container {
   height: 35vw;
   position: relative;
@@ -27,7 +35,7 @@ body {
 }
 .interlude-img {
   position: absolute;
-  height: 120% !important;
+  height: 180% !important;
   width: 100%;
   object-fit: cover;
   z-index: -1;
@@ -52,14 +60,7 @@ body {
   transform: translateZ(-5px) scale(1.51);
   filter: grayscale(0.4);
 }
-.header-img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: -1;
-  transform: translateZ(-10px) scale(2.01);
-}
+
 .interlude-tittle {
   margin-top: 7vh;
   color: rgb(183, 41, 41);
@@ -237,21 +238,7 @@ body {
   background-position: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
   transform: rotate(-90deg);
-} /*
-.card2 {
-  height: 45vh;
-  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692287368/da-paolo/pexels-vincent-rivaud-2471171_kdw4ov.jpg");
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
 }
-.card3 {
-  height: 45vh;
-  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692287422/da-paolo/pexels-samed-bayrak-16148537_svlweh.jpg");
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
-} */
 .card-tittles {
   text-align: center;
   margin-top: 4%;
@@ -301,9 +288,6 @@ body {
   opacity: 0;
 }
 .section3 {
-  /* background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692306481/da-paolo/fondito_nenpzu.jpg");
-  background-size: cover; 
-  background-position: center;*/
   background-color: rgb(183, 41, 41);
   margin-top: 10vh;
   width: 100%;

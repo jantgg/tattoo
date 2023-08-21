@@ -4,6 +4,7 @@ import Image from "next/image";
 import "./menu.css";
 import pizza from "images/tabla.jpg";
 import masa from "images/masa.jpg";
+import Menu1 from "components/menu1/menu1.js";
 import { useEffect, useState } from "react";
 
 export default function Menu() {
@@ -29,7 +30,7 @@ export default function Menu() {
 
   const getCardClassName = (cardId) => {
     let cardSpecificClass = "";
-  
+
     if (cardId === "card1") {
       cardSpecificClass = "card1-m";
     } else if (cardId === "card2") {
@@ -39,7 +40,7 @@ export default function Menu() {
     } else if (cardId === "card4") {
       cardSpecificClass = "card4-m";
     }
-  
+
     if (currentCard === cardId) {
       return `card-m card-m-active row ${cardSpecificClass}`;
     } else if (currentCard === null) {
@@ -79,7 +80,6 @@ export default function Menu() {
             We invite you to explore our diverse menu and immerse yourself in an
             unforgettable culinary experience.
           </div>
-         
         </h2>
       </div>
       <div
@@ -94,8 +94,7 @@ export default function Menu() {
         >
           <h1 className="verticalText col-2 px-0"> Breakfast</h1>
           <div className="col-9 px-0">
-            <div className="cardp">
-              <button
+          <button
                 onClick={(e) => {
                   e.stopPropagation(); // Evita que el evento se propague hacia arriba
                   setCurrentCard(null);
@@ -104,8 +103,7 @@ export default function Menu() {
               >
                 X
               </button>
-              hola
-            </div>
+          <div className="cardp"><Menu1/></div>
           </div>
         </div>
         <div
@@ -115,7 +113,16 @@ export default function Menu() {
         >
           <h1 className="verticalText col-2 px-0"> Dishes</h1>
           <div className="col-9 px-0">
-            <p className="cardp">hola</p>
+             <button
+                onClick={(e) => {
+                  e.stopPropagation(); // Evita que el evento se propague hacia arriba
+                  setCurrentCard(null);
+                }}
+                className="xbutton"
+              >
+                X
+              </button>
+            <div className="cardp"><Menu1/></div>
           </div>
         </div>
         <div
@@ -125,7 +132,16 @@ export default function Menu() {
         >
           <h1 className="verticalText col-2 px-0"> Pizza</h1>
           <div className="col-9 px-0">
-            <p className="cardp">hola</p>
+             <button
+                onClick={(e) => {
+                  e.stopPropagation(); // Evita que el evento se propague hacia arriba
+                  setCurrentCard(null);
+                }}
+                className="xbutton"
+              >
+                X
+              </button>
+          <div className="cardp"><Menu1/></div>
           </div>
         </div>
         <div
@@ -135,7 +151,16 @@ export default function Menu() {
         >
           <h1 className="verticalText col-2 px-0"> Cocktail</h1>
           <div className="col-9 px-0">
-            <p className="cardp">hola</p>
+             <button
+                onClick={(e) => {
+                  e.stopPropagation(); // Evita que el evento se propague hacia arriba
+                  setCurrentCard(null);
+                }}
+                className="xbutton"
+              >
+                X
+              </button>
+          <div className="cardp"><Menu1/></div>
           </div>
         </div>
       </div>
@@ -153,15 +178,13 @@ export default function Menu() {
           <h1 className="interlude-tittle-2">
             Indulge in a culinary experience like no other
           </h1>
+          
         </div>
       </div>
-      <div className="footer">
-        <h2 className="interlude-text">
-          "Discover a waterfront haven in Puerto Banús, where Mediterranean
-          shores marries classic Mediterranean flavors with an exclusive terrace
-          experience." - Chief.
-        </h2>
-      </div>
+      <div className="footer"><h2 className="interlude-text">
+            "Discover a waterfront haven in Puerto Banús, where Mediterranean shores marries classic Mediterranean flavors with an exclusive
+            terrace experience." - Chief.
+          </h2></div>
     </main>
   );
 }

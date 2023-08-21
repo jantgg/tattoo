@@ -2,9 +2,9 @@
   
     --font-lato: 'Lato', sans-serif;
   }
-  
-
-     
+body{
+  cursor:default;
+}
  p {
     font-family: var(--font-lato);
   }

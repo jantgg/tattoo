@@ -68,32 +68,6 @@ export default function Home() {
             </a>
           </div>
         </div>
-
-        {/* <div className="col-2 decoleft"></div> */}
-        {/* <div className="col-3 card1 px-0">
-          <h2 className="card-tittles mx-auto">
-            <Link href="/menu" className="no-deco text-black ">
-              Dishes
-            </Link>
-          </h2>
-        </div>
-        <div className="col-3 card2 px-0">
-          <h2 className="card-tittles mx-auto">
-            {" "}
-            <Link href="/menu" className="no-deco text-black">
-              Pizza
-            </Link>
-          </h2>
-        </div>
-        <div className="col-3 card3 px-0">
-          <h2 className="card-tittles mx-auto">
-            {" "}
-            <Link href="/menu" className="no-deco text-black">
-              Cocktail
-            </Link>
-          </h2>
-        </div> */}
-        {/* <div className="col-2 decoright"></div> */}
       </div>
       <div className="parallax-container">
         <Image

@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useState, useNavigate } from "react";
+import React, { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation'
 import Link from "next/link";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -8,6 +9,7 @@ import "./navbar.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default function Navbar({scrollPosition}) {
+  const router = useRouter()
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1000);
   const [isInView, setIsInView] = useState(scrollPosition < 200);
   const [scrollDirection, setScrollDirection] = useState("up");
@@ -81,7 +83,7 @@ export default function Navbar({scrollPosition}) {
             href="/"
             className={`navbar-tittle mx-auto text-black no-deco${
               isDesktop ? " ms-5" : " ms-2"
-            } ${isInView ? "hided " : ""}`}
+            } ${isInView ? " text-white line" : "  text-black line2"}`}
             onClick={() => {
               scrollToTop();
             }}
@@ -107,19 +109,19 @@ export default function Navbar({scrollPosition}) {
              
 
               <div className="nav-item">
-                <Link
-                  href="/menu"
+                <div
+                  // href="/menu"
                   className={`nav-link mx-2 me-5 px-2   ${
                     selected === 1 && ""
                   } ${isInView ? " text-white line" : "  text-black line2"}`}
-                  onClick={() => {}}
+                  onClick={() => router.push('/menu')}
                 >
                   Menu
-                </Link>
+                </div>
               </div>
               <div className="nav-item">
                 <Link
-                  href="/services"
+                  href="/location"
                   className={`nav-link  mx-2 me-5 px-2  ${
                     selected === 2 && ""
                   } ${isInView ? " text-white line" : "  text-black line2"}`}
