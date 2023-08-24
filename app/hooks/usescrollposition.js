@@ -1,21 +1,23 @@
-"use client"
+"use client";
 import { useState, useEffect } from 'react';
 
 const useScrollPosition = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  const handleScroll = () => {
-    const mainElement = document.querySelector("main");
-    const currentScrollPos = mainElement.scrollTop;
-    setScrollPosition(currentScrollPos);
-  };
-
   useEffect(() => {
-    const mainElement = document.querySelector("main");
-    mainElement.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const mainElement = document.querySelector('main'); // Ajusta el selector según tu estructura
+      if (mainElement) {
+        const currentScrollPos = mainElement.scrollTop;
+        setScrollPosition(currentScrollPos);
+      }
+    };
+
+    const mainElement = document.querySelector('main'); // Ajusta el selector según tu estructura
+    mainElement.addEventListener('scroll', handleScroll);
 
     return () => {
-      mainElement.removeEventListener("scroll", handleScroll);
+      mainElement.removeEventListener('scroll', handleScroll);
     };
   }, []);
 

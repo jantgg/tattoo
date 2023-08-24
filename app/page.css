@@ -8,7 +8,7 @@ body {
   perspective: 10px;
 }
 .header {
-  height: 110%;
+  height: 120%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -25,7 +25,9 @@ body {
   transform: translateZ(-10px) scale(2.01);
 }
 .parallax-container {
-  height: 35vw;
+  margin-top: -10vh;
+  margin-bottom: -10vh;
+  height: 80%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -34,16 +36,18 @@ body {
   z-index: -1;
 }
 .interlude-img {
-  position: absolute;
-  height: 180% !important;
-  width: 100%;
-  object-fit: cover;
+  position: absolute !important;
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover !important;
   z-index: -1;
   transform: translateZ(-5px) scale(1.51);
   filter: grayscale(0.4);
 }
 .parallax-container2 {
-  height: 60vh;
+  margin-top: -10vh;
+  margin-bottom: -10vh;
+  height: 80%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -52,10 +56,10 @@ body {
   z-index: -1;
 }
 .interlude2-img {
-  position: absolute;
-  height: 120% !important;
-  width: 100%;
-  object-fit: cover;
+  position: absolute !important;
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover !important;
   z-index: -1;
   transform: translateZ(-5px) scale(1.51);
   filter: grayscale(0.4);
@@ -83,7 +87,6 @@ body {
   padding-top: 1vh;
   padding-bottom: 1vh;
   text-align: center;
-
 }
 .interlude-text {
   margin-top: 1vh;
@@ -100,14 +103,14 @@ body {
   color: rgb(183, 41, 41);
   font-size: 12vw !important;
   font-weight: 900;
-   text-shadow: 0 0 10px rgb(0, 0, 0);
+  text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .header-h2 {
   color: rgb(183, 41, 41);
   font-size: 2vw !important;
   font-weight: 900;
   text-align: center;
-   text-shadow: 0 0 10px rgb(0, 0, 0);
+  text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .section1 {
   position: relative;
@@ -174,35 +177,30 @@ body {
   background-color: rgb(222, 222, 222);
   font-weight: 600;
   font-size: 1.5vw;
-  transition: transform 0.3s ease-in-out; 
+  transition: transform 0.3s ease-in-out;
 }
 .button:hover {
   box-shadow: 0 0 10px rgb(0, 0, 0);
-  transform: translateX(17px); 
+  transform: translateX(17px);
   color: rgb(227, 227, 227);
   border: 3px solid rgb(224, 224, 224);
   background-color: rgba(21, 21, 21, 0.851);
 }
 .section2 {
   background-color: rgb(183, 41, 41) !important;
-  justify-content: space-evenly;
-  background-color: white;
-  height: auto;
+  height: 80vh
+
+}
+.section2-inner{
+  margin-top: -5vh;
+  margin-bottom: -5vh;
 }
 .section2-bg {
-  background-color: rgb(183, 41, 41);
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-top: 10vh;
 }
-
-/* .top-deco {
-  margin-bottom: 2vh;
-  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692305511/da-paolo/top_szg3aj.png");
-  background-size: cover;
-  background-position: center;
-  height: 5vh;
-  opacity: 0.6;
-} */
+.relative {
+  position: relative;
+}
 .section2 h1 {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -232,12 +230,13 @@ body {
 }
 
 .card1 {
-  height: 70vh;
+  height: 100%;
+  width: 80% !important;
   background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692393460/pexels-natasha-filippovskaya-4394612_z1lpab_duhxsx.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
-  transform: rotate(-90deg);
+
 }
 .card-tittles {
   text-align: center;
@@ -289,7 +288,6 @@ body {
 }
 .section3 {
   background-color: rgb(183, 41, 41);
-  margin-top: 10vh;
   width: 100%;
   z-index: 3;
 }
@@ -367,13 +365,12 @@ body {
   height: 50vh;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
 }
-.footer{
+.footer {
   background-color: rgb(183, 41, 41);
-  height: 25vh;
+  height: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 /* Enable hover only on non-touch devices */

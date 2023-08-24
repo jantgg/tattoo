@@ -1,6 +1,9 @@
 "use client";
 import React, { useState, useRef } from "react";
 import "./slider.css";
+import AnimatedDivUp from "../animateddiv/animateddivup.js";
+import AnimatedDivLeft from "../animateddiv/animateddivleft.js";
+import AnimatedDivRight from "../animateddiv/animateddivright.js";
 
 //<SliderM data={bikesResults} groupSize={1} />
 
@@ -60,51 +63,81 @@ export default function Slider() {
           {" "}
           {currentIndex === 0 ? (
             <>
-              <h1>Get to know us</h1>
-              <p>
-                Welcome to our exquisite Italian restaurant nestled in the heart
-                of Puerto Banús, where the charm of Mediterranean <strong>flavors comes
-                alive.</strong> As the <strong>only establishment with coveted outdoor
-                space</strong> , we invite you to savor every bite while enjoying the
-                gentle sea breeze and the rhythmic symphony of the marina. It's
-                an experience that <strong>elevates dining</strong> to a new level of delight.
-              </p>
-              <a href="/reserve" className="button-slider">
-              Location &#x27A1;
-            </a>
+              <AnimatedDivUp>
+                {" "}
+                <h1>Get to know us</h1>
+              </AnimatedDivUp>
+              <AnimatedDivUp>
+                {" "}
+                <p>
+                  Welcome to our exquisite Italian restaurant nestled in the
+                  heart of Puerto Banús, where the charm of Mediterranean{" "}
+                  <strong>flavors comes alive.</strong> As the{" "}
+                  <strong>only establishment with coveted outdoor space</strong>{" "}
+                  , we invite you to savor every bite while enjoying the gentle
+                  sea breeze and the rhythmic symphony of the marina. It's an
+                  experience that <strong>elevates dining</strong> to a new
+                  level of delight.
+                </p>
+              </AnimatedDivUp>
+              <AnimatedDivUp>
+                <a href="/reserve" className="button-slider">
+                  Location &#x27A1;
+                </a>
+              </AnimatedDivUp>
             </>
           ) : currentIndex === 1 ? (
             <>
-              <h1>Time-honored classics with a modern twist</h1>
-              <p>
-                Indulge in a curated collection of <strong>classic Mediterranean dishes </strong>
-                 that have been lovingly crafted by our <strong>talented chefs.</strong> Each
-                plate tells a story of <strong>time-honored recipes,</strong> handed down through
-                generations, and infused with a touch of modern creativity. Our
-                menu is a celebration of <strong>flavors, textures,</strong> and <strong>aromas</strong> that
-                transport you to the sun-drenched shores of Italy.
-              </p>
-              <a href="/reserve" className="button-slider">
-             Menu &#x27A1;
-            </a>
+              <AnimatedDivUp>
+                {" "}
+                <h1>Time-honored classics with a modern twist</h1>
+              </AnimatedDivUp>
+              <AnimatedDivUp>
+                {" "}
+                <p>
+                  Indulge in a curated collection of{" "}
+                  <strong>classic Mediterranean dishes </strong>
+                  that have been lovingly crafted by our{" "}
+                  <strong>talented chefs.</strong> Each plate tells a story of{" "}
+                  <strong>time-honored recipes,</strong> handed down through
+                  generations, and infused with a touch of modern creativity.
+                  Our menu is a celebration of{" "}
+                  <strong>flavors, textures,</strong> and{" "}
+                  <strong>aromas</strong> that transport you to the sun-drenched
+                  shores of Italy.
+                </p>
+              </AnimatedDivUp>
+              <AnimatedDivUp>
+                <a href="/reserve" className="button-slider">
+                  Menu &#x27A1;
+                </a>
+              </AnimatedDivUp>
             </>
           ) : currentIndex === 2 ? (
             <>
-              <h1>Inviting ambiance for every occasion</h1>
-              <p>
-                Whether you're seeking an intimate dinner for two or a joyous
-                gathering with friends, our restaurant offers a <strong>warm</strong> and
-                <strong> inviting atmosphere</strong> that effortlessly complements the beauty of
-                its surroundings. Join us to embark on a <strong>culinary voyage</strong> that
-                connects your heart to the Mediterranean soul, where every
-                moment is a <strong>celebration of la dolce vita.</strong>
-              </p>
-              
-            {" "}
-            <a href="/reserve" className="button-slider">
-              Reservations &#x27A1;
-            </a>
-      
+              <AnimatedDivUp>
+                {" "}
+                <h1>Inviting ambiance for every occasion</h1>
+              </AnimatedDivUp>
+              <AnimatedDivUp>
+                {" "}
+                <p>
+                  Whether you're seeking an intimate dinner for two or a joyous
+                  gathering with friends, our restaurant offers a{" "}
+                  <strong>warm</strong> and
+                  <strong> inviting atmosphere</strong> that effortlessly
+                  complements the beauty of its surroundings. Join us to embark
+                  on a <strong>culinary voyage</strong> that connects your heart
+                  to the Mediterranean soul, where every moment is a{" "}
+                  <strong>celebration of la dolce vita.</strong>
+                </p>{" "}
+              </AnimatedDivUp>
+              <AnimatedDivUp>
+                {" "}
+                <a href="/reserve" className="button-slider">
+                  Reservations &#x27A1;
+                </a>
+              </AnimatedDivUp>
             </>
           ) : null}
         </div>
@@ -129,14 +162,23 @@ export default function Slider() {
           </button>
         </div>
       </div>
-      <div className="col-6 d-flex">
+      <div className="col-6">
         {" "}
         {currentIndex === 0 ? (
-          <div className="col-11 img-slider-1 mx-auto"> </div>
+          <AnimatedDivRight>
+            {" "}
+            <div className="col-11 img-slider-1 mx-auto"> </div>
+          </AnimatedDivRight>
         ) : currentIndex === 1 ? (
-          <div className="col-11 img-slider-2 mx-auto"> </div>
+          <AnimatedDivRight>
+            {" "}
+            <div className="col-11 img-slider-2 mx-auto"> </div>
+          </AnimatedDivRight>
         ) : currentIndex === 2 ? (
-          <div className="col-11 img-slider-3 mx-auto"> </div>
+          <AnimatedDivRight>
+            {" "}
+            <div className="col-11 img-slider-3 mx-auto"> </div>
+          </AnimatedDivRight>
         ) : null}
       </div>
     </div>

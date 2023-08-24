@@ -6,9 +6,15 @@ import pizza from "images/tabla.jpg";
 import masa from "images/masa.jpg";
 import Menu1 from "components/menu1/menu1.js";
 import { useEffect, useState } from "react";
+import useScrollPosition from "../hooks/usescrollposition.js";
 
 export default function Menu() {
   const [currentCard, setCurrentCard] = useState(null);
+  const scrollPosition = useScrollPosition();
+
+  useEffect(() => {
+    // Lógica específica para Page1 que se ejecutará cuando cambie la posición del scroll
+  }, [scrollPosition]);
 
   const handleCard = (e) => {
     const cardId = e.currentTarget.id; // Usa currentTarget en lugar de target
@@ -50,15 +56,6 @@ export default function Menu() {
     }
   };
 
-  useEffect(() => {
-    const mainElement = document.querySelector("main");
-    const handleScroll = () => {};
-    mainElement.addEventListener("scroll", handleScroll);
-    return () => {
-      mainElement.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <main className="wrapper-m">
       <div id="header" className="header-m flex-column">
@@ -94,16 +91,18 @@ export default function Menu() {
         >
           <h1 className="verticalText col-2 px-0"> Breakfast</h1>
           <div className="col-9 px-0">
-          <button
-                onClick={(e) => {
-                  e.stopPropagation(); // Evita que el evento se propague hacia arriba
-                  setCurrentCard(null);
-                }}
-                className="xbutton"
-              >
-                X
-              </button>
-          <div className="cardp"><Menu1/></div>
+            <button
+              onClick={(e) => {
+                e.stopPropagation(); // Evita que el evento se propague hacia arriba
+                setCurrentCard(null);
+              }}
+              className="xbutton"
+            >
+              X
+            </button>
+            <div className="cardp">
+              <Menu1 />
+            </div>
           </div>
         </div>
         <div
@@ -113,16 +112,18 @@ export default function Menu() {
         >
           <h1 className="verticalText col-2 px-0"> Dishes</h1>
           <div className="col-9 px-0">
-             <button
-                onClick={(e) => {
-                  e.stopPropagation(); // Evita que el evento se propague hacia arriba
-                  setCurrentCard(null);
-                }}
-                className="xbutton"
-              >
-                X
-              </button>
-            <div className="cardp"><Menu1/></div>
+            <button
+              onClick={(e) => {
+                e.stopPropagation(); // Evita que el evento se propague hacia arriba
+                setCurrentCard(null);
+              }}
+              className="xbutton"
+            >
+              X
+            </button>
+            <div className="cardp">
+              <Menu1 />
+            </div>
           </div>
         </div>
         <div
@@ -132,16 +133,18 @@ export default function Menu() {
         >
           <h1 className="verticalText col-2 px-0"> Pizza</h1>
           <div className="col-9 px-0">
-             <button
-                onClick={(e) => {
-                  e.stopPropagation(); // Evita que el evento se propague hacia arriba
-                  setCurrentCard(null);
-                }}
-                className="xbutton"
-              >
-                X
-              </button>
-          <div className="cardp"><Menu1/></div>
+            <button
+              onClick={(e) => {
+                e.stopPropagation(); // Evita que el evento se propague hacia arriba
+                setCurrentCard(null);
+              }}
+              className="xbutton"
+            >
+              X
+            </button>
+            <div className="cardp">
+              <Menu1 />
+            </div>
           </div>
         </div>
         <div
@@ -151,26 +154,28 @@ export default function Menu() {
         >
           <h1 className="verticalText col-2 px-0"> Cocktail</h1>
           <div className="col-9 px-0">
-             <button
-                onClick={(e) => {
-                  e.stopPropagation(); // Evita que el evento se propague hacia arriba
-                  setCurrentCard(null);
-                }}
-                className="xbutton"
-              >
-                X
-              </button>
-          <div className="cardp"><Menu1/></div>
+            <button
+              onClick={(e) => {
+                e.stopPropagation(); // Evita que el evento se propague hacia arriba
+                setCurrentCard(null);
+              }}
+              className="xbutton"
+            >
+              X
+            </button>
+            <div className="cardp">
+              <Menu1 />
+            </div>
           </div>
         </div>
       </div>
       <div className="parallax-container2">
         <Image
           src={masa}
-          layout="responsive"
+          layout="fill"
           objectFit="cover"
-          quality={100}
-          className="interlude2-img"
+          quality={80}
+          className=""
           alt="man knead dough"
         />
         <div className="col-12 flex-cloumn">
@@ -178,13 +183,16 @@ export default function Menu() {
           <h1 className="interlude-tittle-2">
             Indulge in a culinary experience like no other
           </h1>
-          
         </div>
       </div>
-      <div className="footer"><h2 className="interlude-text">
-            "Discover a waterfront haven in Puerto Banús, where Mediterranean shores marries classic Mediterranean flavors with an exclusive
-            terrace experience." - Chief.
-          </h2></div>
+      <div className="footer">
+        <h2 className="interlude-text">
+          "Discover a waterfront haven in Puerto Banús, where Mediterranean
+          shores marries classic Mediterranean flavors with an exclusive terrace
+          experience." - Chief.
+        </h2>
+       
+      </div>
     </main>
   );
 }

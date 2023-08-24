@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.css";
 export default function Navbar({scrollPosition}) {
   const router = useRouter()
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1000);
-  const [isInView, setIsInView] = useState(scrollPosition < 200);
+  const [isInView, setIsInView] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("up");
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [selected, setSelected] = useState(null);
@@ -79,7 +79,7 @@ export default function Navbar({scrollPosition}) {
         `}
       >
         <div className={`container-fluid  ${isInView ? "col-11" : "col-12"}`}>
-          <Link
+          <a
             href="/"
             className={`navbar-tittle mx-auto text-black no-deco${
               isDesktop ? " ms-5" : " ms-2"
@@ -89,7 +89,7 @@ export default function Navbar({scrollPosition}) {
             }}
           >
             Da Paolo
-          </Link>
+          </a>
           <div></div>
           <button
             className={`navbar-toggler  toggle-color-black ${
@@ -109,18 +109,20 @@ export default function Navbar({scrollPosition}) {
              
 
               <div className="nav-item">
-                <div
-                  // href="/menu"
+                <a
+                  href="/menu"
                   className={`nav-link mx-2 me-5 px-2   ${
                     selected === 1 && ""
                   } ${isInView ? " text-white line" : "  text-black line2"}`}
-                  onClick={() => router.push('/menu')}
+                  // onClick={() => {
+                  //   scrollToTop();
+                  // }}
                 >
                   Menu
-                </div>
+                </a>
               </div>
               <div className="nav-item">
-                <Link
+                <a
                   href="/location"
                   className={`nav-link  mx-2 me-5 px-2  ${
                     selected === 2 && ""
@@ -128,10 +130,10 @@ export default function Navbar({scrollPosition}) {
                   onClick={() => scrollToBottom()}
                 >
                   Where are we?
-                </Link>
+                </a>
               </div>
               <div className="nav-item">
-                <Link
+                <a
                   href="/services"
                   className={`nav-link  mx-2 me-5 px-2  ${
                     selected === 2 && ""
@@ -139,10 +141,10 @@ export default function Navbar({scrollPosition}) {
                   onClick={() => scrollToBottom()}
                 >
                   Reservations
-                </Link>
+                </a>
               </div>
               <div className="nav-item ">
-                <Link
+                <a
                   href="/about"
                   className={`nav-link mx-2 me-5 px-2   ${
                     selected === 0 && ""
@@ -150,7 +152,7 @@ export default function Navbar({scrollPosition}) {
                   onClick={() => {}}
                 >
                   About
-                </Link>
+                </a>
               </div>
             </ul>
           </div>

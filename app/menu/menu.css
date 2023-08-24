@@ -35,22 +35,17 @@ body {
   z-index: -1;
 }
 .parallax-container2 {
-  height: 60vh;
+  height: 40vh;
   position: relative;
+  z-index: 1;
+ background-image: url('https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692880014/da-paolo/pexels-skyler-ewing-10009355_ow7ldu.jpg'); /* Ajusta la ruta de la imagen */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform-style: preserve-3d;
-  z-index: -1;
-}
-.interlude2-img {
-  position: absolute;
-  height: 120% !important;
-  width: 100%;
-  object-fit: cover;
-  z-index: -1;
-  transform: translateZ(-5px) scale(1.51);
-  filter: grayscale(0.4);
+
 }
 
 .header-tittle-m {
@@ -77,6 +72,7 @@ body {
   padding-top: 1vh;
   padding-bottom: 1vh;
   text-align: center;
+  z-index: 2;
 }
 .interlude-text {
   margin-top: 1vh;
@@ -118,6 +114,7 @@ body {
   position: relative;
   display: flex;
   transition: background-color 0.5s ease-in-out;
+  z-index: 2;
 }
 .gored {
   background-color: rgb(183, 41, 41) !important;

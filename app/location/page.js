@@ -5,17 +5,16 @@ import "./location.css";
 import pizza from "images/tabla.jpg";
 import masa from "images/masa.jpg";
 import { useEffect, useState } from "react";
+import useScrollPosition from "../hooks/usescrollposition.js";
 
 export default function Location() {
-  useEffect(() => {
-    const mainElement = document.querySelector("main");
-    const handleScroll = () => {};
-    mainElement.addEventListener("scroll", handleScroll);
-    return () => {
-      mainElement.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const scrollPosition = useScrollPosition();
 
+  useEffect(() => {
+    // Lógica específica para Page1 que se ejecutará cuando cambie la posición del scroll
+  }, [scrollPosition]);
+
+  
   return (
     <main className="wrapper-l">
     <div id="header" className="header-l flex-column">
