@@ -7,6 +7,7 @@ import masa from "images/masa.jpg";
 import Menu1 from "components/menu1/menu1.js";
 import { useEffect, useState } from "react";
 import useScrollPosition from "../hooks/usescrollposition.js";
+import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 
 export default function Menu() {
   const [currentCard, setCurrentCard] = useState(null);
@@ -61,8 +62,7 @@ export default function Menu() {
       <div id="header" className="header-m flex-column">
         <Image
           src={pizza}
-          layout="fill"
-          objectFit="cover"
+          fill
           quality={100}
           className="header-img-m"
           alt="marmoled background"
@@ -70,14 +70,16 @@ export default function Menu() {
           placeholder="blur"
           priority={true}
         />
-
-        <h1 className="header-tittle-m ">Discover our menu </h1>
-        <h2 className="header-h2-m col-12">
-          <div className="col-8 mx-auto">
-            We invite you to explore our diverse menu and immerse yourself in an
-            unforgettable culinary experience.
-          </div>
-        </h2>
+        <AnimatedDivUp>
+          {" "}
+          <h1 className="header-tittle-m ">Discover our menu </h1>
+          <h2 className="header-h2-m col-12">
+            <div className="col-8 mx-auto">
+              We invite you to explore our diverse menu and immerse yourself in
+              an unforgettable culinary experience.
+            </div>
+          </h2>
+        </AnimatedDivUp>
       </div>
       <div
         className={`section2-m row col-12 mx-0 card-container ${
@@ -172,17 +174,19 @@ export default function Menu() {
       <div className="parallax-container2">
         <Image
           src={masa}
-          layout="fill"
-          objectFit="cover"
+          fill
           quality={80}
-          className=""
+          className="img-m-2"
           alt="man knead dough"
         />
-        <div className="col-12 flex-cloumn">
+        <div className="col-12 flex-cloumn absolute">
           {" "}
-          <h1 className="interlude-tittle-2">
-            Indulge in a culinary experience like no other
-          </h1>
+          <AnimatedDivUp>
+            {" "}
+            <h1 className="interlude-tittle-2">
+              Indulge in a culinary experience like no other
+            </h1>
+          </AnimatedDivUp>
         </div>
       </div>
       <div className="footer">
@@ -191,7 +195,6 @@ export default function Menu() {
           shores marries classic Mediterranean flavors with an exclusive terrace
           experience." - Chief.
         </h2>
-       
       </div>
     </main>
   );

@@ -1,0 +1,21 @@
+.myrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.img {
+  margin: 1vh;
+  height: 20vh;
+  background-color: aqua;
+  border-radius: 4px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
+
+.img:hover {
+  opacity: 0.8;
+}

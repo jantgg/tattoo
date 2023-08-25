@@ -1,11 +1,13 @@
 "use client";
+import Image from "next/image";
 import React, { useState, useRef } from "react";
 import "./slider.css";
 import AnimatedDivUp from "../animateddiv/animateddivup.js";
 import AnimatedDivLeft from "../animateddiv/animateddivleft.js";
 import AnimatedDivRight from "../animateddiv/animateddivright.js";
-
-//<SliderM data={bikesResults} groupSize={1} />
+import dapaolo from "images/dapaolo.jpg";
+import pasta from "images/pasta.jpg";
+import people from "images/people.jpg";
 
 export default function Slider() {
   const data = [
@@ -42,8 +44,8 @@ export default function Slider() {
       setCurrentIndex(currentIndex + 1);
       setTimeout(() => {
         setIsVisible(true);
-      }, 5);
-    }, 2);
+      }, 120);
+    }, 120);
   };
 
   const handlePrevClick = () => {
@@ -52,13 +54,13 @@ export default function Slider() {
       setCurrentIndex(Math.max(currentIndex - 1, 0));
       setTimeout(() => {
         setIsVisible(true);
-      }, 5);
-    }, 2);
+      }, 120);
+    }, 120);
   };
 
   return (
-    <div className="row slider">
-      <div className="col-6 ">
+    <div className={`row slider col-12 px-0  ${isVisible ? "visible" : ""}`}>
+      <div className="col-6 px-0">
         <div className="text-side">
           {" "}
           {currentIndex === 0 ? (
@@ -70,17 +72,17 @@ export default function Slider() {
               <AnimatedDivUp>
                 {" "}
                 <p>
-                  Welcome to our exquisite Italian restaurant nestled in the
+                  Welcome to our exquisite Italian restaurant nested in the
                   heart of Puerto Banús, where the charm of Mediterranean{" "}
                   <strong>flavors comes alive.</strong> As the{" "}
                   <strong>only establishment with coveted outdoor space</strong>{" "}
                   , we invite you to savor every bite while enjoying the gentle
-                  sea breeze and the rhythmic symphony of the marina. It's an
+                  sea breeze and the rhythmic symphony of the marina. An
                   experience that <strong>elevates dining</strong> to a new
                   level of delight.
                 </p>
               </AnimatedDivUp>
-              <AnimatedDivUp>
+              <AnimatedDivUp classNameProps="col-6 me-auto">
                 <a href="/reserve" className="button-slider">
                   Location &#x27A1;
                 </a>
@@ -107,7 +109,7 @@ export default function Slider() {
                   shores of Italy.
                 </p>
               </AnimatedDivUp>
-              <AnimatedDivUp>
+              <AnimatedDivUp classNameProps="col-6 me-auto">
                 <a href="/reserve" className="button-slider">
                   Menu &#x27A1;
                 </a>
@@ -132,7 +134,7 @@ export default function Slider() {
                   <strong>celebration of la dolce vita.</strong>
                 </p>{" "}
               </AnimatedDivUp>
-              <AnimatedDivUp>
+              <AnimatedDivUp classNameProps="col-6 me-auto">
                 {" "}
                 <a href="/reserve" className="button-slider">
                   Reservations &#x27A1;
@@ -142,7 +144,7 @@ export default function Slider() {
           ) : null}
         </div>
 
-        <div className="col-12 btn-father mb-3">
+        <div className="col-12 btn-father">
           <button
             className={` boton-i  ${currentIndex === 0 ? " hide" : " "}`}
             onClick={handlePrevClick}
@@ -162,23 +164,33 @@ export default function Slider() {
           </button>
         </div>
       </div>
-      <div className="col-6">
+      <div className="col-6 relative px-0">
         {" "}
         {currentIndex === 0 ? (
-          <AnimatedDivRight>
-            {" "}
-            <div className="col-11 img-slider-1 mx-auto"> </div>
-          </AnimatedDivRight>
+          <Image
+            src={dapaolo}
+            fill
+            quality={100}
+            className="img-slider mx-auto"
+            alt="puerto banus image"
+          />
         ) : currentIndex === 1 ? (
-          <AnimatedDivRight>
-            {" "}
-            <div className="col-11 img-slider-2 mx-auto"> </div>
-          </AnimatedDivRight>
+          <Image
+            src={pasta}
+            fill
+
+            quality={100}
+            className="img-slider mx-auto"
+            alt="puerto banus image"
+          />
         ) : currentIndex === 2 ? (
-          <AnimatedDivRight>
-            {" "}
-            <div className="col-11 img-slider-3 mx-auto"> </div>
-          </AnimatedDivRight>
+          <Image
+            src={people}
+            fill
+            quality={100}
+            className="img-slider mx-auto"
+            alt="puerto banus image"
+          />
         ) : null}
       </div>
     </div>

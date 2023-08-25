@@ -58,7 +58,6 @@ export default function Navbar({scrollPosition}) {
 
 
     useEffect(() => {
-      console.log(scrollPosition);
       if (scrollPosition < 200) {
         setIsInView(true);
       } else {
@@ -102,7 +101,7 @@ export default function Navbar({scrollPosition}) {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i class="fa-solid fa-bars"></i>
+            <i className="fa-solid fa-bars"></i>
           </button>
           <div className=" collapse navbar-collapse " id="navbarNavDropdown">
             <ul className={`navbar-nav ms-auto ${isInView ? " " : " "}`}>
@@ -134,24 +133,24 @@ export default function Navbar({scrollPosition}) {
               </div>
               <div className="nav-item">
                 <a
-                  href="/services"
+                  href="/reservations"
                   className={`nav-link  mx-2 me-5 px-2  ${
                     selected === 2 && ""
                   } ${isInView ? " text-white line" : "  text-black line2"}`}
-                  onClick={() => scrollToBottom()}
+              
                 >
                   Reservations
                 </a>
               </div>
               <div className="nav-item ">
                 <a
-                  href="/about"
+                  href="/gallery"
                   className={`nav-link mx-2 me-5 px-2   ${
                     selected === 0 && ""
                   } ${isInView ? " text-white line" : "  text-black line2"}`}
                   onClick={() => {}}
                 >
-                  About
+                  Gallery
                 </a>
               </div>
             </ul>

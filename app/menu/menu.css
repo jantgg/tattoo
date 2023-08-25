@@ -8,7 +8,7 @@ body {
   perspective: 10px;
 }
 .header-m {
-  height: 80%;
+  height: 110%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -35,7 +35,7 @@ body {
   z-index: -1;
 }
 .parallax-container2 {
-  height: 40vh;
+  height: 60vh;
   position: relative;
   z-index: 1;
  background-image: url('https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692880014/da-paolo/pexels-skyler-ewing-10009355_ow7ldu.jpg'); /* Ajusta la ruta de la imagen */
@@ -45,7 +45,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+}
+.img-m-2{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.absolute{
+  position: absolute;
 }
 
 .header-tittle-m {
@@ -110,7 +119,7 @@ body {
   background-color: rgb(183, 41, 41);
   justify-content: space-evenly;
   background-color: white;
-  height: auto;
+  height: 60vh;
   position: relative;
   display: flex;
   transition: background-color 0.5s ease-in-out;

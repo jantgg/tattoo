@@ -28,11 +28,10 @@ export default function RootLayout({ children }) {
     <html lang="en" className={inter.className}>
       <head>
         <title>Da Paolo</title>
-        <description>The best restaurant in Puerto Banus</description>
         <meta name="description" content="The best restaurant in Puerto Banus and the only with terrace"></meta>
         <meta name="theme-color" content="red"></meta>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
           rel="stylesheet"

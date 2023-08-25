@@ -9,6 +9,7 @@ import useScrollPosition from "./hooks/usescrollposition.js";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import AnimatedDivLeft from "components/animateddiv/animateddivleft.js";
 import AnimatedDivRight from "components/animateddiv/animateddivright.js";
+import Gallery from "components/gallery/gallery.js";
 
 export default function Home() {
   const scrollPosition = useScrollPosition();
@@ -18,8 +19,7 @@ export default function Home() {
       <div id="header" className="header flex-column">
         <Image
           src={pizza}
-          layout="fill"
-          objectFit="cover"
+          fill
           quality={100}
           className="header-img"
           alt="marmoled background"
@@ -34,17 +34,14 @@ export default function Home() {
         <div className="section2-inner row col-12 px-0">
           {" "}
           <div className="col-6 relative">
-         
-              {" "}
-              <Image
-                src={madera}
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-                className="card1 mx-auto"
-                alt="puerto banus image"
-              />
-           
+            {" "}
+            <Image
+              src={madera}
+              fill
+              quality={100}
+              className="card1 mx-auto"
+              alt="puerto banus image"
+            />
           </div>
           <div className="col-6 flex-column section2-bg">
             {" "}
@@ -81,8 +78,8 @@ export default function Home() {
       <div className="parallax-container">
         <Image
           src={madera}
-          layout="fill"
-          objectFit="cover"
+          fill
+          sizes="100vw"
           quality={100}
           className="interlude-img"
           alt="puerto banus image"
@@ -95,14 +92,13 @@ export default function Home() {
           </h1>
         </AnimatedDivUp>
       </div>
-      <div className="section3 col-12">
+      <div className="section3 col-12 row px-0 mx-0">
         <Slider />
       </div>
       <div className="parallax-container2">
         <Image
           src={masa}
-          layout="responsive"
-          objectFit="cover"
+          fill
           quality={100}
           className="interlude2-img"
           alt="man knead dough"
@@ -126,6 +122,7 @@ export default function Home() {
             terrace experience." - Chief.
           </h2>
         </AnimatedDivUp>
+    
       </div>
     </main>
   );

@@ -1,21 +1,24 @@
 .slider {
-  height: auto;
+  height: 100%;
+  margin-top: -5vh !important;
+  margin-bottom: -5vh !important;
 }
 .slider h1 {
   padding-left: 5vw;
   padding-right: 2vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
   font-size: 3.5vw;
   font-weight: 900;
-  padding-bottom: 3vh;
   text-align: left;
-  color: rgb(26, 26, 26)
+  color: rgb(26, 26, 26);
 }
 .slider p {
   padding-left: 5vw;
   padding-right: 2vw;
+  padding-bottom: 1vh;
   text-align: left;
   font-weight: 500;
-  padding-bottom: 3vh;
   font-size: 1.5vw;
   color: rgb(222, 222, 222);
   line-height: 4.4rem;
@@ -27,6 +30,8 @@
 }
 .btn-father {
   text-align: right;
+  margin-bottom: 4rem !important;
+  z-index: 3;
 }
 .boton {
   background-color: rgba(0, 0, 0, 0);
@@ -43,29 +48,11 @@
 .hide {
   opacity: 0;
 }
-.img-slider-1 {
-  height: 70vh;
-  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692452581/da-paolo/da-paolo_a8vlnb_lzbanh.jpg");
-  background-size: cover;
-  background-position: center;
+.img-slider {
+  height: 100%;
+  width: 80% !important;
+  object-fit: cover !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
-  transform: rotate(-90deg) translateX(-5vh);
-}
-.img-slider-2 {
-  height: 70vh;
-  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692452534/da-paolo/pexels-monica-turlui-7218637_oksmgz_naidov.jpg");
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
-  transform: rotate(-90deg) translateX(-5vh);
-}
-.img-slider-3 {
-  height: 70vh;
-  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692452580/da-paolo/pexels-fauxels-3184193_fbdwn3_cvrffi.jpg");
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
-  transform: rotate(-90deg) translateX(-5vh);
 }
 .button-slider {
   display: inline-block;
@@ -84,8 +71,20 @@
 }
 .button-slider:hover {
   box-shadow: 0 0 10px rgb(0, 0, 0);
-  transform: translateX(17px); 
+  transform: translateX(17px);
   color: rgb(227, 227, 227);
   border: 3px solid rgb(224, 224, 224);
   background-color: rgb(26, 26, 26);
+}
+
+.slider {
+  transition: opacity 0.1s ease; /* Tiempo de transición y función de aceleración */
+}
+
+.visible {
+  opacity: 1;
+}
+
+.slider:not(.visible) {
+  opacity: 0;
 }

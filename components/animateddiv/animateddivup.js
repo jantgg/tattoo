@@ -5,7 +5,7 @@ import useScrollPosition from 'app/hooks/useScrollPosition';
 
 import "./animateddiv.css";
 
-const AnimatedDivUp = ({ children }) => {
+const AnimatedDivUp = ({ children, classNameProps }) => {
   const scrollPosition = useScrollPosition();
   const divRef = useRef(null);
 
@@ -15,14 +15,16 @@ const AnimatedDivUp = ({ children }) => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          gsap.to(entry.target, { className: 'animated-div-up entering-view-up' });
+          gsap.to(entry.target, { className: `animated-div-up entering-view-up ${classNameProps || ''}` });
           observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.8 });
+
     if (divElement) {
       observer.observe(divElement);
     }
+
     return () => {
       if (divElement) {
         observer.unobserve(divElement);
@@ -31,7 +33,7 @@ const AnimatedDivUp = ({ children }) => {
   }, []);
 
   return (
-    <div ref={divRef} className="animated-div-up">
+    <div ref={divRef} className={`animated-div-up ${classNameProps || ''}`}>
       {children}
     </div>
   );

@@ -230,6 +230,8 @@ body {
 }
 
 .card1 {
+  object-fit: cover;
+  object-position: center;
   height: 100%;
   width: 80% !important;
   background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692393460/pexels-natasha-filippovskaya-4394612_z1lpab_duhxsx.jpg");
@@ -288,10 +290,10 @@ body {
 }
 .section3 {
   background-color: rgb(183, 41, 41);
-  width: 100%;
-  z-index: 3;
+  height: auto;
+
 }
-.section3 h1 {
+/* .section3 h1 {
   text-align: center;
   font-weight: 900;
   padding-bottom: 3vh;
@@ -318,7 +320,7 @@ body {
 .sub-section3 {
   margin-top: 5vh;
   margin-bottom: 10vh;
-}
+} */
 
 .sub-text {
   padding-top: 1vh;
@@ -366,8 +368,8 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
 }
 .footer {
+  height: 31vh;
   background-color: rgb(183, 41, 41);
-  height: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
