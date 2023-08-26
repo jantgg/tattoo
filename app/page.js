@@ -9,7 +9,7 @@ import useScrollPosition from "./hooks/usescrollposition.js";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import AnimatedDivLeft from "components/animateddiv/animateddivleft.js";
 import AnimatedDivRight from "components/animateddiv/animateddivright.js";
-import Gallery from "components/gallery/gallery.js";
+
 
 export default function Home() {
   const scrollPosition = useScrollPosition();

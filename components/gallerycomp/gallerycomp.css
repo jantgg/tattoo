@@ -1,0 +1,39 @@
+.myrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.gallery{
+  height: 70vh;
+}
+.main-img-container{
+  height: 50vh;
+  position: relative;
+}
+.main-img{
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+}
+
+.all-img-container{
+  height: auto;
+}
+
+.img {
+  margin: 1vh;
+  height: 20vh;
+  border-radius: 4px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+  transition: transform 0.3s ease;
+}
+
+.img:hover {
+  transform: translateY(-1vh);
+  opacity: 0.8;
+}
