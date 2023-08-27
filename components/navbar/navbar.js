@@ -113,9 +113,7 @@ export default function Navbar({scrollPosition}) {
                   className={`nav-link mx-2 me-5 px-2   ${
                     selected === 1 && ""
                   } ${isInView ? " text-white line" : "  text-black line2"}`}
-                  // onClick={() => {
-                  //   scrollToTop();
-                  // }}
+             
                 >
                   Menu
                 </a>
@@ -126,7 +124,7 @@ export default function Navbar({scrollPosition}) {
                   className={`nav-link  mx-2 me-5 px-2  ${
                     selected === 2 && ""
                   } ${isInView ? " text-white line" : "  text-black line2"}`}
-                  onClick={() => scrollToBottom()}
+                  
                 >
                   Where are we?
                 </a>
@@ -148,7 +146,7 @@ export default function Navbar({scrollPosition}) {
                   className={`nav-link mx-2 me-5 px-2   ${
                     selected === 0 && ""
                   } ${isInView ? " text-white line" : "  text-black line2"}`}
-                  onClick={() => {}}
+              
                 >
                   Gallery
                 </a>

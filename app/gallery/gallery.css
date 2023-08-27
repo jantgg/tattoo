@@ -79,8 +79,6 @@ body {
   text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
-
-
 .interlude-text {
   margin-top: 1vh;
   color: rgb(0, 0, 0);
@@ -97,6 +95,31 @@ body {
   margin-top: 35vh;
   background-color: rgb(183, 41, 41);
   height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parallax-container2 {
+  height: 50vh;
+  position: relative;
+  z-index: 1;
+   background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-m-2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.footer {
+  height: 31vh;
+  background-color: rgb(183, 41, 41);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,12 +153,16 @@ body {
   .header-h2-l {
     font-size: 3vw !important;
   }
-
-
 }
 
 /* Mobile */
 @media (max-width: 700px) {
+  .header-tittle-l {
+    font-size: 15vw !important;
+  }
+  .header-h2-l {
+    font-size: 5vw !important;
+  }
 }
 
 @keyframes rotate {

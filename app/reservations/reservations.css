@@ -147,6 +147,7 @@ body {
   padding-right: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  margin-left: 3rem!important;
   text-decoration: none;
   color: rgb(0, 0, 0);
   border: 3px solid rgb(0, 0, 0);
@@ -283,7 +284,38 @@ body {
 
 /* Mobile */
 @media (max-width: 700px) {
+  .header-tittle-l {
+    font-size: 18vw !important;
+  }
+  .header-h2-l {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    font-size: 8vw !important;
+    width: 100% !important;
+  }
+  .section2 h1 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2vh;
+    font-size: 10vw;
+    margin-top: 0rem !important;
+  }
+  .section2 p {
+      padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1.4vh;
+    font-size: 5vw;
+    line-height: 2.4rem;
+  }
+  .button {
+    margin-left: 2rem !important;
+    font-size: 4vw;
+  }
 
+  .section2 {
+    height: auto!important;
+    padding-bottom: 3rem;
+  }
 }
 
 @keyframes rotate {

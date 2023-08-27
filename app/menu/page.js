@@ -5,23 +5,21 @@ import "./menu.css";
 import pizza from "images/tabla.jpg";
 import masa from "images/masa.jpg";
 import Menu1 from "components/menu1/menu1.js";
-import { useEffect, useState, } from "react";
+import { useEffect, useState } from "react";
 import useScrollPosition from "../hooks/usescrollposition.js";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
+import Footer from "components/footer/footer.js";
 
 export default function Menu() {
   const [currentCard, setCurrentCard] = useState(null);
   const scrollPosition = useScrollPosition();
   const isMobile = window.innerWidth < 700;
 
-  useEffect(() => {
-    // Lógica específica para Page1 que se ejecutará cuando cambie la posición del scroll
-  }, [scrollPosition]);
 
   const handleCard = (e) => {
     const cardId = e.currentTarget.id;
     setCurrentCard(cardId);
-  
+
     const cardElement = document.getElementById(cardId);
     if (cardElement) {
       cardElement.scrollIntoView({
@@ -92,96 +90,112 @@ export default function Menu() {
       </div>
 
       {isMobile ? (
-         <div
-         className={`section2-m row col-12 mx-0 card-container ${
-           currentCard !== null ? "goblack" : "goblack"
-         }`}
-       >
-         <div
-           className={getCardClassName("card1")}
-           id="card1"
-           onClick={handleCard}
-         >
-           <h1 className="verticalText col-12 px-0"> Breakfast</h1>
-           <div className="col-12 px-0">
-             <button
-               onClick={(e) => {
-                 e.stopPropagation(); // Evita que el evento se propague hacia arriba
-                 setCurrentCard(null);
-               }}
-               className="xbutton"
-             >
-               X
-             </button>
-             <div className="cardp">
-               <Menu1 />
-             </div>
-           </div>
-         </div>
-         <div
-           className={getCardClassName("card2")}
-           id="card2"
-           onClick={handleCard}
-         >
-           <h1 className="verticalText col-12 px-0"> Dishes</h1>
-           <div className="col-12 px-0">
-             <button
-               onClick={(e) => {
-                 e.stopPropagation(); // Evita que el evento se propague hacia arriba
-                 setCurrentCard(null);
-               }}
-               className="xbutton"
-             >
-               X
-             </button>
-             <div className="cardp">
-               <Menu1 />
-             </div>
-           </div>
-         </div>
-         <div
-           className={getCardClassName("card3")}
-           id="card3"
-           onClick={handleCard}
-         >
-           <h1 className="verticalText col-12 px-0"> Pizza</h1>
-           <div className="col-12 px-0">
-             <button
-               onClick={(e) => {
-                 e.stopPropagation(); // Evita que el evento se propague hacia arriba
-                 setCurrentCard(null);
-               }}
-               className="xbutton"
-             >
-               X
-             </button>
-             <div className="cardp">
-               <Menu1 />
-             </div>
-           </div>
-         </div>
-         <div
-           className={getCardClassName("card4")}
-           id="card4"
-           onClick={handleCard}
-         >
-           <h1 className="verticalText col-12 px-0"> Cocktail</h1>
-           <div className="col-12 px-0">
-             <button
-               onClick={(e) => {
-                 e.stopPropagation(); // Evita que el evento se propague hacia arriba
-                 setCurrentCard(null);
-               }}
-               className="xbutton"
-             >
-               X
-             </button>
-             <div className="cardp">
-               <Menu1 />
-             </div>
-           </div>
-         </div>
-       </div>
+        <div
+          className={`section2-m row col-12 mx-0 card-container ${
+            currentCard !== null ? "goblack" : "goblack"
+          }`}
+        >
+          <div
+            className={getCardClassName("card1")}
+            id="card1"
+            onClick={handleCard}
+          >
+            <AnimatedDivUp>
+              {" "}
+              <h1 className="verticalText col-12 px-0"> Breakfast</h1>
+            </AnimatedDivUp>
+
+            <div className="col-12 px-0">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation(); // Evita que el evento se propague hacia arriba
+                  setCurrentCard(null);
+                }}
+                className="xbutton"
+              >
+                X
+              </button>
+              <div className="cardp">
+                <Menu1 />
+              </div>
+            </div>
+          </div>
+          <div
+            className={getCardClassName("card2")}
+            id="card2"
+            onClick={handleCard}
+          >
+            <AnimatedDivUp>
+              {" "}
+              <h1 className="verticalText col-12 px-0"> Dishes</h1>
+            </AnimatedDivUp>
+
+            <div className="col-12 px-0">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation(); // Evita que el evento se propague hacia arriba
+                  setCurrentCard(null);
+                }}
+                className="xbutton"
+              >
+                X
+              </button>
+              <div className="cardp">
+                <Menu1 />
+              </div>
+            </div>
+          </div>
+          <div
+            className={getCardClassName("card3")}
+            id="card3"
+            onClick={handleCard}
+          >
+            <AnimatedDivUp>
+              {" "}
+              <h1 className="verticalText col-12 px-0"> Pizza</h1>
+            </AnimatedDivUp>
+
+            <div className="col-12 px-0">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation(); // Evita que el evento se propague hacia arriba
+                  setCurrentCard(null);
+                }}
+                className="xbutton"
+              >
+                X
+              </button>
+              <div className="cardp">
+                <Menu1 />
+              </div>
+            </div>
+          </div>
+          <div
+            className={getCardClassName("card4")}
+            id="card4"
+            onClick={handleCard}
+          >
+            <AnimatedDivUp>
+              {" "}
+              <h1 className="verticalText col-12 px-0"> Cocktail</h1>
+            </AnimatedDivUp>
+
+            <div className="col-12 px-0">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation(); // Evita que el evento se propague hacia arriba
+                  setCurrentCard(null);
+                }}
+                className="xbutton"
+              >
+                X
+              </button>
+              <div className="cardp">
+                <Menu1 />
+              </div>
+            </div>
+          </div>
+        </div>
       ) : (
         <div
           className={`section2-m row col-12 mx-0 card-container ${
@@ -284,20 +298,18 @@ export default function Menu() {
         />
         <div className="col-12 flex-cloumn absolute">
           {" "}
-          <AnimatedDivUp>
-            {" "}
-            <h1 className="interlude-tittle-2">
-              Indulge in a culinary experience like no other
-            </h1>
-          </AnimatedDivUp>
+          {isMobile ? null : (
+            <AnimatedDivUp>
+              {" "}
+              <h1 className="interlude-tittle-2">
+                Indulge in a culinary experience like no other
+              </h1>
+            </AnimatedDivUp>
+          )}
         </div>
       </div>
       <div className="footer">
-        <h2 className="interlude-text">
-          "Discover a waterfront haven in Puerto Banús, where Mediterranean
-          shores marries classic Mediterranean flavors with an exclusive terrace
-          experience." - Chief.
-        </h2>
+      <Footer/>
       </div>
     </main>
   );

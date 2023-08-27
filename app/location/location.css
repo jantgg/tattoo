@@ -19,9 +19,8 @@ body {
 .section2 {
   background-color: rgb(183, 41, 41) !important;
   height: auto;
-
 }
-.text-side-location{
+.text-side-location {
   padding-top: 4vh;
   padding-left: 4vw;
 }
@@ -65,16 +64,14 @@ body {
   background-size: cover;
   background-position: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
-
 }
-.map{
+.map {
   height: 80%;
   width: 80%;
   object-position: center;
   margin: 10%;
   border-radius: 0.5vh;
   border: 3px solid black;
-
 }
 .parallax-container {
   height: 35vw;
@@ -155,6 +152,7 @@ body {
   padding-right: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  margin-left: 3rem;
   text-decoration: none;
   color: rgb(0, 0, 0);
   border: 3px solid rgb(0, 0, 0);
@@ -217,14 +215,14 @@ body {
     font-size: 4vw !important;
   }
   .section2 {
-    height: 80vh
+    height: 80vh;
   }
   .section2-bg {
     padding-top: 8vh;
   }
   .card1 {
     width: 90% !important;
-    margin-right: 0!important;
+    margin-right: 0 !important;
   }
   .section2 h1 {
     padding-left: 1.5rem;
@@ -248,7 +246,6 @@ body {
     font-size: 5.2vw !important;
     padding-left: 10%;
     padding-right: 10%;
-
   }
 }
 
@@ -261,14 +258,14 @@ body {
     font-size: 5vw !important;
   }
   .section2 {
-    height: 100vh
+    height: 100vh;
   }
   .section2-bg {
     padding-top: 6vh;
   }
   .card1 {
     width: 90% !important;
-    margin-right: 0!important;
+    margin-right: 0 !important;
   }
   .section2 h1 {
     padding-left: 1.5rem;
@@ -291,6 +288,37 @@ body {
 
 /* Mobile */
 @media (max-width: 700px) {
+  .header-tittle-l {
+    font-size: 18vw !important;
+  }
+  .header-h2-l {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    font-size: 8vw !important;
+    width: 100% !important;
+  }
+  .section2 h1 {
+       padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2vh;
+    font-size: 8vw;
+    margin-top: 0rem !important;
+  }
+  .section2 p {
+      padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1.4vh;
+    font-size: 4vw;
+    line-height: 2.4rem;
+  }
+  .button {
+    margin-left: 2rem !important;
+    font-size: 4vw;
+  }
+  .mb-map{
+margin-bottom: 3rem !important;
+  }
+
 
 }
 

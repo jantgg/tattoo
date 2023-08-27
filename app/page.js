@@ -7,6 +7,7 @@ import "./page.css";
 import Slider from "components/slider/slider";
 import useScrollPosition from "./hooks/usescrollposition.js";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
+import Footer from "components/footer/footer.js";
 import AnimatedDivLeft from "components/animateddiv/animateddivleft.js";
 import AnimatedDivRight from "components/animateddiv/animateddivright.js";
 
@@ -117,15 +118,10 @@ export default function Home() {
           )}
         </div>
       </div>
-      <div className="footer row">
-        <AnimatedDivUp>
-          {" "}
-          <h2 className="interlude-text col-12">
-            "Discover a waterfront haven in Puerto Banús, where Mediterranean
-            shores marries classic Mediterranean flavors with an exclusive
-            terrace experience." - Chief.
-          </h2>
-        </AnimatedDivUp>
+      <div className="footer">
+      
+          <Footer />
+    
       </div>
     </main>
   );

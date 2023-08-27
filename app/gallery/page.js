@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import useScrollPosition from "../hooks/usescrollposition.js";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Gallerycomp from "components/gallerycomp/gallerycomp.js";
+import Footer from "components/footer/footer.js";
 
 export default function Gallery() {
   const scrollPosition = useScrollPosition();
@@ -41,27 +42,22 @@ export default function Gallery() {
       <div className="section2 row col-12 mx-0 ">
         <div className="section2-inner row col-12 px-0">
           {" "}
-         <Gallerycomp />
+          <Gallerycomp />
         </div>
       </div>
-    
 
-      <div className="interlude-location-img">
+      <div className="parallax-container2">
         <Image
           src={masa}
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          className="interlude2-img"
+          fill
+          quality={80}
+          className="img-m-2"
           alt="man knead dough"
         />
+       
       </div>
-      <div className="footer-l">
-        <h2 className="interlude-text">
-          "Discover a waterfront haven in Puerto Banús, where Mediterranean
-          shores marries classic Mediterranean flavors with an exclusive terrace
-          experience." - Chief.
-        </h2>
+      <div className="footer">
+        <Footer />
       </div>
     </main>
   );

@@ -38,7 +38,6 @@ body {
   height: 60vh;
   position: relative;
   z-index: 1;
-  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692880014/da-paolo/pexels-skyler-ewing-10009355_ow7ldu.jpg"); /* Ajusta la ruta de la imagen */
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -457,6 +456,14 @@ body {
   .card4-m::before {
     background-image: none;
   }
+  .interlude-tittle-2{
+    font-size: 10vw !important;
+    padding-left: 5%!important;
+    padding-right: 5%!important;
+  }
+  .parallax-container2 {
+    height: 40vh !important;
+}
 }
 
 @keyframes rotate {

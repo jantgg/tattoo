@@ -8,14 +8,12 @@
 .mynav {
   position: fixed !important;
   top: 0;
-
   transition: padding 0.5s ease, background-color 0.5s ease;
   width: 100%;
 }
 .no-deco{
   text-decoration: none;
 }
-
 .mynav2 {
   width: 90%;
   margin-left: 5%;

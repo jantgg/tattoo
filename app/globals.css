@@ -1,17 +1,20 @@
 :root {
-  
-    --font-lato: 'Lato', sans-serif;
-  }
-.myrow{
+  --font-lato: "Lato", sans-serif;
+}
+.myrow {
   display: flex;
   flex-wrap: wrap;
 }
-body{
-  cursor:default;
+.row {
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0 !important;
 }
- p {
-    font-family: var(--font-lato);
-  }
+body {
+  cursor: default;
+}
+p {
+  font-family: var(--font-lato);
+}
 
 /* Ancho y color del scrollbar */
 ::-webkit-scrollbar {
@@ -19,13 +22,13 @@ body{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(19, 19, 19);;
+  background-color: rgb(19, 19, 19);
   border-radius: 5px !important;
 }
 
 /* Cambiar color al pasar el mouse por encima */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(35, 35, 35);;
+  background-color: rgb(35, 35, 35);
   border-radius: 5px !important;
 }
 
@@ -38,4 +41,3 @@ body{
 ::-webkit-scrollbar-track:hover {
   background-color: #dddddd00;
 }
-  

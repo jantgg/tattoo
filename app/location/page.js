@@ -7,6 +7,7 @@ import masa from "images/masa.jpg";
 import { useEffect, useState } from "react";
 import useScrollPosition from "../hooks/usescrollposition.js";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
+import Footer from "components/footer/footer.js";
 
 export default function Location() {
   const scrollPosition = useScrollPosition();
@@ -33,7 +34,7 @@ export default function Location() {
 
         <h1 className="header-tittle-l ">Come and meet us </h1>
         <h2 className="header-h2-l col-12">
-          <div className="col-8 mx-auto">
+          <div className="col-12 col-sm-8 col-md-8 mx-auto">
             Join us by the water's edge at Puerto Banús and experience authentic
             Italian Mediterranean cuisine. Your table is waiting.
           </div>
@@ -41,7 +42,7 @@ export default function Location() {
       </div>
 
       <div className="section2 row col-12 mx-0 ">
-        {" "} <div className="col-6 flex-column  text-side-location">
+        {" "} <div className="col-12 col-sm-6 col-md-6 flex-column  text-side-location">
           {" "}
           <AnimatedDivUp>
           {isSmall ? (
@@ -72,13 +73,13 @@ export default function Location() {
             {" "}
             <div className="">
               {" "}
-              <a href="https://goo.gl/maps/4aCcwVAce1JkRDgv9" target="_blank" className="button mx-auto mb-5">
+              <a href="https://goo.gl/maps/4aCcwVAce1JkRDgv9" target="_blank" className="button mb-5">
                 Location &#x27A1;
               </a>
             </div>
           </AnimatedDivUp>
         </div>
-        <div className="col-6">
+        <div className="col-12 col-sm-6 col-md-6 mb-map">
           {" "}
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12831.078887425943!2d-4.952996!3d36.4872776!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7329c0f7585077%3A0xbf8250c125e84b37!2sDa%20Paolo!5e0!3m2!1ses!2ses!4v1692985400886!5m2!1ses!2ses"
@@ -103,11 +104,7 @@ export default function Location() {
      
       </div>
       <div className="footer-l">
-        <h2 className="interlude-text">
-          "Discover a waterfront haven in Puerto Banús, where Mediterranean
-          shores marries classic Mediterranean flavors with an exclusive terrace
-          experience." - Chief.
-        </h2>
+      <Footer/>
       </div>
     </main>
   );

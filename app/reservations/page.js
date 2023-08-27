@@ -7,13 +7,12 @@ import masa from "images/masa.jpg";
 import { useEffect, useState } from "react";
 import useScrollPosition from "../hooks/usescrollposition.js";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
+import Footer from "components/footer/footer.js";
+import {BsFillTelephoneOutboundFill} from 'react-icons/bs'
 
 export default function Reservations() {
   const scrollPosition = useScrollPosition();
-
-  useEffect(() => {
-    // Lógica específica para Page1 que se ejecutará cuando cambie la posición del scroll
-  }, [scrollPosition]);
+  const isMobile = window.innerWidth < 700;
 
   return (
     <main className="wrapper-l">
@@ -32,7 +31,7 @@ export default function Reservations() {
 
         <h1 className="header-tittle-l ">Secure your table </h1>
         <h2 className="header-h2-l col-12">
-          <div className="col-8 mx-auto">
+          <div className="col-12 col-sm-8 col-md-8 mx-auto">
             Reserve your Mediterranean dining experience today
           </div>
         </h2>
@@ -40,49 +39,49 @@ export default function Reservations() {
       <div className="section2 row col-12 mx-0 ">
         <div className="section2-inner row col-12 px-0">
           {" "}
-          <div className="col-6 relative">
-            {" "}
-            <Image
-              src={pizza}
-              fill
-              quality={100}
-              className="card1 mx-auto"
-              alt="puerto banus image"
-            />
-          </div>
-          <div className="col-6 flex-column section2-bg">
-          {" "}
-          <AnimatedDivUp>
-            <h1 className="col-12 mt-3">
-              +34 777 55 99 00{" "}
-            </h1>
-          </AnimatedDivUp>
-          <AnimatedDivUp>
-            {" "}
-            <p className="lato">
-              Indulge in the anticipation of an exquisite culinary voyage with
-              us. To <strong>ensure your seamless experience</strong>, we recommend reserving
-              your table in advance. Our attentive staff is eager to assist you
-              in arranging a <strong>memorable meal by the sea</strong>.
-            </p>{" "}
-          </AnimatedDivUp>
-          <AnimatedDivUp>
-            {" "}
-            <div className="">
+          {isMobile ? null : (
+            <div className="col-6 relative">
               {" "}
-              <a
-                href="tel:+34777559900"
-                target="_blank"
-                className="button mx-auto mb-5"
-              >
-              Reserve now &#x27A1;
-              </a>
+              <Image
+                src={pizza}
+                fill
+                quality={100}
+                className="card1 mx-auto"
+                alt="puerto banus image"
+              />
             </div>
-          </AnimatedDivUp>
-        </div>
+          )}
+          <div className="col-12 col-sm-6 col-md-6 flex-column section2-bg">
+            {" "}
+            <AnimatedDivUp>
+              <h1 className="col-12 mt-3">Reserve now </h1>
+            </AnimatedDivUp>
+            <AnimatedDivUp>
+              {" "}
+              <p className="lato">
+                Indulge in the anticipation of an exquisite culinary voyage with
+                us. To <strong>ensure your seamless experience</strong>, we
+                recommend reserving your table in advance. Our attentive staff
+                is eager to assist you in arranging a{" "}
+                <strong>memorable meal by the sea</strong>.
+              </p>{" "}
+            </AnimatedDivUp>
+            <AnimatedDivUp>
+              {" "}
+              <div className="">
+                {" "}
+                <a
+                  href="tel:+34777559900"
+                  target="_blank"
+                  className="button mx-auto mb-5"
+                >+34 777 55 99 00 &nbsp;
+                    <BsFillTelephoneOutboundFill />
+                </a>
+              </div>
+            </AnimatedDivUp>
+          </div>
         </div>
       </div>
-    
 
       <div className="interlude-location-img">
         <Image
@@ -93,14 +92,9 @@ export default function Reservations() {
           className="interlude2-img"
           alt="man knead dough"
         />
-  
       </div>
       <div className="footer-l">
-        <h2 className="interlude-text">
-          "Discover a waterfront haven in Puerto Banús, where Mediterranean
-          shores marries classic Mediterranean flavors with an exclusive terrace
-          experience." - Chief.
-        </h2>
+    <Footer/>
       </div>
     </main>
   );
