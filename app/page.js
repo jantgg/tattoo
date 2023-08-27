@@ -10,9 +10,9 @@ import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import AnimatedDivLeft from "components/animateddiv/animateddivleft.js";
 import AnimatedDivRight from "components/animateddiv/animateddivright.js";
 
-
 export default function Home() {
   const scrollPosition = useScrollPosition();
+  const isMobile = window.innerWidth < 700;
 
   return (
     <main className="wrapper">
@@ -33,7 +33,7 @@ export default function Home() {
       <div className="section2 row col-12 mx-0 ">
         <div className="section2-inner row col-12 px-0">
           {" "}
-          <div className="col-6 relative">
+          <div className=" col-12 col-sm-6 col-md-6  relative s2-container-img">
             {" "}
             <Image
               src={madera}
@@ -43,10 +43,10 @@ export default function Home() {
               alt="puerto banus image"
             />
           </div>
-          <div className="col-6 flex-column section2-bg">
+          <div className="col-12 col-sm-6 col-md-6  flex-column section2-bg">
             {" "}
             <AnimatedDivUp>
-              <h1 className="col-12 mt-3">
+              <h1 className="col-12">
                 Discover the true mediterranean cuisine{" "}
               </h1>
             </AnimatedDivUp>
@@ -84,13 +84,15 @@ export default function Home() {
           className="interlude-img"
           alt="puerto banus image"
         />
-        <AnimatedDivUp>
-          {" "}
-          <h1 className="interlude-tittle ">
-            "From our kitchen to your table: An exquisite compilation of classic
-            mediterranean cuisine" <br></br> - The Chef{" "}
-          </h1>
-        </AnimatedDivUp>
+        {isMobile ? null : (
+          <AnimatedDivUp>
+            {" "}
+            <h1 className="interlude-tittle ">
+              "From our kitchen to your table: An exquisite compilation of
+              classic mediterranean cuisine" <br></br> - The Chef{" "}
+            </h1>
+          </AnimatedDivUp>
+        )}
       </div>
       <div className="section3 col-12 row px-0 mx-0">
         <Slider />
@@ -105,12 +107,14 @@ export default function Home() {
         />
         <div className="col-12 flex-cloumn">
           {" "}
-          <AnimatedDivUp>
-            {" "}
-            <h1 className="interlude-tittle-2">
-              Indulge in a culinary experience like no other
-            </h1>
-          </AnimatedDivUp>
+          {isMobile ? null : (
+            <AnimatedDivUp>
+              {" "}
+              <h1 className="interlude-tittle-2">
+                Indulge in a culinary experience like no other
+              </h1>
+            </AnimatedDivUp>
+          )}
         </div>
       </div>
       <div className="footer row">
@@ -122,7 +126,6 @@ export default function Home() {
             terrace experience." - Chief.
           </h2>
         </AnimatedDivUp>
-    
       </div>
     </main>
   );

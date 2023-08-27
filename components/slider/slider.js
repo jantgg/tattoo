@@ -11,6 +11,7 @@ import people from "images/people.jpg";
 
 export default function Slider() {
   const isSmall = window.innerWidth < 1200;
+  const isMobile = window.innerWidth < 700;
   const data = [
     {
       id: 1,
@@ -61,7 +62,7 @@ export default function Slider() {
 
   return (
     <div className={`row slider col-12 px-0  ${isVisible ? "visible" : ""}`}>
-      <div className="col-6 px-0">
+      <div className="col-12 col-sm-6 col-md-6 px-0">
         <div className="text-side">
           {" "}
           {currentIndex === 0 ? (
@@ -167,7 +168,7 @@ export default function Slider() {
           </button>
 
           <button
-            className={` boton-i  ms-5 ${currentIndex === 2 ? " hide" : " "}`}
+            className={` boton-i   ${isMobile ? " ms-3 me-3" : "ms-5  "} ${currentIndex === 2 ? " hide" : " "}`}
             onClick={handleNextClick}
             disabled={currentIndex === 2}
             aria-label="press to forward"
@@ -176,7 +177,7 @@ export default function Slider() {
           </button>
         </div>
       </div>
-      <div className="col-6 relative px-0">
+      <div className="col-6 relative px-0 slider-container-img">
         {" "}
         {currentIndex === 0 ? (
           <Image

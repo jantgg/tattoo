@@ -121,7 +121,6 @@ body {
   background-color: rgb(183, 41, 41);
   justify-content: space-evenly;
   background-color: white;
-
   position: relative;
   display: flex;
   transition: background-color 0.5s ease-in-out;
@@ -340,6 +339,124 @@ body {
 
 /* Mobile */
 @media (max-width: 700px) {
+    .header-tittle-m {
+    font-size: 18vw !important;
+  }
+  .header-h2-m {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 8vw !important;
+  }
+  .menu-tittle {
+    font-size: 8vw;
+    padding-top: 2vh;
+  }
+  .plate-tittle {
+    font-size: 4vw;
+  }
+  .plate-text {
+    font-size: 2.9vw;
+  }
+  .section2-m {
+    padding-top: 5vh;
+    background-color: rgb(183, 41, 41);
+    justify-content: space-evenly;
+    background-color: white;
+    position: relative;
+    display: flex;
+    transition: background-color 0.5s ease-in-out;
+    z-index: 2;
+  }
+  .verticalText {
+    margin-left: 1.5vh;
+    padding-top: 1vh;
+    writing-mode:horizontal-tb;
+    text-orientation:sideways;
+    align-items: center;
+    font-size: 12vw;
+    color: rgb(232, 232, 232);
+    z-index: 1;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    height: auto;
+  }
+  .xbutton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(225, 225, 225);
+    z-index: 2;
+    background-color: rgba(183, 41, 41, 0);
+    border: none;
+    font-size: 7vw;
+    margin-top: 1.3vh;
+    margin-right: 1vh;
+    display: none;
+  }
+  .card-m {
+    position: relative;
+    min-height: 10vh;
+    margin-bottom: 5vh;
+    margin-top: 0vh;
+    background-color: brown;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+    width: 80% !important;
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  }
+  .card-m-active {
+    height: auto;
+    cursor: default;
+  }
+ 
+  .card-m-active .xbutton {
+    display: flex;
+  }
+  .card-m-active .verticalText {
+    margin-left: 0vh;
+    width: 10%;
+  }
+  .card-m-disabled .cardp{
+    display: none;
+  }
+  .card-m-disabled .verticalText {
+    z-index: 1;
+  }
+  .card-m-active .cardp {
+    opacity: 1;
+    overflow: hidden;
+    height: auto;
+    z-index: 1;
+    display: block;
+  }
+  .cardp {
+    color: rgb(255, 255, 255);
+    font-size: 3vw;
+    opacity: 0;
+    overflow: hidden;
+ 
+    height: 0;
+    z-index: 1;
+    position: relative;
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+    transition: height 0.4s ease-in-out;
+  }
+  .card1-m::before {
+    background-image: none;
+  }
+  
+  .card2-m::before {
+    background-image: none;
+  }
+  
+  .card3-m::before {
+    background-image: none;
+  }
+  
+  .card4-m::before {
+    background-image: none;
+  }
 }
 
 @keyframes rotate {
