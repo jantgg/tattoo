@@ -68,7 +68,7 @@ export default function Reservations() {
           </AnimatedDivUp>
           <AnimatedDivUp>
             {" "}
-            <div className="ms-5">
+            <div className="">
               {" "}
               <a
                 href="tel:+34777559900"
@@ -93,6 +93,7 @@ export default function Reservations() {
           className="interlude2-img"
           alt="man knead dough"
         />
+  
       </div>
       <div className="footer-l">
         <h2 className="interlude-text">

@@ -65,7 +65,7 @@ export default function Home() {
             </AnimatedDivUp>
             <AnimatedDivUp>
               {" "}
-              <div className="ms-5">
+              <div className="">
                 {" "}
                 <a href="/menu" className="button mx-auto">
                   See our menu &#x27A1;

@@ -34,7 +34,7 @@ export default function Gallery() {
         <h1 className="header-tittle-l ">Take a look </h1>
         <h2 className="header-h2-l col-12">
           <div className="col-8 mx-auto">
-            Enjoy watching our surroundings, our food and our restaurant.
+            Enjoy watching our surroundings, food & restaurant
           </div>
         </h2>
       </div>

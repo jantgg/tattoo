@@ -10,6 +10,7 @@ import pasta from "images/pasta.jpg";
 import people from "images/people.jpg";
 
 export default function Slider() {
+  const isSmall = window.innerWidth < 1200;
   const data = [
     {
       id: 1,
@@ -92,7 +93,11 @@ export default function Slider() {
             <>
               <AnimatedDivUp>
                 {" "}
-                <h1>Time-honored classics with a modern twist</h1>
+                {isSmall ? (
+                  <h1>Time-honored classics</h1>
+                ) : (
+                  <h1>Time-honored classics with a modern twist</h1>
+                )}
               </AnimatedDivUp>
               <AnimatedDivUp>
                 {" "}
@@ -136,9 +141,16 @@ export default function Slider() {
               </AnimatedDivUp>
               <AnimatedDivUp classNameProps="col-6 me-auto">
                 {" "}
-                <a href="/reserve" className="button-slider">
+                {isSmall ? (
+                  <a href="/reserve" className="button-slider">
+                  Reservations
+                </a>
+                ) : (
+                     <a href="/reserve" className="button-slider">
                   Reservations &#x27A1;
                 </a>
+                )}
+           
               </AnimatedDivUp>
             </>
           ) : null}
@@ -178,7 +190,6 @@ export default function Slider() {
           <Image
             src={pasta}
             fill
-
             quality={100}
             className="img-slider mx-auto"
             alt="puerto banus image"

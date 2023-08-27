@@ -10,6 +10,7 @@ import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 
 export default function Location() {
   const scrollPosition = useScrollPosition();
+  const isSmall = window.innerWidth < 1200;
 
   useEffect(() => {
     // Lógica específica para Page1 que se ejecutará cuando cambie la posición del scroll
@@ -43,9 +44,16 @@ export default function Location() {
         {" "} <div className="col-6 flex-column  text-side-location">
           {" "}
           <AnimatedDivUp>
-            <h1 className="col-12 mt-3">
+          {isSmall ? (
+                <h1 className="col-12 mt-3">
               Mediterranean Coastal Charm in Puerto Banús{" "}
             </h1>
+                ) : (
+                  <h1 className="col-12 mt-3">
+              Mediterranean Coastal Charm in Puerto Banús{" "}
+            </h1>
+                )}
+        
           </AnimatedDivUp>
           <AnimatedDivUp>
             {" "}
@@ -62,7 +70,7 @@ export default function Location() {
           </AnimatedDivUp>
           <AnimatedDivUp>
             {" "}
-            <div className="ms-5">
+            <div className="">
               {" "}
               <a href="https://goo.gl/maps/4aCcwVAce1JkRDgv9" target="_blank" className="button mx-auto mb-5">
                 Location &#x27A1;

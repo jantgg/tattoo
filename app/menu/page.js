@@ -74,7 +74,7 @@ export default function Menu() {
           {" "}
           <h1 className="header-tittle-m ">Discover our menu </h1>
           <h2 className="header-h2-m col-12">
-            <div className="col-8 mx-auto">
+            <div className=" mx-auto">
               We invite you to explore our diverse menu and immerse yourself in
               an unforgettable culinary experience.
             </div>
