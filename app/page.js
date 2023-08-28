@@ -87,8 +87,8 @@ export default function Home() {
           <AnimatedDivUp>
             {" "}
             <h1 className="interlude-tittle ">
-              "From our kitchen to your table: An exquisite compilation of
-              classic mediterranean cuisine" <br></br> - The Chef{" "}
+            &quot;From our kitchen to your table: An exquisite compilation of
+              classic mediterranean cuisine&quot; <br></br> - The Chef{" "}
             </h1>
           </AnimatedDivUp>
         )}

@@ -74,9 +74,9 @@ const Footer = () => {
       <div className="footer-right mt-4">
         <p className="footer-company-about">
           <span>
-            "Discover a waterfront haven in Puerto Banús, where Mediterranean
+            &quot;Discover a waterfront haven in Puerto Banús, where Mediterranean
             shores marries classic Mediterranean flavors with an exclusive
-            terrace experience."
+            terrace experience.&quot;
           </span>{" "}
           - Chief.
         </p>

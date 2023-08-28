@@ -123,7 +123,7 @@ export default function Slider() {
               <AnimatedDivUp>
                 {" "}
                 <p>
-                  Whether you're seeking an intimate dinner for two or a joyous
+                  Whether you&apos;re seeking an intimate dinner for two or a joyous
                   gathering with friends, our restaurant offers a{" "}
                   <strong>warm</strong> and
                   <strong> inviting atmosphere</strong> that effortlessly
