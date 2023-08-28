@@ -5,9 +5,31 @@ import { gsap } from "gsap";
 import useScrollPosition from "app/hooks/useScrollPosition";
 import pasta from "images/pasta.jpg";
 import dapaolo from "images/dapaolo.jpg";
+import boniato from "images/boniato.jpg";
+import brakfast from "images/brakfast.jpg";
+import ensaladatop from "images/ensalada-top.jpg";
+import hambur from "images/hambur.jpg";
+import pastaangulo from "images/pasta-angulo.jpg";
+import pasta2 from "images/pasta-agulo-blanco.jpg";
+import pinchopure from "images/pincho-pure.jpg";
+import pizza from "images/steak-top.jpg";
+
 import "./gallerycomp.css";
 
 const Gallerycomp = () => {
+  const images = [
+    boniato,
+    dapaolo,
+    pasta,
+    brakfast,
+    ensaladatop,
+    hambur,
+    pastaangulo,
+    pasta2,
+    pinchopure,
+    pizza,
+
+  ];
   const [selectedImage, setSelectedImage] = useState(pasta); // Estado para la imagen principal
   const isMobile = window.innerWidth < 700;
 
@@ -23,18 +45,6 @@ const Gallerycomp = () => {
     });
   };
 
-  const images = [
-    pasta,
-    dapaolo,
-    pasta,
-    pasta,
-    dapaolo,
-    pasta,
-    pasta,
-    dapaolo,
-    pasta,
-    pasta,
-  ];
   const [isVisible, setIsVisible] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const selectedImage2 = images[currentIndex];
@@ -48,7 +58,7 @@ const Gallerycomp = () => {
       }, 120);
     }, 120);
   };
-  
+
   const handlePrevClick = () => {
     setIsVisible(false);
     setTimeout(() => {

@@ -1,20 +1,21 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useRouter } from 'next/navigation'
-import Link from "next/link";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import logo from "../../images/logo.png";
+import { useRouter } from "next/navigation";
 import "./navbar.css";
 import "bootstrap/dist/css/bootstrap.css";
 
-export default function Navbar({scrollPosition}) {
-  const router = useRouter()
+export default function Navbar({ scrollPosition }) {
+  const router = useRouter();
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1000);
   const [isInView, setIsInView] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("up");
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [selected, setSelected] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleCollap = () => {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  };
 
   const handleScroll = () => {
     const mainElement = document.querySelector("main");
@@ -22,16 +23,16 @@ export default function Navbar({scrollPosition}) {
     setScrollDirection(currentScrollPos > prevScrollPos ? "down" : "up");
     setPrevScrollPos(currentScrollPos);
   };
-  
+
   useEffect(() => {
     const mainElement = document.querySelector("main");
     mainElement.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       mainElement.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
-  
+
   const scrollToBottom = () => {
     const mainElement = document.querySelector("main");
     mainElement.scrollTo({
@@ -39,7 +40,7 @@ export default function Navbar({scrollPosition}) {
       behavior: "smooth",
     });
   };
-  
+
   const scrollToTop = () => {
     const mainElement = document.querySelector("main");
     mainElement.scrollTo({
@@ -55,106 +56,136 @@ export default function Navbar({scrollPosition}) {
     }
   }, [currentPath]);
 
-
-
-    useEffect(() => {
-      if (scrollPosition < 200) {
-        setIsInView(true);
-      } else {
-        setIsInView(false);}
-    }, [scrollPosition]);
-
+  useEffect(() => {
+    if (scrollPosition < 200) {
+      setIsInView(true);
+    } else {
+      setIsInView(false);
+    }
+  }, [scrollPosition]);
 
   return (
-   
-      <nav
-        style={{ zIndex: "99" }}
-        className={`navbar mynav navbar-expand-lg  navbar-scrolled   ${
-          isInView
-            ? " bg-gradient-1 py-3 col-12"
-            : " bg-white-gradient shadowed mt-3 mynav2"
-        }
+    <nav
+      style={{ zIndex: "99" }}
+      className={`navbar mynav navbar-expand-lg  navbar-scrolled   ${
+        isInView
+          ? " bg-gradient-1 py-3 col-12"
+          : " bg-white-gradient shadowed mt-3 mynav2"
+      }
         ${scrollDirection === "down" ? "hided" : ""}
         `}
-      >
-        <div className={`container-fluid  ${isInView ? "col-11" : "col-12"}`}>
-          <a
-            href="/"
-            className={`navbar-tittle mx-auto text-black no-deco${
-              isDesktop ? " ms-5" : " ms-2"
-            } ${isInView ? " text-white line" : "  text-black line2"}`}
-            onClick={() => {
-              scrollToTop();
-            }}
-          >
-            Da Paolo
-          </a>
-          <div></div>
-          <button
-            className={`navbar-toggler  toggle-color-black ${
-              isInView ? " " : " "
-            }`}
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i className="fa-solid fa-bars"></i>
-          </button>
-          <div className=" collapse navbar-collapse " id="navbarNavDropdown">
-            <ul className={`navbar-nav ms-auto ${isInView ? " " : " "}`}>
-             
+    >
+      <div className={`container-fluid  ${isInView ? "col-11" : "col-12"}`}>
+        <a
+          href="/"
+          className={`navbar-tittle mx-auto text-black no-deco${
+            isDesktop ? " ms-5" : " ms-2"
+          } ${isInView ? " text-white line" : "  text-black line2"}`}
+          onClick={() => {
+            scrollToTop();
+          }}
+        >
+          Da Paolo
+        </a>
 
-              <div className="nav-item">
+        {isDesktop ? (
+          <div className={`navbar-nav ms-auto myrow ${isInView ? " " : " "}`}>
+            <a
+              href="/menu"
+              className={`mx-2 me-5 px-2 deco-none  ${selected === 1 && ""} ${
+                isInView ? " text-white line" : "  text-black line2"
+              }`}
+            >
+              Menu
+            </a>
+
+            <a
+              href="/where"
+              className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
+                isInView ? " text-white line" : "  text-black line2"
+              }`}
+            >
+              Where are we?
+            </a>
+
+            <a
+              href="/reservations"
+              className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
+                isInView ? " text-white line" : "  text-black line2"
+              }`}
+            >
+              Reservations
+            </a>
+
+            <a
+              href="/gallery"
+              className={`mx-2 me-5 px-2 deco-none  ${selected === 0 && ""} ${
+                isInView ? " text-white line" : "  text-black line2"
+              }`}
+            >
+              Gallery
+            </a>
+          </div>
+        ) : (
+          <>
+            {" "}
+            <div className="collap-nav myrow col-2">
+              <div className=" ms-auto">
+                <input
+                  type="checkbox"
+                  id="checkbox"
+                  className="toggle"
+                  onChange={toggleCollap}
+                />
+                <label htmlFor="checkbox" className="toggle">
+                  <div className="bars" id="bar1"></div>
+                  <div className="bars" id="bar2"></div>
+                  <div className="bars" id="bar3"></div>
+                </label>
+              </div>
+            </div>
+            <div className={`collap-wrapper col-12 ${isOpen ? "open" : ""}`}>
+              <div className="collap-content myrow">
                 <a
                   href="/menu"
-                  className={`nav-link mx-2 me-5 px-2   ${
+                  className={` deco-none col-12 text-r mt-3  ${
                     selected === 1 && ""
                   } ${isInView ? " text-white line" : "  text-black line2"}`}
-             
                 >
                   Menu
                 </a>
-              </div>
-              <div className="nav-item">
+
                 <a
-                  href="/location"
-                  className={`nav-link  mx-2 me-5 px-2  ${
+                  href="/where"
+                  className={` deco-none col-12 text-r mt-3 ${
                     selected === 2 && ""
                   } ${isInView ? " text-white line" : "  text-black line2"}`}
-                  
                 >
                   Where are we?
                 </a>
-              </div>
-              <div className="nav-item">
+
                 <a
                   href="/reservations"
-                  className={`nav-link  mx-2 me-5 px-2  ${
+                  className={` deco-none col-12 text-r mt-3 ${
                     selected === 2 && ""
                   } ${isInView ? " text-white line" : "  text-black line2"}`}
-              
                 >
                   Reservations
                 </a>
-              </div>
-              <div className="nav-item ">
+
                 <a
                   href="/gallery"
-                  className={`nav-link mx-2 me-5 px-2   ${
+                  className={` deco-none col-12 text-r mt-3  ${
                     selected === 0 && ""
                   } ${isInView ? " text-white line" : "  text-black line2"}`}
-              
                 >
                   Gallery
                 </a>
               </div>
-            </ul>
-          </div>
-        </div>
-      </nav>
-   
+            </div>
+          </>
+        )}
+      </div>
+    </nav>
   );
 }

@@ -3,13 +3,12 @@ import Image from "next/image";
 import pizza from "images/fondopizza.jpg";
 import madera from "images/madera.jpg";
 import masa from "images/masa.jpg";
+import ensaladatop from "images/ensalada-top.jpg";
 import "./page.css";
 import Slider from "components/slider/slider";
 import useScrollPosition from "./hooks/usescrollposition.js";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Footer from "components/footer/footer.js";
-import AnimatedDivLeft from "components/animateddiv/animateddivleft.js";
-import AnimatedDivRight from "components/animateddiv/animateddivright.js";
 
 export default function Home() {
   const scrollPosition = useScrollPosition();
@@ -37,7 +36,7 @@ export default function Home() {
           <div className=" col-12 col-sm-6 col-md-6  relative s2-container-img">
             {" "}
             <Image
-              src={madera}
+              src={ensaladatop}
               fill
               quality={100}
               className="card1 mx-auto"

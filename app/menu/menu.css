@@ -22,7 +22,7 @@ body {
   width: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: grayscale(0.8);
+  filter: grayscale(0.5);
   transform: translateZ(-10px) scale(2.01);
 }
 .parallax-container {
@@ -51,6 +51,7 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: center;
+  filter: grayscale(0.6);
 }
 .absolute {
   position: absolute;
@@ -275,7 +276,7 @@ body {
 .footer {
   position: relative;
   background-color: rgb(183, 41, 41);
-  height: 25vh;
+
   display: flex;
   justify-content: center;
   align-items: center;

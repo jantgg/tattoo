@@ -2,8 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import "./gallery.css";
-import pizza from "images/tabla.jpg";
-import masa from "images/masa.jpg";
+import pizza from "images/banus.jpg";
+import masa from "images/pizza-top-blanco.jpg";
 import { useEffect, useState } from "react";
 import useScrollPosition from "../hooks/usescrollposition.js";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";

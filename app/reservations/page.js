@@ -2,8 +2,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import "./reservations.css";
-import pizza from "images/tabla.jpg";
-import masa from "images/masa.jpg";
+import pizza from "images/fondo-mesa.jpg";
+import phone from "images/phone.jpg";
+import masa from "images/ensaladaymesar.jpg";
 import { useEffect, useState } from "react";
 import useScrollPosition from "../hooks/usescrollposition.js";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
@@ -43,7 +44,7 @@ export default function Reservations() {
             <div className="col-6 relative">
               {" "}
               <Image
-                src={pizza}
+                src={phone}
                 fill
                 quality={100}
                 className="card1 mx-auto"

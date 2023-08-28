@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import "./menu.css";
 import pizza from "images/tabla.jpg";
-import masa from "images/masa.jpg";
+import masa from "images/especias.jpg";
 import Menu1 from "components/menu1/menu1.js";
 import { useEffect, useState } from "react";
 import useScrollPosition from "../hooks/usescrollposition.js";

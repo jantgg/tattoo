@@ -31,7 +31,7 @@ const Footer = () => {
             Menu
           </a>
 
-          <a href="/location" className="link-1 mx-2 line">
+          <a href="/where" className="link-1 mx-2 line">
             Location
           </a>
 

@@ -88,7 +88,7 @@ body {
 
 .interlude-location-img {
   position: absolute;
-  height: 50% !important;
+  height: 70% !important;
   width: 100%;
   object-fit: cover;
   z-index: -1;
@@ -109,14 +109,14 @@ body {
   font-size: 8vw !important;
   font-weight: 900;
   text-align: center;
-  text-shadow: 0 0 10px rgb(0, 0, 0);
+  text-shadow: 0 0 10px rgb(228, 228, 228);
 }
 .header-h2-l {
-  color: rgb(229, 229, 229);
+  color: rgb(24, 24, 24);
   font-size: 2vw !important;
   font-weight: 900;
   text-align: center;
-  text-shadow: 0 0 10px rgb(0, 0, 0);
+  text-shadow: 0 0 10px rgb(204, 204, 204);
 }
 .interlude-tittle-2 {
   margin-top: 7vh;
@@ -183,7 +183,7 @@ body {
 }
 
 .footer-l {
-  margin-top: 35vh;
+  margin-top: 55vh;
   background-color: rgb(183, 41, 41);
   height: 25vh;
   display: flex;

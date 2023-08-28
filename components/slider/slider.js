@@ -6,7 +6,7 @@ import AnimatedDivUp from "../animateddiv/animateddivup.js";
 import AnimatedDivLeft from "../animateddiv/animateddivleft.js";
 import AnimatedDivRight from "../animateddiv/animateddivright.js";
 import dapaolo from "images/dapaolo.jpg";
-import pasta from "images/pasta.jpg";
+import pasta from "images/pasta-angulo.jpg";
 import people from "images/people.jpg";
 
 export default function Slider() {
@@ -85,7 +85,7 @@ export default function Slider() {
                 </p>
               </AnimatedDivUp>
               <AnimatedDivUp classNameProps="col-6 me-auto">
-                <a href="/reserve" className="button-slider">
+                <a href="/where" className="button-slider">
                   Location &#x27A1;
                 </a>
               </AnimatedDivUp>
@@ -116,7 +116,7 @@ export default function Slider() {
                 </p>
               </AnimatedDivUp>
               <AnimatedDivUp classNameProps="col-6 me-auto">
-                <a href="/reserve" className="button-slider">
+                <a href="/menu" className="button-slider">
                   Menu &#x27A1;
                 </a>
               </AnimatedDivUp>
@@ -143,11 +143,11 @@ export default function Slider() {
               <AnimatedDivUp classNameProps="col-6 me-auto">
                 {" "}
                 {isSmall ? (
-                  <a href="/reserve" className="button-slider">
+                  <a href="/reservations" className="button-slider">
                   Reservations
                 </a>
                 ) : (
-                     <a href="/reserve" className="button-slider">
+                     <a href="/reservations" className="button-slider">
                   Reservations &#x27A1;
                 </a>
                 )}
