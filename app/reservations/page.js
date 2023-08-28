@@ -9,14 +9,12 @@ import { useEffect, useState } from "react";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Footer from "components/footer/footer.js";
 import {BsFillTelephoneOutboundFill} from 'react-icons/bs'
+import { useMediaQuery } from 'react-responsive'
 
 export default function Reservations() {
-  const [isSmall, setSmall] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 1200 : false
-  );
-  const [isMobile, setMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 700 : false
-  );
+  const isSmall = useMediaQuery({ query: '(max-width: 1200px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
+  
 
   return (
     <main className="wrapper-l">

@@ -6,19 +6,15 @@ import pizza from "images/tabla.jpg";
 import masa from "images/especias.jpg";
 import Menu1 from "components/menu1/menu1.js";
 import { useEffect, useState } from "react";
-
+import { useMediaQuery } from 'react-responsive'
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Footer from "components/footer/footer.js";
 
 export default function Menu() {
   const [currentCard, setCurrentCard] = useState(null);
  
-  const [isSmall, setSmall] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 1200 : false
-  );
-  const [isMobile, setMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 700 : false
-  );
+   const isSmall = useMediaQuery({ query: '(max-width: 1200px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
 
 
   const handleCard = (e) => {

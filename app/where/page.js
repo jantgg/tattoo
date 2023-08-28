@@ -5,15 +5,14 @@ import "./location.css";
 import pizza from "images/puerto3.jpg";
 import masa from "images/puerto2.jpg";
 import { useEffect, useState } from "react";
-
+import { useMediaQuery } from 'react-responsive'
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Footer from "components/footer/footer.js";
 
 export default function Location() {
 
-  const [isSmall, setSmall] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 1200 : false
-  );
+  const isSmall = useMediaQuery({ query: '(max-width: 1200px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
 
 
   return (

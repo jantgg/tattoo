@@ -3,12 +3,11 @@ import React, { useEffect, useState } from "react";
 import "./navbar.css";
 import "bootstrap/dist/css/bootstrap.css";
 import useScrollPosition from "app/hooks/usescrollposition.js";
+import { useMediaQuery } from "react-responsive";
 
 export default function Navbar() {
   const scrollPosition = useScrollPosition();
-  const [isDesktop, setIsDesktop] = useState(
-    typeof window !== "undefined" ? window.innerWidth >= 1000 : false
-  );
+  const isDesktop = useMediaQuery({ query: "(max-width: 1000px)" });
   const [isInView, setIsInView] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("up");
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -144,12 +143,20 @@ export default function Navbar() {
                   onChange={toggleCollap}
                 />
                 <label htmlFor="checkbox" className="toggle">
-                <div className={`bars ${isInView ? 'bg-w' : 'bg-b'}`} id="bar1"></div>
+                  <div
+                    className={`bars ${isInView ? "bg-w" : "bg-b"}`}
+                    id="bar1"
+                  ></div>
 
-                <div className={`bars ${isInView ? 'bg-w' : 'bg-b'}`} id="bar2"></div>
+                  <div
+                    className={`bars ${isInView ? "bg-w" : "bg-b"}`}
+                    id="bar2"
+                  ></div>
 
-                <div className={`bars ${isInView ? 'bg-w' : 'bg-b'}`} id="bar3"></div>
-
+                  <div
+                    className={`bars ${isInView ? "bg-w" : "bg-b"}`}
+                    id="bar3"
+                  ></div>
                 </label>
               </div>
             </div>
