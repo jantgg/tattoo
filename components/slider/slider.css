@@ -1,0 +1,215 @@
+.slider {
+  height: 100%;
+  margin-top: -5vh !important;
+  margin-bottom: -5vh !important;
+}
+.slider h1 {
+  padding-left: 5vw;
+  padding-right: 2vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  font-size: 3.5vw;
+  font-weight: 900;
+  text-align: left;
+  color: rgb(26, 26, 26);
+}
+.slider p {
+  padding-left: 5vw;
+  padding-right: 2vw;
+  padding-bottom: 1vh;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.5vw;
+  color: rgb(222, 222, 222);
+  line-height: 4.4rem;
+}
+.text-side {
+  padding-top: 7vh;
+  padding-bottom: 5vh;
+  height: 70vh;
+}
+.btn-father {
+  text-align: right;
+  margin-bottom: 4rem !important;
+  z-index: 3;
+}
+.boton {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  text-align: center;
+}
+.boton-i {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  z-index: 1;
+  font-size: 3vw;
+  color: #ffffff;
+}
+.hide {
+  opacity: 0;
+}
+.img-slider {
+  height: 100%;
+  width: 80% !important;
+  object-fit: cover !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+}
+.button-slider {
+  display: inline-block;
+  margin-left: 5vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border: 3px solid rgb(0, 0, 0);
+  background-color: rgb(222, 222, 222);
+  font-weight: 600;
+  font-size: 1.5vw;
+  transition: transform 0.3s ease-in-out;
+}
+.button-slider:hover {
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  transform: translateX(17px);
+  color: rgb(227, 227, 227);
+  border: 3px solid rgb(224, 224, 224);
+  background-color: rgb(26, 26, 26);
+}
+
+.slider {
+  transition: opacity 0.1s ease; /* Tiempo de transición y función de aceleración */
+}
+
+.visible {
+  opacity: 1;
+}
+
+.slider:not(.visible) {
+  opacity: 0;
+}
+
+/* Desktop */
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .slider {
+    height: 100%;
+    margin-top: -5vh !important;
+    margin-bottom: -5vh !important;
+  }
+  .slider h1 {
+    padding-left: 3.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    font-size: 4vw;
+  }
+  .slider p {
+    padding-left: 3.5rem;
+    padding-right: 3rem;
+    padding-bottom: 2vh;
+    font-size: 1.8vw;
+    line-height: 3rem;
+  }
+  .text-side {
+    padding-top: 7vh;
+    padding-bottom: 5vh;
+    height: 80vh;
+  }
+  .button-slider {
+    margin-left: 3.5rem !important;
+    font-size: 1.8vw;
+  }
+  .img-slider {
+    width: 90% !important;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1200px) {
+  .slider h1 {
+    padding-left: 3.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0vh;
+    padding-bottom: 2vh;
+    font-size: 5vw;
+  }
+  .slider p {
+    padding-left: 3.5rem;
+    padding-right: 3rem;
+    padding-bottom: 0vh;
+    font-size: 2.1vw;
+    line-height: 2.4rem;
+  }
+  .text-side {
+    padding-top: 7vh;
+    padding-bottom: 5vh;
+    height: 83vh;
+  }
+  .button-slider {
+    margin-left: 3.5rem !important;
+    font-size: 1.8vw;
+  }
+  .img-slider {
+    width: 90% !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .row {
+    --bs-gutter-x: 0 !important;
+    --bs-gutter-y: 0 !important;
+  }
+  .slider-container-img {
+    display: none;
+  }
+  .button-slider {
+    margin-left: 2rem !important;
+    font-size: 4vw;
+  }
+  .slider h1 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2vh;
+    font-size: 8vw;
+    margin-top: 0rem !important;
+  }
+  .slider p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1.4vh;
+    font-size: 4vw;
+    line-height: 2.4rem;
+  }
+  .text-side {
+    padding-top: 7vh;
+    padding-bottom: 5vh;
+   
+  }
+  .button-slider {
+    margin-left: 2rem !important;
+    font-size: 4vw;
+  }
+  .img-slider {
+    width: 90% !important;
+  }
+  .boton-i {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    z-index: 1;
+    font-size: 6vw;
+    color: #ffffff;
+  }
+  .interlude-tittle {
+    margin-top: 0;
+    font-size: 7vw !important;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .interlude-tittle-2 {
+    margin-top: 0;
+    font-size: 5.8vw !important;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
