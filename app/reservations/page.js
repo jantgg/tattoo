@@ -6,13 +6,11 @@ import pizza from "images/fondo-mesa.jpg";
 import phone from "images/phone.jpg";
 import masa from "images/ensaladaymesar.jpg";
 import { useEffect, useState } from "react";
-import useScrollPosition from "../hooks/usescrollposition.js";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Footer from "components/footer/footer.js";
 import {BsFillTelephoneOutboundFill} from 'react-icons/bs'
 
 export default function Reservations() {
-  const scrollPosition = useScrollPosition();
   const isMobile = window.innerWidth < 700;
 
   return (

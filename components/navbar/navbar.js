@@ -1,11 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import "./navbar.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default function Navbar({ scrollPosition }) {
-  const router = useRouter();
+
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1000);
   const [isInView, setIsInView] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("up");

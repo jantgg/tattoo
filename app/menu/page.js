@@ -6,13 +6,13 @@ import pizza from "images/tabla.jpg";
 import masa from "images/especias.jpg";
 import Menu1 from "components/menu1/menu1.js";
 import { useEffect, useState } from "react";
-import useScrollPosition from "../hooks/usescrollposition.js";
+
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Footer from "components/footer/footer.js";
 
 export default function Menu() {
   const [currentCard, setCurrentCard] = useState(null);
-  const scrollPosition = useScrollPosition();
+ 
   const isMobile = window.innerWidth < 700;
 
 

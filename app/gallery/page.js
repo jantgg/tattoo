@@ -5,17 +5,13 @@ import "./gallery.css";
 import pizza from "images/banus.jpg";
 import masa from "images/pizza-top-blanco.jpg";
 import { useEffect, useState } from "react";
-import useScrollPosition from "../hooks/usescrollposition.js";
+
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Gallerycomp from "components/gallerycomp/gallerycomp.js";
 import Footer from "components/footer/footer.js";
 
 export default function Gallery() {
-  const scrollPosition = useScrollPosition();
 
-  useEffect(() => {
-    // Lógica específica para Page1 que se ejecutará cuando cambie la posición del scroll
-  }, [scrollPosition]);
 
   return (
     <main className="wrapper-l">
