@@ -1,4 +1,4 @@
-"use client";
+
 import { useClient } from "next/client";
 import Head from "next/head";
 import "./globals.css";
