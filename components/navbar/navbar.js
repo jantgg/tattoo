@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
 import "bootstrap/dist/css/bootstrap.css";
+import useScrollPosition from "app/hooks/usescrollposition.js";
 
-export default function Navbar({ scrollPosition }) {
-
+export default function Navbar() {
+  const scrollPosition = useScrollPosition();
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1000);
   const [isInView, setIsInView] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("up");
