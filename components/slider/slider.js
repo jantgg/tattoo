@@ -1,10 +1,8 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useRef } from "react";
+import React, { useState} from "react";
 import "./slider.css";
 import AnimatedDivUp from "../animateddiv/animateddivup.js";
-import AnimatedDivLeft from "../animateddiv/animateddivleft.js";
-import AnimatedDivRight from "../animateddiv/animateddivright.js";
 import dapaolo from "images/dapaolo.jpg";
 import pasta from "images/pasta-angulo.jpg";
 import people from "images/people.jpg";
@@ -32,11 +30,6 @@ export default function Slider() {
       text: "Whether you're seeking an intimate dinner for two or a joyous gathering with friends, our restaurant offers a warm and inviting atmosphere that effortlessly complements the beauty of its surroundings. Join us to embark on a culinary voyage that connects your heart to the Mediterranean soul, where every moment is a celebration of la dolce vita.",
     },
   ];
-  //   const [currentIndex, setCurrentIndex] = useState(0);
-  //   const endIndex = data.length;
-  //   console.log(endIndex);
-
-  //   const dataToRender = data.slice(currentIndex, endIndex);
   const [isVisible, setIsVisible] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
 

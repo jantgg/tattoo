@@ -16,10 +16,6 @@ const inter = Merriweather({
   display: 'swap',
   weight: '300',
 })
-export const metadata = {
-  title: "Da Paolo",
-  description: "The best restaurant in Puerto Banus",
-};
 
 export default function RootLayout({ children }) {
   const scrollPosition = useScrollPosition();

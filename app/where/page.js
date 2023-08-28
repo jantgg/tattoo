@@ -5,17 +5,14 @@ import "./location.css";
 import pizza from "images/puerto3.jpg";
 import masa from "images/puerto2.jpg";
 import { useEffect, useState } from "react";
-import useScrollPosition from "../hooks/usescrollposition.js";
+
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Footer from "components/footer/footer.js";
 
 export default function Location() {
-  const scrollPosition = useScrollPosition();
+
   const isSmall = window.innerWidth < 1200;
 
-  useEffect(() => {
-    // Lógica específica para Page1 que se ejecutará cuando cambie la posición del scroll
-  }, [scrollPosition]);
 
   return (
     <main className="wrapper-l">

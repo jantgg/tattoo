@@ -1,12 +1,12 @@
 "use client";
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
-import useScrollPosition from 'app/hooks/useScrollPosition';
+
 
 import "./animateddiv.css";
 
 const AnimatedDivLeft = ({ children, classNameProps }) => {
-  const scrollPosition = useScrollPosition();
+
   const divRef = useRef(null);
 
   useEffect(() => {

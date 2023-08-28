@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 import { gsap } from "gsap";
-import useScrollPosition from "app/hooks/useScrollPosition";
 import pasta from "images/pasta.jpg";
 import dapaolo from "images/dapaolo.jpg";
 import boniato from "images/boniato.jpg";

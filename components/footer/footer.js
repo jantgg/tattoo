@@ -1,10 +1,3 @@
-"use client";
-import Image from "next/image";
-import React, { useRef, useState } from "react";
-import { gsap } from "gsap";
-import useScrollPosition from "app/hooks/useScrollPosition";
-import pasta from "images/pasta.jpg";
-import dapaolo from "images/dapaolo.jpg";
 import "./footer.css";
 import { GrMail } from "react-icons/gr";
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
@@ -12,7 +5,7 @@ import { HiLocationMarker } from "react-icons/hi";
 import { FaTripadvisor } from "react-icons/fa";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
-import AnimatedDivUp from "../animateddiv/animateddivup.js";
+
 
 const Footer = () => {
   return (
