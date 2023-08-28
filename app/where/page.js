@@ -32,7 +32,7 @@ export default function Location() {
         <h1 className="header-tittle-l ">Come and meet us </h1>
         <h2 className="header-h2-l col-12">
           <div className="col-12 col-sm-8 col-md-8 mx-auto">
-            Join us by the water's edge at Puerto Banús and experience authentic
+            Join us by the water&apos;s edge at Puerto Banús and experience authentic
             Italian Mediterranean cuisine. Your table is waiting.
           </div>
         </h2>

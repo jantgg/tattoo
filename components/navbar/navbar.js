@@ -27,11 +27,11 @@ export default function Navbar() {
   useEffect(() => {
     const mainElement = document.querySelector("main");
     mainElement.addEventListener("scroll", handleScroll);
-
+  
     return () => {
       mainElement.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos]);
+  }, [prevScrollPos, handleScroll]);
 
   const scrollToBottom = () => {
     const mainElement = document.querySelector("main");
