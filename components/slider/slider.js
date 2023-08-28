@@ -13,12 +13,12 @@ export default function Slider() {
   const [isSmall, setIsSmall] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setIsSmall(window.innerWidth <= 1200);
-      setIsMobile(window.innerWidth <= 700);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     setIsSmall(window.innerWidth <= 1200);
+  //     setIsMobile(window.innerWidth <= 700);
+  //   }
+  // }, []);
   
   const data = [
     {

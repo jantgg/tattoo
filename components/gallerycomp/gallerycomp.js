@@ -33,12 +33,12 @@ const Gallerycomp = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const [selectedImage, setSelectedImage] = useState(pasta); // Estado para la imagen principal
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setIsSmall(window.innerWidth <= 1200);
-      setIsMobile(window.innerWidth <= 700);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     setIsSmall(window.innerWidth <= 1200);
+  //     setIsMobile(window.innerWidth <= 700);
+  //   }
+  // }, []);
 
   const handleImageClick = (src) => {
     // Animación de cambio de imagen usando GSAP

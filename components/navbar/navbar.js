@@ -16,11 +16,11 @@ export default function Navbar() {
 
   const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setIsMobile(window.innerWidth > 700);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     setIsMobile(window.innerWidth > 700);
+  //   }
+  // }, []);
 
   const toggleCollap = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
