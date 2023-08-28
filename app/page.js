@@ -8,12 +8,13 @@ import "./page.css";
 import Slider from "components/slider/slider";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Footer from "components/footer/footer.js";
+import { useState } from "react";
+import { useMediaQuery } from 'react-responsive'
+
 
 export default function Home() {
-
-  const [isMobile, setMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 700 : false
-  );
+  const isSmall = useMediaQuery({ query: '(max-width: 1200px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
 
   return (
     <main className="wrapper">

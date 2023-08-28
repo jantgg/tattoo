@@ -6,14 +6,12 @@ import AnimatedDivUp from "../animateddiv/animateddivup.js";
 import dapaolo from "images/dapaolo.jpg";
 import pasta from "images/pasta-angulo.jpg";
 import people from "images/people.jpg";
+import { useMediaQuery } from 'react-responsive'
+
 
 export default function Slider() {
-  const [isSmall, setSmall] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 1200 : false
-  );
-  const [isMobile, setMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 700 : false
-  );
+  const isSmall = useMediaQuery({ query: '(max-width: 1200px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
   const data = [
     {
       id: 1,
