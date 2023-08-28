@@ -7,12 +7,18 @@ import { useMediaQuery } from "react-responsive";
 
 export default function Navbar() {
   const scrollPosition = useScrollPosition();
-  const isDesktop = useMediaQuery({ query: "(max-width: 1000px)" });
+
   const [isInView, setIsInView] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("up");
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [selected, setSelected] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsDesktop(useMediaQuery({ query: '(max-width: 1000px)' }));
+  }, []);
 
   const toggleCollap = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);

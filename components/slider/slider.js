@@ -10,8 +10,13 @@ import { useMediaQuery } from 'react-responsive'
 
 
 export default function Slider() {
-  const isSmall = useMediaQuery({ query: '(max-width: 1200px)' })
-  const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
+  const [isSmall, setIsSmall] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsSmall(useMediaQuery({ query: '(max-width: 1200px)' }));
+    setIsMobile(useMediaQuery({ query: '(max-width: 700px)' }));
+  }, []);
   const data = [
     {
       id: 1,

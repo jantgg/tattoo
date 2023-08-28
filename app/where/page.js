@@ -11,9 +11,13 @@ import Footer from "components/footer/footer.js";
 
 export default function Location() {
 
-  const isSmall = useMediaQuery({ query: '(max-width: 1200px)' })
-  const isMobile = useMediaQuery({ query: '(max-width: 700px)' })
+  const [isSmall, setIsSmall] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    setIsSmall(useMediaQuery({ query: '(max-width: 1200px)' }));
+    setIsMobile(useMediaQuery({ query: '(max-width: 700px)' }));
+  }, []);
 
   return (
     <main className="wrapper-l">
