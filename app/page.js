@@ -8,6 +8,7 @@ import "./page.css";
 import Slider from "components/slider/slider";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Footer from "components/footer/footer.js";
+import { useState } from "react";
 
 export default function Home() {
 
