@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 import pasta from "images/pasta.jpg";
 import dapaolo from "images/dapaolo.jpg";
@@ -29,10 +29,16 @@ const Gallerycomp = () => {
     pizza,
 
   ];
+  const [isSmall, setIsSmall] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
   const [selectedImage, setSelectedImage] = useState(pasta); // Estado para la imagen principal
-  const [isMobile, setMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 700 : false
-  );
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsSmall(window.innerWidth <= 1200);
+      setIsMobile(window.innerWidth <= 700);
+    }
+  }, []);
 
   const handleImageClick = (src) => {
     // Animación de cambio de imagen usando GSAP

@@ -13,11 +13,13 @@ export default function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [selected, setSelected] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
+
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsDesktop(useMediaQuery({ query: '(max-width: 1000px)' }));
+    if (typeof window !== 'undefined') {
+      setIsMobile(window.innerWidth > 700);
+    }
   }, []);
 
   const toggleCollap = () => {
@@ -86,7 +88,7 @@ export default function Navbar() {
         <a
           href="/"
           className={`navbar-tittle mx-auto text-black no-deco${
-            isDesktop ? " ms-5" : " ms-2"
+            isMobile ? " ms-5" : " ms-2"
           } ${isInView ? " text-white line" : "  text-black line2"}`}
           onClick={() => {
             scrollToTop();
@@ -95,7 +97,7 @@ export default function Navbar() {
           Da Paolo
         </a>
 
-        {isDesktop ? (
+        {isMobile ? (
           <div className={`navbar-nav ms-auto myrow ${isInView ? " " : " "}`}>
             <a
               href="/menu"

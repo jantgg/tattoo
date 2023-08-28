@@ -15,8 +15,10 @@ export default function Location() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsSmall(useMediaQuery({ query: '(max-width: 1200px)' }));
-    setIsMobile(useMediaQuery({ query: '(max-width: 700px)' }));
+    if (typeof window !== 'undefined') {
+      setIsSmall(window.innerWidth <= 1200);
+      setIsMobile(window.innerWidth <= 700);
+    }
   }, []);
 
   return (

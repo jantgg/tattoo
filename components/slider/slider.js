@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState} from "react";
+import React, { useState, useEffect} from "react";
 import "./slider.css";
 import AnimatedDivUp from "../animateddiv/animateddivup.js";
 import dapaolo from "images/dapaolo.jpg";
@@ -14,9 +14,12 @@ export default function Slider() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsSmall(useMediaQuery({ query: '(max-width: 1200px)' }));
-    setIsMobile(useMediaQuery({ query: '(max-width: 700px)' }));
+    if (typeof window !== 'undefined') {
+      setIsSmall(window.innerWidth <= 1200);
+      setIsMobile(window.innerWidth <= 700);
+    }
   }, []);
+  
   const data = [
     {
       id: 1,

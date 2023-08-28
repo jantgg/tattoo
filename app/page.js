@@ -8,7 +8,7 @@ import "./page.css";
 import Slider from "components/slider/slider";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Footer from "components/footer/footer.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { useMediaQuery } from 'react-responsive'
 
@@ -19,8 +19,10 @@ export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsSmall(useMediaQuery({ query: '(max-width: 1200px)' }));
-    setIsMobile(useMediaQuery({ query: '(max-width: 700px)' }));
+    if (typeof window !== 'undefined') {
+      setIsSmall(window.innerWidth <= 1200);
+      setIsMobile(window.innerWidth <= 700);
+    }
   }, []);
 
   return (
