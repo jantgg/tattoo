@@ -30,7 +30,9 @@ const Gallerycomp = () => {
 
   ];
   const [selectedImage, setSelectedImage] = useState(pasta); // Estado para la imagen principal
-  const isMobile = window.innerWidth < 700;
+  const [isMobile, setMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 700 : false
+  );
 
   const handleImageClick = (src) => {
     // Animación de cambio de imagen usando GSAP

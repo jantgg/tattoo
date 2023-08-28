@@ -8,8 +8,12 @@ import pasta from "images/pasta-angulo.jpg";
 import people from "images/people.jpg";
 
 export default function Slider() {
-  const isSmall = window.innerWidth < 1200;
-  const isMobile = window.innerWidth < 700;
+  const [isSmall, setSmall] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 1200 : false
+  );
+  const [isMobile, setMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 700 : false
+  );
   const data = [
     {
       id: 1,

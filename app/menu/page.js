@@ -13,7 +13,12 @@ import Footer from "components/footer/footer.js";
 export default function Menu() {
   const [currentCard, setCurrentCard] = useState(null);
  
-  const isMobile = window.innerWidth < 700;
+  const [isSmall, setSmall] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 1200 : false
+  );
+  const [isMobile, setMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 700 : false
+  );
 
 
   const handleCard = (e) => {
