@@ -6,7 +6,9 @@ import useScrollPosition from "app/hooks/usescrollposition.js";
 
 export default function Navbar() {
   const scrollPosition = useScrollPosition();
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1000);
+  const [isDesktop, setIsDesktop] = useState(
+    typeof window !== "undefined" ? window.innerWidth >= 1000 : false
+  );
   const [isInView, setIsInView] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("up");
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -27,7 +29,7 @@ export default function Navbar() {
   useEffect(() => {
     const mainElement = document.querySelector("main");
     mainElement.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       mainElement.removeEventListener("scroll", handleScroll);
     };
@@ -130,7 +132,11 @@ export default function Navbar() {
           <>
             {" "}
             <div className="collap-nav myrow col-2">
-              <div className=" ms-auto">
+              <div
+                className={` ms-auto ${
+                  isInView ? " text-white " : "  text-black "
+                }`}
+              >
                 <input
                   type="checkbox"
                   id="checkbox"
@@ -138,9 +144,12 @@ export default function Navbar() {
                   onChange={toggleCollap}
                 />
                 <label htmlFor="checkbox" className="toggle">
-                  <div className="bars" id="bar1"></div>
-                  <div className="bars" id="bar2"></div>
-                  <div className="bars" id="bar3"></div>
+                <div className={`bars ${isInView ? 'bg-w' : 'bg-b'}`} id="bar1"></div>
+
+                <div className={`bars ${isInView ? 'bg-w' : 'bg-b'}`} id="bar2"></div>
+
+                <div className={`bars ${isInView ? 'bg-w' : 'bg-b'}`} id="bar3"></div>
+
                 </label>
               </div>
             </div>

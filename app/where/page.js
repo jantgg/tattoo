@@ -11,7 +11,9 @@ import Footer from "components/footer/footer.js";
 
 export default function Location() {
 
-  const isSmall = window.innerWidth < 1200;
+  const [isSmall, setSmall] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 1200 : false
+  );
 
 
   return (

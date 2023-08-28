@@ -5,14 +5,14 @@ const useScrollPosition = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const mainElement = document.querySelector('main'); // Ajusta el selector según tu estructura
+      const mainElement = document.querySelector('main');
       if (mainElement) {
         const currentScrollPos = mainElement.scrollTop;
         setScrollPosition(currentScrollPos);
       }
     };
 
-    const mainElement = document.querySelector('main'); // Ajusta el selector según tu estructura
+    const mainElement = document.querySelector('main');
     mainElement.addEventListener('scroll', handleScroll);
 
     return () => {

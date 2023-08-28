@@ -11,7 +11,12 @@ import Footer from "components/footer/footer.js";
 import {BsFillTelephoneOutboundFill} from 'react-icons/bs'
 
 export default function Reservations() {
-  const isMobile = window.innerWidth < 700;
+  const [isSmall, setSmall] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 1200 : false
+  );
+  const [isMobile, setMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 700 : false
+  );
 
   return (
     <main className="wrapper-l">

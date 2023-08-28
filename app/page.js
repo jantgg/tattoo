@@ -11,7 +11,9 @@ import Footer from "components/footer/footer.js";
 
 export default function Home() {
 
-  const isMobile = window.innerWidth < 700;
+  const [isMobile, setMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 700 : false
+  );
 
   return (
     <main className="wrapper">

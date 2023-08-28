@@ -152,6 +152,12 @@
   background-color: rgb(238, 238, 238);
   border-radius: 4px;
 }
+.bg-w{
+    background-color: rgb(238, 238, 238);
+}
+.bg-b{
+    background-color: rgb(23, 23, 23);
+}
 
 #bar2 {
   transition-duration: 0.8s;
