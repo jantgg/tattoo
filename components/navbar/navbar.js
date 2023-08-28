@@ -57,13 +57,6 @@ export default function Navbar() {
       behavior: "smooth",
     });
   };
-  const currentPath = window.location.pathname;
-
-  useEffect(() => {
-    if (currentPath !== "/") {
-      setIsInView(false);
-    }
-  }, [currentPath]);
 
   useEffect(() => {
     if (scrollPosition < 200) {
