@@ -6,7 +6,6 @@ import masa from "images/masa.jpg";
 import ensaladatop from "images/ensalada-top.jpg";
 import "./page.css";
 import Slider from "components/slider/slider";
-
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Footer from "components/footer/footer.js";
 
