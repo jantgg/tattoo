@@ -5,17 +5,10 @@ import Navbar from "@/components/navbar/navbar";
 import "bootstrap/dist/css/bootstrap.css";
 
 import Script from "next/script";
-const inter = Merriweather({
-  subsets: ["latin"],
-  display: "swap",
-  weight: "300",
-});
 
 export default function RootLayout({ children }) {
-
-
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en">
       <head>
         <title>Da Paolo</title>
         <meta
@@ -33,12 +26,15 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
           rel="stylesheet"
         />
+        {/* <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"></link> */}
+
         <link
+          href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap"
           rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         />
+        {/* <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" /> */}
       </head>
-      <body className={inter.className}>
+      <body>
         <Navbar />
         {children}
       </body>

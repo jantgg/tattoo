@@ -49,7 +49,7 @@ body {
   object-fit: cover !important;
   z-index: -1;
   transform: translateZ(-5px) scale(1.51);
-  filter: grayscale(0.4);
+  
 }
 .parallax-container2 {
   margin-top: -10vh;
@@ -69,31 +69,34 @@ body {
   object-fit: cover !important;
   z-index: -1;
   transform: translateZ(-5px) scale(1.51);
-  filter: grayscale(0.4);
+
 }
 
 .interlude-tittle {
   margin-top: 7vh;
-  color: rgb(183, 41, 41);
+  color: rgb(250, 250, 250);
   font-size: 2.6vw !important;
-  font-weight: 900;
+  font-weight: 600;
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 1vh;
   padding-bottom: 1vh;
   text-align: center;
   font-style: italic;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
 }
+
 .interlude-tittle-2 {
   margin-top: 7vh;
-  color: rgb(183, 41, 41);
+  color: rgb(226, 226, 226);
   font-size: 4.2vw !important;
-  font-weight: 900;
+  font-weight: 600;
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 1vh;
   padding-bottom: 1vh;
   text-align: center;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .interlude-text {
   margin-top: 1vh;
@@ -107,15 +110,16 @@ body {
   font-style: italic;
 }
 .header-tittle {
-  color: rgb(183, 41, 41);
-  font-size: 12vw !important;
-  font-weight: 900;
+  color: rgb(255, 255, 255);
+  font-size: 15vw !important;
+  font-weight: 600;
   text-shadow: 0 0 10px rgb(0, 0, 0);
+  
 }
 .header-h2 {
-  color: rgb(183, 41, 41);
+  color: rgb(255, 255, 255);
   font-size: 2vw !important;
-  font-weight: 900;
+  font-weight: 600;
   text-align: center;
   text-shadow: 0 0 10px rgb(0, 0, 0);
 }
@@ -173,21 +177,23 @@ body {
   text-decoration: none;
   color: rgb(0, 0, 0);
   border: 3px solid rgb(0, 0, 0);
-  background-color: rgb(222, 222, 222);
+  background-color:rgb(238, 238, 238);
   font-weight: 600;
   font-size: 1.5vw;
   transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
 }
 .button:hover {
   box-shadow: 0 0 10px rgb(0, 0, 0);
   transform: translateX(17px);
   color: rgb(227, 227, 227);
   border: 3px solid rgb(224, 224, 224);
-  background-color: rgba(21, 21, 21, 0.851);
+  background-color: rgb(21, 21, 21);
 }
 .section2 {
-  background-color: rgb(183, 41, 41) !important;
-  height: 80vh;
+  background-color: rgb(238, 238, 238) !important;
+  height: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.705);
 }
 .section2-inner {
   margin-top: -5vh;
@@ -195,6 +201,7 @@ body {
 }
 .section2-bg {
   padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 .relative {
   position: relative;
@@ -202,12 +209,16 @@ body {
 .section2 h1 {
   padding-left: 3rem;
   padding-right: 3rem;
-  margin-top: 1rem !important;
+  padding-top: 1rem !important;
   text-align: left;
-  font-weight: 900;
-  padding-bottom: 3vh;
-  font-size: 3.5vw;
-  color: rgb(0, 0, 0);
+  font-weight: 600;
+  padding-bottom: 1.5vh;
+  font-size: 4vw;
+  color: rgb(226, 226, 226);
+  background-color: rgb(40, 40, 40);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.502);
 }
 .section2 h2 {
   text-align: center;
@@ -218,13 +229,14 @@ body {
   line-height: 2.9rem;
 }
 .section2 p {
+  padding-top: 1vh;
   padding-left: 3rem;
   padding-right: 7rem;
   text-align: left;
   font-weight: 400;
-  padding-bottom: 3vh;
+  padding-bottom:0vh;
   font-size: 1.5vw;
-  color: rgb(222, 222, 222);
+  color: rgb(34, 34, 34);
   line-height: 4.4rem;
 }
 
@@ -237,6 +249,7 @@ body {
   background-size: cover;
   background-position: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+  border-radius: 10px;
 }
 .card-tittles {
   text-align: center;
@@ -287,8 +300,9 @@ body {
   opacity: 0;
 }
 .section3 {
-  background-color: rgb(183, 41, 41);
+   background-color: rgb(238, 238, 238) !important;
   height: auto;
+   box-shadow: 0 10px 30px rgb(0, 0, 0);
 }
 
 .sub-text {
@@ -337,7 +351,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
 }
 .footer {
-
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
   background-color: rgb(183, 41, 41);
   display: flex;
   justify-content: center;
@@ -366,6 +380,7 @@ body {
   }
   .section2-bg {
     padding-top: 8vh;
+    padding-bottom: 0vh !important;
   }
   .card1 {
     width: 90% !important;
@@ -393,6 +408,7 @@ body {
     font-size: 3.1vw !important;
     padding-left: 10%;
     padding-right: 10%;
+    
   }
   .interlude-tittle-2 {
     margin-top: 0;
@@ -415,6 +431,7 @@ body {
   }
   .section2-bg {
     padding-top: 6vh;
+    padding-bottom: 0vh !important;
   }
   .card1 {
     width: 90% !important;
@@ -472,6 +489,7 @@ body {
   }
   .section2-bg {
     padding-top: 0vh;
+    padding-bottom: 0vh !important;
   }
   .s2-container-img {
     display: none;
@@ -480,7 +498,8 @@ body {
     width: 90% !important;
   }
   .section2 h1 {
-    padding-left: 2rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
     padding-right: 2rem;
     padding-bottom: 2vh;
     font-size: 8vw;

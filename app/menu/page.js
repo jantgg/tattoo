@@ -3,12 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import "./menu.css";
 import pizza from "images/tabla.jpg";
-import masa from "images/especias.jpg";
+import masa from "images/ensaladaymesar.jpg";
 import Menu1 from "components/menu1/menu1.js";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from 'react-responsive'
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import Footer from "components/footer/footer.js";
+import{RxCross1} from "react-icons/rx";
 
 export default function Menu() {
   const [currentCard, setCurrentCard] = useState(null);
@@ -22,19 +23,29 @@ export default function Menu() {
     }
   }, []);
 
-
   const handleCard = (e) => {
     const cardId = e.currentTarget.id;
     setCurrentCard(cardId);
-
+  
     const cardElement = document.getElementById(cardId);
-    if (cardElement) {
+    const cardContainer = document.querySelector('.card-container');
+  
+    if (cardElement && cardContainer) {
       cardElement.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
+  
+      // Ajustar la posición del scroll después de un pequeño retraso
+      const offset = 50; // Ajusta este valor según sea necesario
+      setTimeout(() => {
+        const currentScrollPosition = cardContainer.scrollTop;
+        cardContainer.scrollTop = currentScrollPosition - offset;
+      }, 100); // Ajusta este valor según sea necesario
     }
   };
+  
+  
 
   useEffect(() => {
     const container = document.querySelector(".card-container");
@@ -109,7 +120,7 @@ export default function Menu() {
           >
             <AnimatedDivUp>
               {" "}
-              <h1 className="verticalText col-12 px-0"> Breakfast</h1>
+              <h1 className="verticalText text-mobile col-12 px-0"> Breakfast</h1>
             </AnimatedDivUp>
 
             <div className="col-12 px-0">
@@ -118,9 +129,9 @@ export default function Menu() {
                   e.stopPropagation(); // Evita que el evento se propague hacia arriba
                   setCurrentCard(null);
                 }}
-                className="xbutton"
+                className="xbutton text-black"
               >
-                X
+                   <RxCross1/>
               </button>
               <div className="cardp">
                 <Menu1 />
@@ -134,7 +145,7 @@ export default function Menu() {
           >
             <AnimatedDivUp>
               {" "}
-              <h1 className="verticalText col-12 px-0"> Dishes</h1>
+              <h1 className="verticalText text-mobile col-12 px-0"> Dishes</h1>
             </AnimatedDivUp>
 
             <div className="col-12 px-0">
@@ -143,9 +154,9 @@ export default function Menu() {
                   e.stopPropagation(); // Evita que el evento se propague hacia arriba
                   setCurrentCard(null);
                 }}
-                className="xbutton"
+                className="xbutton text-black"
               >
-                X
+                    <RxCross1/>
               </button>
               <div className="cardp">
                 <Menu1 />
@@ -159,7 +170,7 @@ export default function Menu() {
           >
             <AnimatedDivUp>
               {" "}
-              <h1 className="verticalText col-12 px-0"> Pizza</h1>
+              <h1 className="verticalText text-mobile col-12 px-0"> Pizza</h1>
             </AnimatedDivUp>
 
             <div className="col-12 px-0">
@@ -168,9 +179,9 @@ export default function Menu() {
                   e.stopPropagation(); // Evita que el evento se propague hacia arriba
                   setCurrentCard(null);
                 }}
-                className="xbutton"
+                className="xbutton text-black"
               >
-                X
+                   <RxCross1/>
               </button>
               <div className="cardp">
                 <Menu1 />
@@ -184,7 +195,7 @@ export default function Menu() {
           >
             <AnimatedDivUp>
               {" "}
-              <h1 className="verticalText col-12 px-0"> Cocktail</h1>
+              <h1 className="verticalText text-mobile col-12 px-0"> Cocktail</h1>
             </AnimatedDivUp>
 
             <div className="col-12 px-0">
@@ -193,9 +204,9 @@ export default function Menu() {
                   e.stopPropagation(); // Evita que el evento se propague hacia arriba
                   setCurrentCard(null);
                 }}
-                className="xbutton"
+                className="xbutton text-black"
               >
-                X
+                    <RxCross1/>
               </button>
               <div className="cardp">
                 <Menu1 />
@@ -206,7 +217,7 @@ export default function Menu() {
       ) : (
         <div
           className={`section2-m row col-12 mx-0 card-container ${
-            currentCard !== null ? "goblack" : "gored"
+            currentCard !== null ? "goblack" : "gowhite"
           }`}
         >
           <div
@@ -223,7 +234,7 @@ export default function Menu() {
                 }}
                 className="xbutton"
               >
-                X
+                <RxCross1/>
               </button>
               <div className="cardp">
                 <Menu1 />
@@ -244,7 +255,7 @@ export default function Menu() {
                 }}
                 className="xbutton"
               >
-                X
+                     <RxCross1/>
               </button>
               <div className="cardp">
                 <Menu1 />
@@ -265,7 +276,7 @@ export default function Menu() {
                 }}
                 className="xbutton"
               >
-                X
+                     <RxCross1/>
               </button>
               <div className="cardp">
                 <Menu1 />
@@ -286,7 +297,7 @@ export default function Menu() {
                 }}
                 className="xbutton"
               >
-                X
+                    <RxCross1/>
               </button>
               <div className="cardp">
                 <Menu1 />

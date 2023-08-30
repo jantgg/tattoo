@@ -3,6 +3,8 @@ import Image from "next/image";
 import React, { useState, useEffect} from "react";
 import "./slider.css";
 import AnimatedDivUp from "../animateddiv/animateddivup.js";
+import AnimatedDivLeft from "../animateddiv/animateddivleft.js";
+import AnimatedDivRight from "../animateddiv/animateddivright.js";
 import dapaolo from "images/dapaolo.jpg";
 import pasta from "images/pasta-angulo.jpg";
 import people from "images/people.jpg";
@@ -70,10 +72,10 @@ export default function Slider() {
           {" "}
           {currentIndex === 0 ? (
             <>
-              <AnimatedDivUp>
+              <AnimatedDivLeft>
                 {" "}
-                <h1>Get to know us</h1>
-              </AnimatedDivUp>
+                <h1 className="col-11 col-sm-12 col-md-12" >Get to know us</h1>
+              </AnimatedDivLeft>
               <AnimatedDivUp>
                 {" "}
                 <p>
@@ -98,9 +100,9 @@ export default function Slider() {
               <AnimatedDivUp>
                 {" "}
                 {isSmall ? (
-                  <h1>Time-honored classics</h1>
+                   <h1 className="col-11 col-sm-12 col-md-12" >Time-honored classics</h1>
                 ) : (
-                  <h1>Time-honored classics with a modern twist</h1>
+                  <h1 className="col-11 col-sm-12 col-md-12" >Time-honored classics with a modern twist</h1>
                 )}
               </AnimatedDivUp>
               <AnimatedDivUp>
@@ -126,10 +128,10 @@ export default function Slider() {
             </>
           ) : currentIndex === 2 ? (
             <>
-              <AnimatedDivUp>
+              <AnimatedDivLeft>
                 {" "}
-                <h1>Inviting ambiance for every occasion</h1>
-              </AnimatedDivUp>
+                <h1 className="col-11 col-sm-12 col-md-12" >Inviting ambiance for every occasion</h1>
+              </AnimatedDivLeft>
               <AnimatedDivUp>
                 {" "}
                 <p>

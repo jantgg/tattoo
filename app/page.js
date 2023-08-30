@@ -1,25 +1,23 @@
 "use client";
 import Image from "next/image";
-import pizza from "images/fondopizza.jpg";
-import madera from "images/madera.jpg";
+import pizza from "images/pizzamaster.jpg";
+import madera from "images/ensaladaymesar.jpg";
+import pizza2 from "images/boniato.jpg";
 import masa from "images/masa.jpg";
-import ensaladatop from "images/ensalada-top.jpg";
+import ensaladatop from "images/arroz.jpg";
 import "./page.css";
 import Slider from "components/slider/slider";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
+import AnimatedDivRight from "components/animateddiv/animateddivright.js";
 import Footer from "components/footer/footer.js";
 import { useState, useEffect } from "react";
-
-import { useMediaQuery } from 'react-responsive'
-
-
 
 export default function Home() {
   const [isSmall, setIsSmall] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       setIsSmall(window.innerWidth <= 1200);
       setIsMobile(window.innerWidth <= 700);
     }
@@ -38,8 +36,11 @@ export default function Home() {
           placeholder="blur"
           priority={true}
         />
-        <h1 className={` header-tittle`}>Da Paolo </h1>
+           <AnimatedDivUp>
+           <h1 className={` header-tittle`}>da Paolo </h1>
         <h2 className="header-h2 col-10"> Restaurant - Pizzeria</h2>
+            </AnimatedDivUp>
+   
       </div>
       <div className="section2 row col-12 mx-0 ">
         <div className="section2-inner row col-12 px-0">
@@ -56,11 +57,9 @@ export default function Home() {
           </div>
           <div className="col-12 col-sm-6 col-md-6  flex-column section2-bg">
             {" "}
-            <AnimatedDivUp>
-              <h1 className="col-12">
-                Discover the true mediterranean cuisine{" "}
-              </h1>
-            </AnimatedDivUp>
+            <AnimatedDivRight>
+              <h1 className="">Discover the true mediterranean cuisine </h1>
+            </AnimatedDivRight>
             <AnimatedDivUp>
               {" "}
               <p className="lato">
@@ -88,7 +87,7 @@ export default function Home() {
       </div>
       <div className="parallax-container">
         <Image
-          src={madera}
+          src={pizza2}
           fill
           sizes="100vw"
           quality={100}
@@ -96,13 +95,23 @@ export default function Home() {
           alt="puerto banus image"
         />
         {isMobile ? null : (
-          <AnimatedDivUp>
-            {" "}
-            <h1 className="interlude-tittle ">
-            &quot;From our kitchen to your table: An exquisite compilation of
-              classic mediterranean cuisine&quot; <br></br> - The Chef{" "}
-            </h1>
-          </AnimatedDivUp>
+          <>
+            <Image
+              src={madera}
+              fill
+              sizes="100vw"
+              quality={100}
+              className="interlude-img"
+              alt="puerto banus image"
+            />
+            <AnimatedDivUp>
+              {" "}
+              <h1 className="interlude-tittle merri">
+                &quot;From our kitchen to your table: An exquisite compilation
+                of classic mediterranean cuisine&quot; <span>-The Chef </span>
+              </h1>
+            </AnimatedDivUp>
+          </>
         )}
       </div>
       <div className="section3 col-12 row px-0 mx-0">
@@ -129,9 +138,7 @@ export default function Home() {
         </div>
       </div>
       <div className="footer">
-      
-          <Footer />
-    
+        <Footer />
       </div>
     </main>
   );

@@ -1,5 +1,16 @@
-:root {
-  --font-lato: "Lato", sans-serif;
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', cursive;
+}
+.poppins{
+  font-family: 'Poppins', cursive !important;
+}
+.merri{
+  font-family: 'Merriweather', serif;
+}
+body {
+  font-family: 'Merriweather', serif;
 }
 .myrow {
   display: flex;
@@ -16,7 +27,7 @@ p {
   font-family: var(--font-lato);
 }
 
-/* Ancho y color del scrollbar */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -26,18 +37,18 @@ p {
   border-radius: 5px !important;
 }
 
-/* Cambiar color al pasar el mouse por encima */
+
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(35, 35, 35);
   border-radius: 5px !important;
 }
 
-/* Color de fondo del scrollbar */
+
 ::-webkit-scrollbar-track {
   background-color: #f1f1f100;
 }
 
-/* Cambiar el color del fondo del scrollbar al pasar el mouse por encima */
+
 ::-webkit-scrollbar-track:hover {
   background-color: #dddddd00;
 }

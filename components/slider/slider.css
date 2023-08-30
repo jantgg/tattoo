@@ -1,17 +1,22 @@
 .slider {
-  height: 100%;
+  height: auto;
   margin-top: -5vh !important;
   margin-bottom: -5vh !important;
 }
 .slider h1 {
+  margin-top: 2vh;
   padding-left: 5vw;
   padding-right: 2vw;
   padding-top: 3vh;
   padding-bottom: 3vh;
-  font-size: 3.5vw;
-  font-weight: 900;
+  font-size: 3.4vw;
+  font-weight: 600;
   text-align: left;
-  color: rgb(26, 26, 26);
+  color: rgb(226, 226, 226);
+  background-color: rgb(40, 40, 40);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.502);
 }
 .slider p {
   padding-left: 5vw;
@@ -20,17 +25,17 @@
   text-align: left;
   font-weight: 500;
   font-size: 1.5vw;
-  color: rgb(222, 222, 222);
+  color: rgb(35, 35, 35);
   line-height: 4.4rem;
 }
 .text-side {
   padding-top: 7vh;
   padding-bottom: 5vh;
-  height: 70vh;
+  height: 80vh;
 }
 .btn-father {
   text-align: right;
-  margin-bottom: 4rem !important;
+  margin-bottom: 5rem!important;
   z-index: 3;
 }
 .boton {
@@ -39,11 +44,11 @@
   text-align: center;
 }
 .boton-i {
-  background-color: rgba(0, 0, 0, 0);
+
   border: none;
   z-index: 1;
   font-size: 3vw;
-  color: #ffffff;
+  color: #1c1c1c;
 }
 .hide {
   opacity: 0;
@@ -53,6 +58,7 @@
   width: 80% !important;
   object-fit: cover !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
+  border-radius: 10px;
 }
 .button-slider {
   display: inline-block;
@@ -64,10 +70,11 @@
   text-decoration: none;
   color: rgb(0, 0, 0);
   border: 3px solid rgb(0, 0, 0);
-  background-color: rgb(222, 222, 222);
+  background-color: rgb(238, 238, 238);
   font-weight: 600;
   font-size: 1.5vw;
   transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
 }
 .button-slider:hover {
   box-shadow: 0 0 10px rgb(0, 0, 0);
@@ -168,11 +175,13 @@
     font-size: 4vw;
   }
   .slider h1 {
+
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-bottom: 2vh;
+    padding-bottom: 3vh;
     font-size: 8vw;
-    margin-top: 0rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 3vh;
   }
   .slider p {
     padding-left: 2rem;
@@ -198,7 +207,7 @@
     border: none;
     z-index: 1;
     font-size: 6vw;
-    color: #ffffff;
+    color: #1a1a1a;
   }
   .interlude-tittle {
     margin-top: 0;

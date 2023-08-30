@@ -7,6 +7,7 @@ import masa from "images/puerto2.jpg";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from 'react-responsive'
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
+
 import Footer from "components/footer/footer.js";
 
 export default function Location() {

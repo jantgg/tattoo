@@ -22,7 +22,7 @@ body {
   width: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: grayscale(0.5);
+ 
   transform: translateZ(-10px) scale(2.01);
 }
 .parallax-container {
@@ -51,39 +51,41 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: center;
-  filter: grayscale(0.6);
+ 
 }
 .absolute {
   position: absolute;
 }
 
 .header-tittle-m {
-  color: rgb(183, 41, 41);
-  font-size: 8vw !important;
-  font-weight: 900;
+  color: rgb(253, 253, 253);
+  font-size: 9vw !important;
+  font-weight: 600;
   text-align: center;
   text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .header-h2-m {
-  color: rgb(229, 229, 229);
+  color: rgb(253, 253, 253);
   font-size: 2vw !important;
-  font-weight: 900;
+  font-weight: 600;
   text-align: center;
   text-shadow: 0 0 10px rgb(0, 0, 0);
   padding-left: 20%;
   padding-right: 20%;
+  
 }
 .interlude-tittle-2 {
   margin-top: 7vh;
-  color: rgb(183, 41, 41);
+  color: rgb(226, 226, 226);
   font-size: 4.2vw !important;
-  font-weight: 900;
+  font-weight: 600;
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 1vh;
   padding-bottom: 1vh;
   text-align: center;
   z-index: 2;
+   text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .interlude-text {
   margin-top: 1vh;
@@ -120,7 +122,6 @@ body {
 .section2-m {
   background-color: rgb(183, 41, 41);
   justify-content: space-evenly;
-  background-color: white;
   position: relative;
   display: flex;
   transition: background-color 0.5s ease-in-out;
@@ -130,7 +131,7 @@ body {
   background-color: rgb(183, 41, 41) !important;
 }
 .gowhite {
-  background-color: rgb(228, 228, 228) !important;
+  background-color: rgb(235, 235, 235) !important;
 }
 .goblack {
   background-color: rgb(22, 22, 22) !important;
@@ -138,7 +139,7 @@ body {
 .card-m {
   position: relative;
   min-height: 50vh;
-  background-color: brown;
+  background-color: rgb(227, 227, 227);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
   margin-bottom: -5vh;
   margin-top: -5vh;
@@ -146,6 +147,7 @@ body {
   flex: 0 0 auto;
   cursor: pointer;
   transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  border-radius: 10px;
 }
 .card-m::before {
   content: "";
@@ -159,6 +161,7 @@ body {
   background-repeat: no-repeat;
   opacity: 1;
   transition: opacity 0.4s ease-in-out;
+  border-radius: 10px;
 }
 
 .card1-m::before {
@@ -204,7 +207,9 @@ body {
 .card-m-active .verticalText {
   margin-left: 0vh;
   width: 10%;
-}
+  color: rgb(37, 37, 37);
+  z-index: 1;
+  text-shadow: 0 0 5px rgb(0, 0, 0);}
 .card-m-disabled {
   width: 5%;
   opacity: 1;
@@ -213,6 +218,9 @@ body {
   margin-left: 0vh;
   width: 100%;
   z-index: 1;
+  color: rgb(37, 37, 37);
+  z-index: 1;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
 .verticalText {
@@ -223,12 +231,14 @@ body {
   /* Rota el texto 180 grados */
   align-items: center;
   font-size: 4vw;
-  color: rgb(232, 232, 232);
+  color: rgb(225, 225, 225);
   z-index: 1;
   text-shadow: 0 0 10px rgb(0, 0, 0);
+  transition: color 0.5 ease-in-out;
 }
+
 .cardp {
-  color: rgb(255, 255, 255);
+  color: rgb(31, 31, 31);
   font-size: 3vw;
   opacity: 0;
   overflow: hidden;
@@ -243,22 +253,26 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  color: rgb(225, 225, 225);
+  color: rgb(40, 40, 40);
   z-index: 2;
   background-color: rgba(183, 41, 41, 0);
   border: none;
   font-size: 2vw;
   margin-right: 1vh;
   display: none;
+  padding-top: 1.6vh;
 }
 
 .menu-tittle {
   color: rgb(235, 235, 235);
   text-align: center;
+  background-color:  rgb(34, 34, 34);
   font-size: 3vw;
-  padding-top: 2vh;
-  font-weight: 700;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  font-weight: 600;
   text-shadow: 0 0 10px rgb(0, 0, 0);
+  border-radius: 10px;
 }
 .plate-tittle {
   color: rgb(13, 13, 13);
@@ -271,6 +285,8 @@ body {
   text-align: center;
   font-size: 1vw;
   font-weight: 400;
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
 
 .footer {
@@ -366,6 +382,7 @@ body {
     display: flex;
     transition: background-color 0.5s ease-in-out;
     z-index: 2;
+    box-shadow: 0 10 30px rgb(0, 0, 0);
   }
   .verticalText {
     margin-left: 1.5vh;
@@ -388,7 +405,7 @@ body {
     background-color: rgba(183, 41, 41, 0);
     border: none;
     font-size: 7vw;
-    margin-top: 1.3vh;
+    margin-top: 0.7vh;
     margin-right: 1vh;
     display: none;
   }
@@ -397,7 +414,7 @@ body {
     min-height: 10vh;
     margin-bottom: 5vh;
     margin-top: 0vh;
-    background-color: brown;
+    background-color: rgb(238, 238, 238);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.502);
     width: 80% !important;
     flex: 0 0 auto;
@@ -413,14 +430,16 @@ body {
     display: flex;
   }
   .card-m-active .verticalText {
-    margin-left: 0vh;
-    width: 10%;
+   padding-left: 2vh !important;
+    width: 80% !important;
   }
   .card-m-disabled .cardp{
     display: none;
   }
   .card-m-disabled .verticalText {
     z-index: 1;
+       padding-left: 2vh !important;
+    width: 80% !important;
   }
   .card-m-active .cardp {
     opacity: 1;
@@ -434,7 +453,7 @@ body {
     font-size: 3vw;
     opacity: 0;
     overflow: hidden;
- 
+
     height: 0;
     z-index: 1;
     position: relative;
@@ -443,20 +462,21 @@ body {
     transition: height 0.4s ease-in-out;
   }
   .card1-m::before {
-    background-image: none;
-  }
-  
-  .card2-m::before {
-    background-image: none;
-  }
-  
-  .card3-m::before {
-    background-image: none;
-  }
-  
-  .card4-m::before {
-    background-image: none;
-  }
+
+ background-color: rgb(26, 26, 26);
+}
+
+.card2-m::before {
+  background-color: rgb(26, 26, 26);
+}
+
+.card3-m::before {
+ background-color: rgb(26, 26, 26);
+}
+
+.card4-m::before {
+  background-color: rgb(26, 26, 26);
+}
   .interlude-tittle-2{
     font-size: 10vw !important;
     padding-left: 5%!important;

@@ -9,30 +9,30 @@ import { FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer-distributed">
+    <footer className="footer-distributed poppins">
       <div className="footer-left">
         <h3 className="ms-2">
-          Da<span>&nbsp;Paolo</span>
+          da<span>&nbsp;Paolo</span>
         </h3>
 
         <p className="footer-links">
-          <a href="/" className="link-1 mx-2 line">
+          <a href="/" className="link-1 mx-2 line2">
             Home
           </a>
 
-          <a href="/menu" className="link-1 mx-2 line">
+          <a href="/menu" className="link-1 mx-2 line2">
             Menu
           </a>
 
-          <a href="/where" className="link-1 mx-2 line">
+          <a href="/where" className="link-1 mx-2 line2">
             Location
           </a>
 
-          <a href="/reservations" className="link-1 mx-2 line">
+          <a href="/reservations" className="link-1 mx-2 line2">
             Reservations
           </a>
 
-          <a href="/gallery" className="link-1 mx-2 line">
+          <a href="/gallery" className="link-1 mx-2 line2">
             Gallery
           </a>
         </p>
@@ -76,9 +76,9 @@ const Footer = () => {
           <span>
             &quot;Discover a waterfront haven in Puerto Banús, where Mediterranean
             shores marries classic Mediterranean flavors with an exclusive
-            terrace experience.&quot;
+            terrace experience.&quot; - Chief.
           </span>{" "}
-          - Chief.
+         
         </p>
 
         <div className="footer-icons">

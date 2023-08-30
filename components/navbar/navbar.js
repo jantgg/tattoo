@@ -18,7 +18,7 @@ export default function Navbar() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setIsMobile(window.innerWidth > 700);
+      setIsMobile(window.innerWidth < 700);
     }
   }, []);
 
@@ -69,10 +69,10 @@ export default function Navbar() {
   return (
     <nav
       style={{ zIndex: "99" }}
-      className={`navbar mynav navbar-expand-lg  navbar-scrolled   ${
+      className={`navbar mynav navbar-expand-lg poppins navbar-scrolled   ${
         isInView
-          ? " bg-gradient-1 py-3 col-12"
-          : " bg-white-gradient shadowed mt-3 mynav2"
+          ? " bg-myblack py-3 col-12"
+          : " bg-mywhite shadowed mt-3 mynav2"
       }
         ${scrollDirection === "down" ? "hided" : ""}
         `}
@@ -80,56 +80,17 @@ export default function Navbar() {
       <div className={`container-fluid  ${isInView ? "col-11" : "col-12"}`}>
         <a
           href="/"
-          className={`navbar-tittle mx-auto text-black no-deco${
+          className={`navbar-tittle mx-auto text-black no-deco poppins ${
             isMobile ? " ms-5" : " ms-2"
           } ${isInView ? " text-white line" : "  text-black line2"}`}
           onClick={() => {
             scrollToTop();
           }}
         >
-          Da Paolo
+          da Paolo
         </a>
 
-        {isMobile ? (
-          <div className={`navbar-nav ms-auto myrow ${isInView ? " " : " "}`}>
-            <a
-              href="/menu"
-              className={`mx-2 me-5 px-2 deco-none  ${selected === 1 && ""} ${
-                isInView ? " text-white line" : "  text-black line2"
-              }`}
-            >
-              Menu
-            </a>
-
-            <a
-              href="/where"
-              className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
-                isInView ? " text-white line" : "  text-black line2"
-              }`}
-            >
-              Where are we?
-            </a>
-
-            <a
-              href="/reservations"
-              className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
-                isInView ? " text-white line" : "  text-black line2"
-              }`}
-            >
-              Reservations
-            </a>
-
-            <a
-              href="/gallery"
-              className={`mx-2 me-5 px-2 deco-none  ${selected === 0 && ""} ${
-                isInView ? " text-white line" : "  text-black line2"
-              }`}
-            >
-              Gallery
-            </a>
-          </div>
-        ) : (
-          <>
+        {isMobile ? (     <>
             {" "}
             <div className="collap-nav myrow col-2">
               <div
@@ -201,6 +162,46 @@ export default function Navbar() {
               </div>
             </div>
           </>
+     
+        ) : (
+     
+               <div className={`navbar-nav ms-auto myrow ${isInView ? " " : " "}`}>
+               <a
+                 href="/menu"
+                 className={`mx-2 me-5 px-2 deco-none  ${selected === 1 && ""} ${
+                   isInView ? " text-white line" : "  text-black line2"
+                 }`}
+               >
+                 Menu
+               </a>
+   
+               <a
+                 href="/where"
+                 className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
+                   isInView ? " text-white line" : "  text-black line2"
+                 }`}
+               >
+                 Where are we?
+               </a>
+   
+               <a
+                 href="/reservations"
+                 className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
+                   isInView ? " text-white line" : "  text-black line2"
+                 }`}
+               >
+                 Reservations
+               </a>
+   
+               <a
+                 href="/gallery"
+                 className={`mx-2 me-5 px-2 deco-none  ${selected === 0 && ""} ${
+                   isInView ? " text-white line" : "  text-black line2"
+                 }`}
+               >
+                 Gallery
+               </a>
+             </div>
         )}
       </div>
     </nav>

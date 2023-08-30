@@ -17,24 +17,30 @@ body {
   z-index: -1;
 }
 .section2 {
-  background-color: rgb(183, 41, 41) !important;
+  background-color: rgb(239, 239, 239) !important;
   height: auto;
 }
 .text-side-location {
   padding-top: 4vh;
-  padding-left: 4vw;
 }
 .relative {
   position: relative;
 }
 .section2 h1 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-  text-align: left;
-  font-weight: 900;
+ margin-top: 2vh;
+  padding-left: 5vw;
+  padding-right: 2vw;
+  padding-top: 3vh;
   padding-bottom: 3vh;
-  font-size: 3.5vw;
-  color: rgb(0, 0, 0);
+  font-size: 3.4vw;
+  font-weight: 600;
+  text-align: left;
+  color: rgb(226, 226, 226);
+  background-color: rgb(40, 40, 40);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.502);
+  margin-bottom: 3vh;
 }
 .section2 h2 {
   text-align: center;
@@ -45,13 +51,13 @@ body {
   line-height: 2.9rem;
 }
 .section2 p {
-  padding-left: 3rem;
-  padding-right: 7rem;
+  padding-left: 5vw;
+  padding-right: 2vw;
+  padding-bottom: 1vh;
   text-align: left;
-  font-weight: 400;
-  padding-bottom: 3vh;
+  font-weight: 500;
   font-size: 1.5vw;
-  color: rgb(222, 222, 222);
+  color: rgb(35, 35, 35);
   line-height: 4.4rem;
 }
 
@@ -70,8 +76,9 @@ body {
   width: 80%;
   object-position: center;
   margin: 10%;
-  border-radius: 0.5vh;
+  border-radius: 10px;
   border: 3px solid black;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.502);
 }
 .parallax-container {
   height: 35vw;
@@ -110,18 +117,18 @@ body {
   transform: translateZ(-10px) scale(2.01);
 }
 .header-tittle-l {
-  color: rgb(209, 36, 36);
-  font-size: 8vw !important;
-  font-weight: 900;
   text-align: center;
-  /* text-shadow: 0 0 5px rgb(0, 0, 0); */
+  color: rgb(255, 255, 255);
+  font-size: 8vw !important;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .header-h2-l {
-  color: rgb(16, 16, 16);
+ color: rgb(255, 255, 255);
   font-size: 2vw !important;
-  font-weight: 900;
+  font-weight: 600;
   text-align: center;
-  text-shadow: 0 0 5px rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .interlude-tittle-2 {
   margin-top: 7vh;
@@ -148,25 +155,26 @@ body {
 }
 .button {
   display: inline-block;
+  margin-left: 5vw;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-left: 3rem;
   text-decoration: none;
   color: rgb(0, 0, 0);
   border: 3px solid rgb(0, 0, 0);
-  background-color: rgb(222, 222, 222);
+  background-color: rgb(238, 238, 238);
   font-weight: 600;
   font-size: 1.5vw;
   transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
 }
 .button:hover {
-  box-shadow: 0 0 10px rgb(0, 0, 0);
+ box-shadow: 0 0 10px rgb(0, 0, 0);
   transform: translateX(17px);
   color: rgb(227, 227, 227);
   border: 3px solid rgb(224, 224, 224);
-  background-color: rgba(21, 21, 21, 0.851);
+  background-color: rgb(26, 26, 26);
 }
 .section2-l {
   background-color: rgb(183, 41, 41);
