@@ -88,7 +88,7 @@ export default function Menu() {
         <Image
           src={pizza}
           fill
-          quality={100}
+          quality={70}
           className="header-img-m"
           alt="marmoled background"
           loading="eager"
@@ -310,9 +310,10 @@ export default function Menu() {
         <Image
           src={masa}
           fill
-          quality={80}
+          quality={60}
           className="img-m-2"
           alt="man knead dough"
+          placeholder="blur"
         />
         <div className="col-12 flex-cloumn absolute">
           {" "}

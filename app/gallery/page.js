@@ -11,8 +11,6 @@ import Gallerycomp from "components/gallerycomp/gallerycomp.js";
 import Footer from "components/footer/footer.js";
 
 export default function Gallery() {
-
-
   return (
     <main className="wrapper-l">
       <div id="header" className="header-l flex-column">
@@ -20,7 +18,7 @@ export default function Gallery() {
           src={pizza}
           layout="fill"
           objectFit="cover"
-          quality={100}
+          quality={50}
           className="header-img-l"
           alt="marmoled background"
           loading="eager"
@@ -28,12 +26,14 @@ export default function Gallery() {
           priority={true}
         />
 
-        <h1 className="header-tittle-l ">Take a look </h1>
-        <h2 className="header-h2-l col-12">
-          <div className="col-8 mx-auto">
-            Enjoy watching our surroundings, food & restaurant
-          </div>
-        </h2>
+        <AnimatedDivUp>
+          <h1 className="header-tittle-l ">Take a look </h1>
+          <h2 className="header-h2-l col-12">
+            <div className="col-8 mx-auto">
+              Enjoy watching our surroundings, food & restaurant
+            </div>
+          </h2>
+        </AnimatedDivUp>
       </div>
       <div className="section2 row col-12 mx-0 ">
         <div className="section2-inner row col-12 px-0">
@@ -46,11 +46,11 @@ export default function Gallery() {
         <Image
           src={masa}
           fill
-          quality={80}
+          quality={60}
           className="img-m-2"
           alt="man knead dough"
+          placeholder="blur"
         />
-       
       </div>
       <div className="footer">
         <Footer />

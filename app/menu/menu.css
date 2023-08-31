@@ -165,23 +165,19 @@ body {
 }
 
 .card1-m::before {
-  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692561229/da-paolo/pexels-karthik-reddy-397913_dqvzvr.jpg");
-  /* Cambia a la URL de tu primera imagen */
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/w_550,h_800,c_fill,f_auto,q_auto/v1692561229/da-paolo/pexels-karthik-reddy-397913_dqvzvr.jpg");
 }
 
 .card2-m::before {
-  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692287370/da-paolo/pexels-monica-turlui-7218637_oksmgz.jpg");
-  /* Cambia a la URL de tu segunda imagen */
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/w_550,h_800,c_fill,f_auto,q_auto/v1692287370/da-paolo/pexels-monica-turlui-7218637_oksmgz.jpg");
 }
 
 .card3-m::before {
-  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692287368/da-paolo/pexels-vincent-rivaud-2471171_kdw4ov.jpg");
-  /* Cambia a la URL de tu tercera imagen */
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/w_550,h_800,c_fill,f_auto,q_auto/v1692287368/da-paolo/pexels-vincent-rivaud-2471171_kdw4ov.jpg");
 }
 
 .card4-m::before {
-  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/v1692561229/da-paolo/pexels-isabella-mendes-338713_yon3pi.jpg");
-  /* Cambia a la URL de tu cuarta imagen */
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/w_550,h_800,c_fill,f_auto,q_auto/v1692561229/da-paolo/pexels-isabella-mendes-338713_yon3pi.jpg");
 }
 .card-m-active::before {
   opacity: 0;
@@ -484,6 +480,21 @@ body {
   }
   .parallax-container2 {
     height: 40vh !important;
+}
+.card1-m::before {
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/w_450,h_200,c_fill,f_auto,q_auto/v1692561229/da-paolo/pexels-karthik-reddy-397913_dqvzvr.jpg");
+}
+
+.card2-m::before {
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/w_450,h_200,c_fill,f_auto,q_auto/v1692287370/da-paolo/pexels-monica-turlui-7218637_oksmgz.jpg");
+}
+
+.card3-m::before {
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/w_450,h_200,c_fill,f_auto,q_auto/v1692287368/da-paolo/pexels-vincent-rivaud-2471171_kdw4ov.jpg");
+}
+
+.card4-m::before {
+  background-image: url("https://res.cloudinary.com/dsbp8pqdb/image/upload/w_450,h_200,c_fill,f_auto,q_auto/v1692561229/da-paolo/pexels-isabella-mendes-338713_yon3pi.jpg");
 }
 }
 

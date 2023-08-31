@@ -87,6 +87,7 @@ const Gallerycomp = () => {
               fill
               className="main-img"
               quality={70}
+              placeholder="blur"
             />
           </div>
           <div className="col-12 btn-father justify-content-between d-flex">

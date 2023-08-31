@@ -29,14 +29,14 @@ export default function Location() {
           src={pizza}
           layout="fill"
           objectFit="cover"
-          quality={100}
+          quality={50}
           className="header-img-l"
           alt="marmoled background"
           loading="eager"
           placeholder="blur"
           priority={true}
         />
-
+   <AnimatedDivUp>
         <h1 className="header-tittle-l ">Come and meet us </h1>
         <h2 className="header-h2-l col-12">
           <div className="col-12 col-sm-8 col-md-8 mx-auto">
@@ -44,6 +44,8 @@ export default function Location() {
             Italian Mediterranean cuisine. Your table is waiting.
           </div>
         </h2>
+        </AnimatedDivUp>
+       
       </div>
 
       <div className="section2 row col-12 mx-0 ">
@@ -102,9 +104,10 @@ export default function Location() {
           src={masa}
           layout="fill"
           objectFit="cover"
-          quality={100}
+          quality={70}
           className="interlude2-img"
           alt="man knead dough"
+          placeholder="blur"
         />
      
       </div>

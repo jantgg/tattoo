@@ -29,7 +29,7 @@ export default function Home() {
         <Image
           src={pizza}
           fill
-          quality={100}
+          quality={70}
           className="header-img"
           alt="marmoled background"
           loading="eager"
@@ -38,7 +38,7 @@ export default function Home() {
         />
            <AnimatedDivUp>
            <h1 className={` header-tittle`}>da Paolo </h1>
-        <h2 className="header-h2 col-10"> Restaurant - Pizzeria</h2>
+        <h2 className="header-h2 "> Restaurant - Pizzeria</h2>
             </AnimatedDivUp>
    
       </div>
@@ -50,9 +50,10 @@ export default function Home() {
             <Image
               src={ensaladatop}
               fill
-              quality={100}
+              quality={60}
               className="card1 mx-auto"
               alt="puerto banus image"
+              placeholder="blur"
             />
           </div>
           <div className="col-12 col-sm-6 col-md-6  flex-column section2-bg">
@@ -90,9 +91,10 @@ export default function Home() {
           src={pizza2}
           fill
           sizes="100vw"
-          quality={100}
+          quality={60}
           className="interlude-img"
           alt="puerto banus image"
+          placeholder="blur"
         />
         {isMobile ? null : (
           <>
@@ -100,9 +102,10 @@ export default function Home() {
               src={madera}
               fill
               sizes="100vw"
-              quality={100}
+              quality={60}
               className="interlude-img"
               alt="puerto banus image"
+              placeholder="blur"
             />
             <AnimatedDivUp>
               {" "}
@@ -121,9 +124,10 @@ export default function Home() {
         <Image
           src={masa}
           fill
-          quality={100}
+          quality={60}
           className="interlude2-img"
           alt="man knead dough"
+          placeholder="blur"
         />
         <div className="col-12 flex-cloumn">
           {" "}

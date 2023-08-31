@@ -29,20 +29,22 @@ export default function Reservations() {
           src={pizza}
           layout="fill"
           objectFit="cover"
-          quality={100}
+          quality={50}
           className="header-img-l"
           alt="marmoled background"
           loading="eager"
           placeholder="blur"
           priority={true}
         />
-
+         <AnimatedDivUp>
         <h1 className="header-tittle-l ">Secure your table </h1>
         <h2 className="header-h2-l col-12">
           <div className="col-12 col-sm-8 col-md-8 mx-auto">
             Reserve your Mediterranean dining experience today
           </div>
         </h2>
+        </AnimatedDivUp>
+ 
       </div>
       <div className="section2 row col-12 mx-0 ">
         <div className="section2-inner row col-12 px-0">
@@ -53,9 +55,10 @@ export default function Reservations() {
               <Image
                 src={phone}
                 fill
-                quality={100}
+                quality={60}
                 className="card1 mx-auto"
                 alt="puerto banus image"
+                placeholder="blur"
               />
             </div>
           )}
@@ -96,9 +99,10 @@ export default function Reservations() {
           src={masa}
           layout="fill"
           objectFit="cover"
-          quality={100}
+          quality={60}
           className="interlude2-img"
           alt="man knead dough"
+          placeholder="blur"
         />
       </div>
       <div className="footer-l">
