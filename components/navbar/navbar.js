@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
-import Bgtinta from "images/fondotinta.png"
+import Bgtinta from "images/fondotintalargo2.png"
 import "bootstrap/dist/css/bootstrap.css";
 import Image from "next/image";
 import { gsap } from "gsap";
