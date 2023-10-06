@@ -17,6 +17,11 @@ import { TbArrowDownRhombus } from "react-icons/tb";
 export default function Home() {
   const [isSmall, setIsSmall] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const handleImageLoaded = () => {
+    setIsLoaded(true);
+  };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -49,7 +54,13 @@ export default function Home() {
     <main>
       <header>
         <div className="jarallax" data-jarallax data-speed="0.2">
-          <Image className="jarallax-img animated-img" src={Studio} alt="" />
+         <Image
+  className={`jarallax-img animated-img ${isLoaded ? 'is-visible' : ''}`}
+  src={Studio}
+  alt=""
+  onLoad={handleImageLoaded}
+/>
+
           <div className="logo-container">
             {" "}
             <Image className="logo-header" src={Logo} />
