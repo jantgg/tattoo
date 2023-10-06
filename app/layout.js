@@ -1,6 +1,5 @@
 import "./globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { Merriweather } from "next/font/google";
 import Navbar from "@/components/navbar/navbar";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -10,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>Da Paolo</title>
+        <title>Tattoo</title>
         <meta
           name="description"
           content="The best restaurant in Puerto Banus and the only with terrace"
@@ -26,13 +25,11 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
           rel="stylesheet"
         />
-        {/* <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"></link> */}
 
         <link
-          href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Allura&family=Gabarito&family=Merriweather:wght@300;400;700;900&family=New+Rocker&family=Poppins:wght@100;200;300;400;500;600;700;900&family=UnifrakturCook:wght@700&display=swap"
           rel="stylesheet"
-        />
-        {/* <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" /> */}
+        ></link>
       </head>
       <body>
         <Navbar />

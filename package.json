@@ -15,6 +15,7 @@
     "eslint-config-next": "13.4.13",
     "gsap": "^3.12.2",
     "gsap-trial": "^3.12.2",
+    "jarallax": "^2.1.4",
     "next": "^13.4.13",
     "react": "18.2.0",
     "react-dom": "18.2.0",

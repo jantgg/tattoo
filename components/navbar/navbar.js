@@ -13,17 +13,20 @@ export default function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [selected, setSelected] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isOpenDesk, setIsOpenDesk] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       setIsMobile(window.innerWidth < 700);
     }
   }, []);
 
   const toggleCollap = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
+  };
+  const toggleCollapDesk = () => {
+    setIsOpenDesk((prevIsOpenDesk) => !prevIsOpenDesk);
   };
 
   const handleScroll = () => {
@@ -69,28 +72,27 @@ export default function Navbar() {
   return (
     <nav
       style={{ zIndex: "99" }}
-      className={`navbar mynav navbar-expand-lg poppins navbar-scrolled   ${
-        isInView
-          ? " bg-myblack py-3 col-12"
-          : " bg-mywhite shadowed mt-3 mynav2"
+      className={`navbar mynav navbar-expand-lg allura navbar-scrolled   ${
+        isInView ? " py-3 col-12" : " bg-mywhite shadowed mt-3 mynav2"
       }
         ${scrollDirection === "down" ? "hided" : ""}
         `}
     >
-      <div className={`container-fluid  ${isInView ? "col-11" : "col-12"}`}>
+      <div className={`container-fluid  ${isInView ? "col-12" : "col-12"}`}>
         <a
           href="/"
-          className={`navbar-tittle mx-auto text-black no-deco poppins ${
-            isMobile ? " ms-5" : " ms-2"
-          } ${isInView ? " text-white line" : "  text-black line2"}`}
+          className={`navbar-tittle mx-auto text-black no-deco  ${
+            isMobile ? " ms-5" : " ms-5"
+          } ${isInView ? " text-white " : "  text-black "}`}
           onClick={() => {
             scrollToTop();
           }}
         >
-          da Paolo
+          Inkredible
         </a>
 
-        {isMobile ? (     <>
+        {isMobile ? (
+          <>
             {" "}
             <div className="collap-nav myrow col-2">
               <div
@@ -125,83 +127,108 @@ export default function Navbar() {
             <div className={`collap-wrapper col-12 ${isOpen ? "open" : ""}`}>
               <div className="collap-content myrow">
                 <a
-                  href="/menu"
+                  href="/artistas"
                   className={` deco-none col-12 text-r mt-3  ${
                     selected === 1 && ""
-                  } ${isInView ? " text-white line" : "  text-black line2"}`}
+                  } ${isInView ? " text-white " : "  text-black "}`}
                 >
-                  Menu
+                  Artistas
                 </a>
 
                 <a
-                  href="/where"
+                  href="/trabajos"
                   className={` deco-none col-12 text-r mt-3 ${
                     selected === 2 && ""
-                  } ${isInView ? " text-white line" : "  text-black line2"}`}
+                  } ${isInView ? " text-white " : "  text-black "}`}
                 >
-                  Where are we?
+                  Trabajos
                 </a>
 
                 <a
-                  href="/reservations"
+                  href="/cuidados"
                   className={` deco-none col-12 text-r mt-3 ${
                     selected === 2 && ""
-                  } ${isInView ? " text-white line" : "  text-black line2"}`}
+                  } ${isInView ? " text-white " : "  text-black "}`}
                 >
-                  Reservations
+                  Cuidados
                 </a>
 
                 <a
-                  href="/gallery"
+                  href="/contacto"
                   className={` deco-none col-12 text-r mt-3  ${
                     selected === 0 && ""
-                  } ${isInView ? " text-white line" : "  text-black line2"}`}
+                  } ${isInView ? " text-white " : "  text-black "}`}
                 >
-                  Gallery
+                  Contacto
                 </a>
               </div>
             </div>
           </>
-     
         ) : (
-     
-               <div className={`navbar-nav ms-auto myrow ${isInView ? " " : " "}`}>
-               <a
-                 href="/menu"
-                 className={`mx-2 me-5 px-2 deco-none  ${selected === 1 && ""} ${
-                   isInView ? " text-white line" : "  text-black line2"
-                 }`}
-               >
-                 Menu
-               </a>
-   
-               <a
-                 href="/where"
-                 className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
-                   isInView ? " text-white line" : "  text-black line2"
-                 }`}
-               >
-                 Where are we?
-               </a>
-   
-               <a
-                 href="/reservations"
-                 className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
-                   isInView ? " text-white line" : "  text-black line2"
-                 }`}
-               >
-                 Reservations
-               </a>
-   
-               <a
-                 href="/gallery"
-                 className={`mx-2 me-5 px-2 deco-none  ${selected === 0 && ""} ${
-                   isInView ? " text-white line" : "  text-black line2"
-                 }`}
-               >
-                 Gallery
-               </a>
-             </div>
+          <div className={`navbar-nav ms-auto  ${isInView ? " " : " "}`}>
+            <div className={`navbar-content ${isOpenDesk ? "opened" : ""}`}>
+              <a
+                href="/artistas"
+                className={`mx-2 me-5 px-2 deco-none  ${selected === 1 && ""} ${
+                  isInView ? " text-white " : "  text-black "
+                }`}
+              >
+                Artistas
+              </a>
+
+              <a
+                href="/trabajos"
+                className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
+                  isInView ? " text-white " : "  text-black "
+                }`}
+              >
+                Trabajos
+              </a>
+
+              <a
+                href="/cuidados"
+                className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
+                  isInView ? " text-white " : "  text-black "
+                }`}
+              >
+                Cuidados
+              </a>
+
+              <a
+                href="/contacto"
+                className={`mx-2 me-5 px-2 deco-none  ${selected === 0 && ""} ${
+                  isInView ? " text-white " : "  text-black "
+                }`}
+              >
+                Contacto
+              </a>
+            </div>
+
+            <div className="block me-5">
+            <input
+                  type="checkbox"
+                  id="checkbox"
+                  className="toggle"
+                  onChange={toggleCollapDesk}
+                />
+                <label htmlFor="checkbox" className="toggle">
+                  <div
+                    className={`bars ${isInView ? "bg-w" : "bg-b"}`}
+                    id="bar1"
+                  ></div>
+
+                  <div
+                    className={`bars ${isInView ? "bg-w" : "bg-b"}`}
+                    id="bar2"
+                  ></div>
+
+                  <div
+                    className={`bars ${isInView ? "bg-w" : "bg-b"}`}
+                    id="bar3"
+                  ></div>
+                </label>
+            </div>
+          </div>
         )}
       </div>
     </nav>

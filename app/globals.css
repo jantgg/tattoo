@@ -1,20 +1,40 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", cursive;
+}
+.poppins {
+  font-family: "Poppins", cursive !important;
+}
+.merri {
+  font-family: "Merriweather", serif;
+}
+.allura {
+  font-family: "Allura", cursive;
+}
+.gabarito {
+  font-family: "Gabarito", cursive;
+}
+.unifrak {
+  font-family: "UnifrakturCook", cursive;
+}
+.rocker{
+  font-family: 'New Rocker', cursive;
+}
 
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', cursive;
-}
-.poppins{
-  font-family: 'Poppins', cursive !important;
-}
-.merri{
-  font-family: 'Merriweather', serif;
-}
 body {
-  font-family: 'Merriweather', serif;
+  background-color: black;
+  font-family: "Merriweather", serif;
 }
 .myrow {
   display: flex;
   flex-wrap: wrap;
+}
+.block{
+  display: block;
 }
 .row {
   --bs-gutter-x: 0 !important;
@@ -27,7 +47,6 @@ p {
   font-family: var(--font-lato);
 }
 
-
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -37,17 +56,14 @@ p {
   border-radius: 5px !important;
 }
 
-
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(35, 35, 35);
   border-radius: 5px !important;
 }
 
-
 ::-webkit-scrollbar-track {
   background-color: #f1f1f100;
 }
-
 
 ::-webkit-scrollbar-track:hover {
   background-color: #dddddd00;

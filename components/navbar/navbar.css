@@ -109,6 +109,23 @@
 .navbar-dark .navbar-toggler {
   background-color: black;
 }
+.nav-icon {
+  cursor: pointer;
+}
+.navbar-nav {
+  display: flex;
+  align-items: center; /* Si quieres que se centren verticalmente */
+  justify-content: flex-end; /* Alinear todo al final */
+}
+.navbar-content {
+  overflow: hidden;
+  width: 0;
+  transition: width 0.5s;
+}
+
+.navbar-content.opened {
+  width: 100%;  /* revela el contenido */
+}
 .collap-wrapper {
   display: grid;
   grid-template-rows: 0fr;
@@ -148,7 +165,7 @@
 
 .bars {
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: rgb(238, 238, 238);
   border-radius: 4px;
 }
@@ -194,17 +211,15 @@
   transition-duration: 0.5s;
   transform: rotate(180deg);
 }
-.mynav {
-  font-size: 1.1vw;
-  font-weight: 500;
-}
+
 
 @media (min-width: 1500px) {
   .navbar-tittle {
     size: 10vw !important;
   }
   .mynav {
-    font-size: 1.7vw;
+    margin-top: 1vh;
+    font-size: 2vw;
     font-weight: 500;
   }
 }

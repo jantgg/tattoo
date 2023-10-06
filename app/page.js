@@ -1,16 +1,18 @@
 "use client";
 import Image from "next/image";
-import pizza from "images/pizzamaster.jpg";
-import madera from "images/ensaladaymesar.jpg";
-import pizza2 from "images/boniato.jpg";
-import masa from "images/masa.jpg";
-import ensaladatop from "images/arroz.jpg";
 import "./page.css";
-import Slider from "components/slider/slider";
+import Studio from "images/estudio.jpg";
+import Sucio from "images/sucio.png";
+import Logo from "images/logo.png";
+import Tinta from "images/tintaroja3.png";
+import BlancoAbajo from "images/paintwhitebot.png";
+import BlancoArriba from "images/paint-light-top.png";
+import Tatuando from "images/tatuando1.jpg";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import AnimatedDivRight from "components/animateddiv/animateddivright.js";
 import Footer from "components/footer/footer.js";
 import { useState, useEffect } from "react";
+import { TbArrowDownRhombus } from "react-icons/tb";
 
 export default function Home() {
   const [isSmall, setIsSmall] = useState(false);
@@ -23,127 +25,77 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const { jarallax } = require("jarallax");
+
+      // Inicializa el primer contenedor
+      jarallax(document.querySelector(".jarallax"), {
+        speed: 0.2,
+      });
+
+       jarallax(document.querySelector(".jarallax2"), {
+         speed: 0.2,
+       });
+    }
+}, []);
+
   return (
-    <main className="wrapper">
-      <div id="header" className="header flex-column">
-        <Image
-          src={pizza}
-          fill
-          quality={70}
-          className="header-img"
-          alt="marmoled background"
-          loading="eager"
-          placeholder="blur"
-          priority={true}
-        />
-           <AnimatedDivUp>
-           <h1 className={` header-tittle`}>da Paolo </h1>
-        <h2 className="header-h2 "> Restaurant - Pizzeria</h2>
-            </AnimatedDivUp>
-   
-      </div>
-      <div className="section2 row col-12 mx-0 ">
-        <div className="section2-inner row col-12 px-0">
-          {" "}
-          <div className=" col-12 col-sm-6 col-md-6  relative s2-container-img">
+    <main>
+      <header>
+        <div className="jarallax" data-jarallax data-speed="0.2">
+          <Image className="jarallax-img" src={Studio} alt="" />
+          <div className="logo-container">
             {" "}
-            <Image
-              src={ensaladatop}
-              fill
-              quality={60}
-              className="card1 mx-auto"
-              alt="puerto banus image"
-              placeholder="blur"
-            />
+            <Image className="logo-header" src={Logo} />
           </div>
-          <div className="col-12 col-sm-6 col-md-6  flex-column section2-bg">
-            {" "}
-            <AnimatedDivRight>
-              <h1 className="">Discover the true mediterranean cuisine </h1>
-            </AnimatedDivRight>
-            <AnimatedDivUp>
-              {" "}
-              <p className="lato">
-                Our menu is a tribute to the rich{" "}
-                <strong>culinary heritage</strong> of the Mediterranean region.
-                Each dish is carefully crafted with{" "}
-                <strong>handpicked ingredients</strong> that accentuate the
-                natural and vibrant flavors of the area. From exquisite{" "}
-                <strong>fresh</strong> salads to <strong>flavorful</strong> main
-                courses, each bite will transport you to sunny shores and sea
-                breezes.
-              </p>{" "}
-            </AnimatedDivUp>
-            <AnimatedDivUp>
-              {" "}
-              <div className="">
-                {" "}
-                <a href="/menu" className="button mx-auto">
-                  See our menu &#x27A1;
-                </a>
-              </div>
-            </AnimatedDivUp>
-          </div>
+
+          <Image className="sucio" src={Sucio} />
+          <Image className="imagen-abajo" src={BlancoAbajo} />
+          <TbArrowDownRhombus className="arrow-icon" />
         </div>
-      </div>
-      <div className="parallax-container">
-        <Image
-          src={pizza2}
-          fill
-          sizes="100vw"
-          quality={60}
-          className="interlude-img"
-          alt="puerto banus image"
-          placeholder="blur"
-        />
-        {isMobile ? null : (
-          <>
-            <Image
-              src={madera}
-              fill
-              sizes="100vw"
-              quality={60}
-              className="interlude-img"
-              alt="puerto banus image"
-              placeholder="blur"
-            />
-            <AnimatedDivUp>
-              {" "}
-              <h1 className="interlude-tittle merri">
-                &quot;From our kitchen to your table: An exquisite compilation
-                of classic mediterranean cuisine&quot; <span>-The Chef </span>
-              </h1>
-            </AnimatedDivUp>
-          </>
-        )}
-      </div>
-      <div className="section3 col-12 row px-0 mx-0">
-        <Slider />
-      </div>
-      <div className="parallax-container2">
-        <Image
-          src={masa}
-          fill
-          quality={60}
-          className="interlude2-img"
-          alt="man knead dough"
-          placeholder="blur"
-        />
-        <div className="col-12 flex-cloumn">
+      </header>
+      <section className="section1">
+        <Image className="sucio2" src={Sucio} />
+        <div className="fondo-letras allura">Ink</div>
+        <div className="section1-content">
           {" "}
-          {isMobile ? null : (
-            <AnimatedDivUp>
-              {" "}
-              <h1 className="interlude-tittle-2">
-                Indulge in a culinary experience like no other
-              </h1>
-            </AnimatedDivUp>
-          )}
+          <div className="section1-text col-6">
+            {" "}
+            <h1 className="tittle1 rocker" data-text="Bienvenidos a Inkredible">
+              Bienvenidos a Inkredible
+            </h1>
+            <h2 className="tittle2 gabarito">
+              EL MEJOR ESTUDIO DE TATTO EN MARBELLA
+            </h2>
+            <p className="parrafo1 gabarito">
+              Si deseas agendar un encuentro con nuestro equipo, accede a
+              nuestra sección de contacto y comunícate con nosotros vía
+              teléfono, email o Whatsapp para contarnos qué diseño tienes en
+              mente. <br></br>
+              Si estás en busca de ideas, te invitamos a explorar nuestras
+              galerías en las categorías de trabajos y artistas.
+              <br></br>
+              Recuerda también revisar nuestras recomendaciones sobre el
+              mantenimiento y cuidado higiénico de tus tatuajes y piercings.
+            </p>
+            <p className="firma allura">Sebastián Román</p>
+          </div>
+          <div className="section1-img col-6">
+            <Image className="maquina" src={Logo} />
+            <Image className="tinta1" src={Tinta} />
+          </div>{" "}
         </div>
-      </div>
-      <div className="footer">
-        <Footer />
-      </div>
+      </section>
+      <section className="">
+        <div className="jarallax2" data-jarallax data-speed="0.2">
+          <Image className="jarallax2-img" src={Tatuando} alt="" />
+          <Image className="imagen-abajo2" src={BlancoAbajo} />
+          <Image className="imagen-arriba2" src={BlancoArriba} />
+          <h1 className="interlude-tittle rocker" data-text="ESTUDIO DE TATUAJES Y PIERCING">ESTUDIO DE TATUAJES Y PIERCING</h1>
+        </div>
+      </section>
+      <section className="section2"></section>
     </main>
   );
 }
