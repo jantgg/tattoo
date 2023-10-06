@@ -1,13 +1,15 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
+import Bgtinta from "images/fondotinta.png"
 import "bootstrap/dist/css/bootstrap.css";
-import useScrollPosition from "app/hooks/usescrollposition.js";
+import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {
-  const scrollPosition = useScrollPosition();
-
   const [isInView, setIsInView] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("up");
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -28,62 +30,78 @@ export default function Navbar() {
   const toggleCollapDesk = () => {
     setIsOpenDesk((prevIsOpenDesk) => !prevIsOpenDesk);
   };
-
   const handleScroll = () => {
-    const mainElement = document.querySelector("main");
-    const currentScrollPos = mainElement.scrollTop;
+    const currentScrollPos =
+      window.scrollY || document.documentElement.scrollTop;
     setScrollDirection(currentScrollPos > prevScrollPos ? "down" : "up");
     setPrevScrollPos(currentScrollPos);
   };
 
   useEffect(() => {
-    const mainElement = document.querySelector("main");
-    mainElement.addEventListener("scroll", handleScroll);
+    // Agregar un event listener para el evento de scroll al elemento window
+    window.addEventListener("scroll", handleScroll);
 
+    // Eliminar el event listener cuando se desmonte el componente para evitar pérdidas de memoria
     return () => {
-      mainElement.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos, handleScroll]);
+  }, [prevScrollPos]);
 
   const scrollToBottom = () => {
-    const mainElement = document.querySelector("main");
-    mainElement.scrollTo({
-      top: mainElement.scrollHeight,
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
       behavior: "smooth",
     });
   };
-
   const scrollToTop = () => {
-    const mainElement = document.querySelector("main");
-    mainElement.scrollTo({
+    window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
 
   useEffect(() => {
-    if (scrollPosition < 200) {
-      setIsInView(true);
-    } else {
-      setIsInView(false);
+    if (window.location.pathname === "/") {
+      // Verificar si currentPath no es "/"
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.utils.toArray(".navbar-scrolled").forEach(function (elem) {
+        ScrollTrigger.create({
+          trigger: elem,
+          start: "top 20%",
+          end: "bottom 0%",
+          onEnter: () => {
+            setIsInView(true); // Establecer el estado en true cuando se cumple la condición
+          },
+          onLeave: () => {
+            setIsInView(false); // Establecer el estado en false cuando no se cumple la condición
+          },
+          onEnterBack: () => {
+            setIsInView(true);
+          },
+          onLeaveBack: () => {
+            setIsInView(false);
+          },
+        });
+      });
     }
-  }, [scrollPosition]);
-
+  }, []);
   return (
     <nav
       style={{ zIndex: "99" }}
       className={`navbar mynav navbar-expand-lg allura navbar-scrolled   ${
-        isInView ? " py-3 col-12" : " bg-mywhite shadowed mt-3 mynav2"
+        isInView ? " py-3 col-12" : " mt-3 mynav2"
       }
         ${scrollDirection === "down" ? "hided" : ""}
         `}
     >
+      {isInView ? <></> :    <Image className="bg-tinta" src={Bgtinta}/>}
+   
       <div className={`container-fluid  ${isInView ? "col-12" : "col-12"}`}>
         <a
           href="/"
-          className={`navbar-tittle mx-auto text-black no-deco  ${
+          className={`navbar-tittle mx-auto text-white no-deco  ${
             isMobile ? " ms-5" : " ms-5"
-          } ${isInView ? " text-white " : "  text-black "}`}
+          } ${isInView ? " text-white " : "  text-white padding-tinta"}`}
           onClick={() => {
             scrollToTop();
           }}
@@ -170,7 +188,7 @@ export default function Navbar() {
               <a
                 href="/artistas"
                 className={`mx-2 me-5 px-2 deco-none  ${selected === 1 && ""} ${
-                  isInView ? " text-white " : "  text-black "
+                  isInView ? " text-white " : "  text-white "
                 }`}
               >
                 Artistas
@@ -179,7 +197,7 @@ export default function Navbar() {
               <a
                 href="/trabajos"
                 className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
-                  isInView ? " text-white " : "  text-black "
+                  isInView ? " text-white " : "  text-white "
                 }`}
               >
                 Trabajos
@@ -188,7 +206,7 @@ export default function Navbar() {
               <a
                 href="/cuidados"
                 className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
-                  isInView ? " text-white " : "  text-black "
+                  isInView ? " text-white " : "  text-white "
                 }`}
               >
                 Cuidados
@@ -197,7 +215,7 @@ export default function Navbar() {
               <a
                 href="/contacto"
                 className={`mx-2 me-5 px-2 deco-none  ${selected === 0 && ""} ${
-                  isInView ? " text-white " : "  text-black "
+                  isInView ? " text-white " : "  text-white "
                 }`}
               >
                 Contacto
@@ -213,17 +231,17 @@ export default function Navbar() {
                 />
                 <label htmlFor="checkbox" className="toggle">
                   <div
-                    className={`bars ${isInView ? "bg-w" : "bg-b"}`}
+                    className={`bars ${isInView ? "bg-w" : "bg-w"}`}
                     id="bar1"
                   ></div>
 
                   <div
-                    className={`bars ${isInView ? "bg-w" : "bg-b"}`}
+                    className={`bars ${isInView ? "bg-w" : "bg-w"}`}
                     id="bar2"
                   ></div>
 
                   <div
-                    className={`bars ${isInView ? "bg-w" : "bg-b"}`}
+                    className={`bars ${isInView ? "bg-w" : "bg-w"}`}
                     id="bar3"
                   ></div>
                 </label>

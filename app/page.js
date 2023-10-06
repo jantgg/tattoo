@@ -26,25 +26,30 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    let jarallaxElems;
     if (typeof window !== "undefined") {
-      const { jarallax } = require("jarallax");
-
-      // Inicializa el primer contenedor
-      jarallax(document.querySelector(".jarallax"), {
-        speed: 0.2,
-      });
-
-       jarallax(document.querySelector(".jarallax2"), {
-         speed: 0.2,
-       });
+        const { jarallax } = require("jarallax");
+        jarallaxElems = document.querySelectorAll(".jarallax, .jarallax2");
+        if (jarallaxElems.length) {
+            jarallax(jarallaxElems, {
+                speed: 0.2,
+            });
+        }
     }
+
+    return () => {
+        if (jarallaxElems && jarallaxElems.length) {
+            jarallax(jarallaxElems, "destroy");
+        }
+    };
 }, []);
+
 
   return (
     <main>
       <header>
         <div className="jarallax" data-jarallax data-speed="0.2">
-          <Image className="jarallax-img" src={Studio} alt="" />
+          <Image className="jarallax-img animated-img" src={Studio} alt="" />
           <div className="logo-container">
             {" "}
             <Image className="logo-header" src={Logo} />
@@ -89,10 +94,10 @@ export default function Home() {
       </section>
       <section className="">
         <div className="jarallax2" data-jarallax data-speed="0.2">
-          <Image className="jarallax2-img" src={Tatuando} alt="" />
+          <Image className="jarallax-img j2-filter" src={Tatuando} alt="" />
           <Image className="imagen-abajo2" src={BlancoAbajo} />
           <Image className="imagen-arriba2" src={BlancoArriba} />
-          <h1 className="interlude-tittle rocker" data-text="ESTUDIO DE TATUAJES Y PIERCING">ESTUDIO DE TATUAJES Y PIERCING</h1>
+          <h1 className="interlude-tittle rocker" data-text="TU ESTUDIO DE TATUAJES Y PIERCING">TU ESTUDIO DE TATUAJES Y PIERCING</h1>
         </div>
       </section>
       <section className="section2"></section>

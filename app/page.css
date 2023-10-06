@@ -12,19 +12,32 @@ body {
 header{
   background-image: linear-gradient(to bottom, #6a0000c2, #190a05);
 }
+
+/* TODOS LOS JARALLAX --------------------------------------TODOS LOS JARALLAX-------------------------------TODOS LOS JARALLAX------------------------------------TODOS LOS JARALLAX--------------------------------- */
 .jarallax {
   position: relative;
   z-index: 0;
   height: 100vh; /* o la altura que desees */
   overflow: hidden;
 }
-
 .jarallax-img {
   position: absolute;
   object-fit: cover;
   filter: grayscale(1);
   opacity: 0.5;
+}
+.animated-img{
   animation: zoomAndTurnRed 20s infinite;
+}
+.j2-filter{
+  filter: brightness(80%) sepia(100%) hue-rotate(-25deg) blur(5px);
+}
+.jarallax2 {
+  position: relative;
+  z-index: 0;
+  height: 40vh; /* o la altura que desees */
+  overflow: hidden;
+  background-image: linear-gradient(to top, #870000, #190a05);
 }
 @keyframes zoomAndTurnRed {
   0% {
@@ -32,11 +45,11 @@ header{
     filter: brightness(100%) sepia(0%) hue-rotate(0deg);
   }
   10% {
-    transform: scale(1);
+    transform: scale(1.3);
     filter: brightness(100%) sepia(100%) hue-rotate(-25deg);
   }
   70% {
-    transform: scale(1.1); /* Zoom */
+    transform: scale(1.3); /* Zoom */
     filter: brightness(120%) sepia(100%) hue-rotate(-25deg); /* Efecto rojo */
   }
   100% {
@@ -195,21 +208,7 @@ br {
 .interlude1 {
   background-image: linear-gradient(to top, #870000, #190a05);
 }
-.jarallax2 {
-  position: relative;
-  z-index: 0;
-  height: 40vh; /* o la altura que desees */
-  overflow: hidden;
-  background-image: linear-gradient(to top, #870000, #190a05);
-}
 
-.jarallax2-img {
-  position: absolute;
-  object-fit: cover;
-  filter: grayscale(1);
-  opacity: 0.5;
-  filter: brightness(80%) sepia(100%) hue-rotate(-25deg) blur(5px);
-}
 .imagen-arriba2 {
   position: absolute;
   bottom: 100; /* Esto alinea la imagen en la parte inferior del contenedor .jarallax */
