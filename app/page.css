@@ -9,8 +9,11 @@ body {
   flex-wrap: wrap;
   position: relative;
 }
-header{
+#header1{
   background-image: linear-gradient(to bottom, #6a0000c2, #190a05);
+}
+#interlude1{
+  background-image: linear-gradient(to top, #870000, #190a05);
 }
 
 /* TODOS LOS JARALLAX --------------------------------------TODOS LOS JARALLAX-------------------------------TODOS LOS JARALLAX------------------------------------TODOS LOS JARALLAX--------------------------------- */
@@ -46,7 +49,7 @@ header{
   z-index: 0;
   height: 40vh; /* o la altura que desees */
   overflow: hidden;
-  background-image: linear-gradient(to top, #870000, #190a05);
+
 
 }
 /* ANIMACIONES --------------------------------------ANIMACIONES-------------------------------ANIMACIONES------------------------------------ANIMACIONES--------------------------------- */
@@ -248,7 +251,7 @@ br {
   width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
   height: 13%; /* Permite que la imagen determine su propia altura basada en el ancho */
   object-position: center bottom; /* Centra la imagen y la alinea con el borde inferior */
-  filter: brightness(170%);
+  filter: brightness(98%);
   z-index: 1;
 }
 .interlude-tittle{
@@ -278,4 +281,43 @@ br {
 .section2 {
   background-color: white;
   height: 70vh;
+}
+.s2head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.s2-img {
+  width: 100%; 
+  height: 40vh;
+  max-width: 80%;
+  position: absolute;
+  margin-top: 40vh;
+}
+
+.s2tittle {
+  position: absolute;
+  margin-top: 39vh;
+  z-index: 1; /* Esto asegura que el texto esté por encima de la imagen */
+  color: rgb(36, 36, 36); /* Cambia el color según tu diseño */
+  font-size: 3vw;
+  text-align: center;
+  width: 100%; /* Asegura que el texto ocupe todo el ancho y se centre adecuadamente */
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    transform: translate(
+      -50%,
+      -50%
+    );
+    top: 52.7%;
+    left: 50.1%;
+    color: rgb(116, 0, 0);
+    z-index: -1;
+    white-space: nowrap; /* Evitar que se parta el texto en el pseudo-elemento */
+  }   
+
+
 }

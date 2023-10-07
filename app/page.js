@@ -8,6 +8,7 @@ import Tinta from "images/tintaroja3.png";
 import BlancoAbajo from "images/paintwhitebot.png";
 import BlancoArriba from "images/paint-light-top.png";
 import Tatuando from "images/tatuando1.jpg";
+import Tbanner from "images/header.png"
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import AnimatedDivRight from "components/animateddiv/animateddivright.js";
 import Footer from "components/footer/footer.js";
@@ -33,33 +34,34 @@ export default function Home() {
   useEffect(() => {
     let jarallaxElems;
     if (typeof window !== "undefined") {
-        const { jarallax } = require("jarallax");
-        jarallaxElems = document.querySelectorAll(".jarallax, .jarallax2");
-        if (jarallaxElems.length) {
-            jarallax(jarallaxElems, {
-                speed: 0.2,
-            });
-        }
+      const { jarallax } = require("jarallax");
+      jarallaxElems = document.querySelectorAll(".jarallax, .jarallax2");
+      if (jarallaxElems.length) {
+        jarallax(jarallaxElems, {
+          speed: 0.2,
+        });
+      }
     }
 
     return () => {
-        if (jarallaxElems && jarallaxElems.length) {
-            jarallax(jarallaxElems, "destroy");
-        }
+      if (jarallaxElems && jarallaxElems.length) {
+        jarallax(jarallaxElems, "destroy");
+      }
     };
-}, []);
-
+  }, []);
 
   return (
     <main>
-      <header>
+      <header id="header1">
         <div className="jarallax" data-jarallax data-speed="0.2">
-         <Image
-  className={`jarallax-img animated-img ${isLoaded ? 'is-visible' : ''}`}
-  src={Studio}
-  alt=""
-  onLoad={handleImageLoaded}
-/>
+          <Image
+            className={`jarallax-img animated-img ${
+              isLoaded ? "is-visible" : ""
+            }`}
+            src={Studio}
+            alt=""
+            onLoad={handleImageLoaded}
+          />
 
           <div className="logo-container">
             {" "}
@@ -73,7 +75,7 @@ export default function Home() {
       </header>
       <section className="section1">
         <Image className="sucio2" src={Sucio} />
-        <div className="fondo-letras allura">Ink</div>
+        {/* <div className="fondo-letras allura">Ink</div> */}
         <div className="section1-content">
           {" "}
           <div className="section1-text col-6">
@@ -103,15 +105,26 @@ export default function Home() {
           </div>{" "}
         </div>
       </section>
-      <section className="">
+      <section id="interlude1" className="">
         <div className="jarallax2" data-jarallax data-speed="0.2">
           <Image className="jarallax-img j2-filter" src={Tatuando} alt="" />
           <Image className="imagen-abajo2" src={BlancoAbajo} />
           <Image className="imagen-arriba2" src={BlancoArriba} />
-          <h1 className="interlude-tittle rocker" data-text="TU ESTUDIO DE TATUAJES Y PIERCING">TU ESTUDIO DE TATUAJES Y PIERCING</h1>
+          <h1
+            className="interlude-tittle rocker"
+            data-text="TU ESTUDIO DE TATUAJES Y PIERCING"
+          >
+            TU ESTUDIO DE TATUAJES Y PIERCING
+          </h1>
         </div>
       </section>
-      <section className="section2"></section>
+      <section className="section2">
+      <Image className="sucio" src={Sucio} />
+            <header className="s2head">
+              <h1 className="s2tittle rocker" data-text="CONOCE A NUESTRO EQUIPO">CONOCE A NUESTRO EQUIPO</h1>
+              <Image className="s2-img" src={Tbanner}/>
+            </header>
+      </section>
     </main>
   );
 }

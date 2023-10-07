@@ -88,7 +88,7 @@ export default function Navbar() {
   return (
     <nav
       style={{ zIndex: "99" }}
-      className={`navbar mynav navbar-expand-lg allura navbar-scrolled   ${
+      className={`navbar mynav navbar-expand-lg rocker navbar-scrolled   ${
         isInView ? " py-3 col-12" : " mt-3 mynav2"
       }
         ${scrollDirection === "down" ? "hided" : ""}
