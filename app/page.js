@@ -3,14 +3,17 @@ import Image from "next/image";
 import "./page.css";
 import Studio from "images/estudio.jpg";
 import Sucio from "images/sucio.png";
+import Sucio3 from "images/sucio3.png";
 import Logo from "images/logo.png";
 import Tinta from "images/tintaroja3.png";
 import BlancoAbajo from "images/paintwhitebot.png";
 import BlancoArriba from "images/paint-light-top.png";
 import Tatuando from "images/tatuando1.jpg";
-import Tbanner from "images/header.png"
+import Tatuando2 from "images/tatuando2.jpg";
+import Tbanner from "images/header.png";
 import AnimatedDivUp from "components/animateddiv/animateddivup.js";
 import AnimatedDivRight from "components/animateddiv/animateddivright.js";
+import Sliderv from "components/sliderv/sliderv.js";
 import Footer from "components/footer/footer.js";
 import { useState, useEffect } from "react";
 import { TbArrowDownRhombus } from "react-icons/tb";
@@ -110,20 +113,29 @@ export default function Home() {
           <Image className="jarallax-img j2-filter" src={Tatuando} alt="" />
           <Image className="imagen-abajo2" src={BlancoAbajo} />
           <Image className="imagen-arriba2" src={BlancoArriba} />
-          <h1
-            className="interlude-tittle rocker"
-            data-text="TU ESTUDIO DE TATUAJES Y PIERCING"
-          >
-            TU ESTUDIO DE TATUAJES Y PIERCING
-          </h1>
+          <h1 className="interlude-tittle rocker"></h1>
         </div>
       </section>
       <section className="section2">
-      <Image className="sucio" src={Sucio} />
-            <header className="s2head">
-              <h1 className="s2tittle rocker" data-text="CONOCE A NUESTRO EQUIPO">CONOCE A NUESTRO EQUIPO</h1>
-              <Image className="s2-img" src={Tbanner}/>
-            </header>
+        <Image className="sucio" src={Sucio} />
+        <header className="s2head">
+          <h1 className="s2tittle rocker" data-text="CONOCE A NUESTRO EQUIPO">
+            CONOCE A NUESTRO EQUIPO
+          </h1>
+          <Image className="s2-img" src={Tbanner} />
+        </header>
+        <Sliderv />
+      </section>
+      <section id="interlude1" className="">
+        <div className="jarallax2" data-jarallax data-speed="0.2">
+          <Image className="jarallax-img j2-filter" src={Tatuando2} alt="" />
+          <Image className="imagen-abajo2" src={BlancoAbajo} />
+          <Image className="imagen-arriba2" src={BlancoArriba} />
+          <h1 className="interlude-tittle rocker"></h1>
+        </div>
+      </section>
+      <section className="section3">
+      <Image className="sucio3" src={Sucio} />
       </section>
     </main>
   );

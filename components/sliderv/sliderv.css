@@ -1,0 +1,175 @@
+.sliderv {
+  margin-top: 45vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  height: 60vh;
+}
+.img-section-slider {
+margin-top: -10vh;
+  height: 140%;
+  width: 100%;
+  position: relative;
+}
+.img-slider-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  display: flex;           /* Habilita flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; 
+}
+.img-slide {
+  position: absolute;
+  height: 77%;
+  width: 66%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease 0.3s;
+}
+.sombra-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.3;
+  filter: brightness(50%);
+}
+.img-grunge {
+    position: absolute;
+    height: 77%;
+    width: 66%;
+    object-fit: cover;
+  z-index: 2;
+  filter: blur(1px);
+}
+
+.img-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.text-section-slider {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  position: relative;
+  height: 100%;
+  user-select: none; /* Esto evita que el contenido sea seleccionable */
+  cursor: grab; /* Cambia el cursor a una mano abierta */
+}
+.text-section-slider:active {
+  cursor: grabbing; /* Cambia el cursor a una mano cerrada cuando se hace clic */
+}
+.deco-esquina {
+  position: absolute;
+  object-fit: contain;
+  top: 50%;
+  right: 5%;
+  width: 10%;
+}
+
+.text-section-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.text-inner-slide {
+  padding-left: 3vw;
+  padding-top: 4vh;
+  height: 120%;
+}
+.text-inner-slide-last {
+  height: 100% !important;
+}
+.tsh1 {
+  color: rgb(0, 0, 0);
+  font-size: 3vw;
+  text-align: center;
+  white-space: nowrap; /* Esto evitará que el texto se parta */
+  width: max-content; /* Esto hará que el contenedor tenga el ancho exacto del contenido */
+
+  &::before {
+    content: attr(data-text);
+    padding-left: 20vw;
+    position: absolute;
+    padding-top: 6vh;
+    top: 2px;
+    left: 2px;
+    color: rgba(116, 0, 0, 0.402);
+    z-index: -1;
+    white-space: nowrap; /* Evitar que se parta el texto en el pseudo-elemento */
+  }
+}
+.tsh2 {
+  padding-top: 2vh;
+  font-size: 1.5vw;
+  color: rgb(116, 0, 0);
+}
+.tsp {
+  line-height: 1.5;
+  font-size: 1vw;
+  padding-top: 2vh;
+}
+.tsf {
+  font-style: italic;
+  color: brown;
+  padding-top: 2vh;
+  text-align: left;
+  font-size: 2vw;
+}
+
+/* ------------------------------------------------SCROLL ICON -----------------------------------------*/
+@keyframes scroll_2 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(0.75em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.scroll-icon__dot {
+  display: block;
+  position: absolute;
+  left: 50%;
+  background: #920000;
+  height: 0.5em;
+  width: 0.5em;
+  top: 0.6em;
+  margin-left: -0.25em;
+  border-radius: 50%;
+  transform-origin: top center;
+  backface-visibility: hidden;
+  animation: scroll_2 2s ease-out infinite;
+}
+
+.scroll-icon {
+  display: block;
+  position: relative;
+  height: 3em;
+  width: 1.5em;
+  border: 0.25em solid #920000;
+  border-radius: 1em;
+}
+.example {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.example--2 {
+  position: absolute;
+  right: -0.4vw;
+  top: 45%;
+}

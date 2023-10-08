@@ -13,7 +13,7 @@ body {
   background-image: linear-gradient(to bottom, #6a0000c2, #190a05);
 }
 #interlude1{
-  background-image: linear-gradient(to top, #870000, #190a05);
+  background: linear-gradient(to bottom, black, rgb(0, 0, 0), black);
 }
 
 /* TODOS LOS JARALLAX --------------------------------------TODOS LOS JARALLAX-------------------------------TODOS LOS JARALLAX------------------------------------TODOS LOS JARALLAX--------------------------------- */
@@ -47,7 +47,7 @@ body {
 .jarallax2 {
   position: relative;
   z-index: 0;
-  height: 40vh; /* o la altura que desees */
+  height: 30vh; /* o la altura que desees */
   overflow: hidden;
 
 
@@ -86,7 +86,6 @@ body {
 
 .sucio {
   position: absolute;
-  object-fit: cover;
   width: 100%;
   height: 100%;
   opacity: 0.5;
@@ -231,7 +230,7 @@ br {
   margin-top: 0.5em;
 }
 .interlude1 {
-  background-image: linear-gradient(to top, #870000, #190a05);
+  background: linear-gradient(to bottom, black, red, black);
 }
 
 .imagen-arriba2 {
@@ -280,7 +279,8 @@ br {
 }
 .section2 {
   background-color: white;
-  height: 70vh;
+  height: 130vh;
+  position: relative;
 }
 .s2head {
   display: flex;
@@ -317,7 +317,20 @@ br {
     color: rgb(116, 0, 0);
     z-index: -1;
     white-space: nowrap; /* Evitar que se parta el texto en el pseudo-elemento */
-  }   
+  } 
+}
 
+.section3{
+  background-color: rgb(241, 241, 241);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.sucio3 {
+  position: absolute;
+  width: 100%;
+  height: 140%;
+  opacity: 0.3;
+  margin-top: -2vh;
 
 }
