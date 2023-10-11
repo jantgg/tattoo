@@ -1,0 +1,52 @@
+/* styles/ReviewsSlider.css */
+.carousel {
+  position: absolute;
+  width: 70vw;
+  margin: auto;
+  margin-top: 40vh;
+  margin-bottom: 20vh;
+}
+.carousel-cell {
+  height: auto;
+  width: 100%;
+  margin-right: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.parrafo-r {
+  display: block;
+  width: 70%;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 2vw;
+  padding-top: 2vh;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.firma-r {
+  text-align: center;
+  font-style: italic;
+  color: brown;
+  padding-top: 2vh;
+  font-size: 3vw;
+  padding-bottom: 1vh;
+  text-shadow: 1px 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Cambiar el color del indicador no seleccionado */
+.flickity-page-dot {
+    background: white !important; /* Puedes ajustar este color según tu diseño */
+    opacity: 0.4;
+  }
+  
+  /* Cambiar el color del indicador seleccionado */
+  .flickity-page-dot.is-selected {
+    background: rgb(177, 0, 0) !important; /* Puedes ajustar este color según tu diseño */
+    opacity: 1 !important;
+  }
+  

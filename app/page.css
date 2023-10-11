@@ -1,6 +1,5 @@
 body {
   margin: 0;
-
 }
 .myrow {
   display: flex;
@@ -9,10 +8,10 @@ body {
   flex-wrap: wrap;
   position: relative;
 }
-#header1{
+#header1 {
   background-image: linear-gradient(to bottom, #6a0000c2, #190a05);
 }
-#interlude1{
+#interlude1 {
   background: linear-gradient(to bottom, black, rgb(0, 0, 0), black);
 }
 
@@ -38,19 +37,20 @@ body {
 .jarallax-img.animated-img.is-visible {
   opacity: 0.5;
 }
-.animated-img{
+.animated-img {
   animation: zoomAndTurnRed 20s infinite;
 }
-.j2-filter{
+.j2-filter {
   filter: brightness(80%) sepia(100%) hue-rotate(-25deg) blur(5px);
 }
 .jarallax2 {
   position: relative;
   z-index: 0;
-  height: 30vh; /* o la altura que desees */
+  height: 100vh; /* o la altura que desees */
   overflow: hidden;
-
-
+}
+.vh30{
+  height: 30vh !important;
 }
 /* ANIMACIONES --------------------------------------ANIMACIONES-------------------------------ANIMACIONES------------------------------------ANIMACIONES--------------------------------- */
 @keyframes expandFromCenter {
@@ -63,7 +63,6 @@ body {
     transform: translate(-50%, -50%) scale(1);
   }
 }
-
 
 @keyframes zoomAndTurnRed {
   0% {
@@ -128,7 +127,7 @@ body {
   width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
   height: 3%; /* Permite que la imagen determine su propia altura basada en el ancho */
   object-position: center bottom; /* Centra la imagen y la alinea con el borde inferior */
-filter: brightness(98%);
+  filter: brightness(98%);
 }
 .section1 {
   background-color: white;
@@ -150,7 +149,6 @@ filter: brightness(98%);
   opacity: 0.05;
   font-size: 40vw;
   line-height: 0.9;
-
 }
 .section1-content {
   padding-top: 6vh;
@@ -197,7 +195,7 @@ filter: brightness(98%);
   padding-top: 2vh;
   text-align: left;
   font-size: 3vw;
-   padding-bottom: 5vh; 
+  padding-bottom: 5vh;
 }
 .section1-img {
   position: relative;
@@ -219,7 +217,7 @@ filter: brightness(98%);
   transform: scale(1);
   z-index: 0;
   opacity: 0.1;
-  right:0;
+  right: 0;
   top: -60%;
 }
 
@@ -253,33 +251,31 @@ br {
   filter: brightness(98%);
   z-index: 1;
 }
-.interlude-tittle{
+
+.interlude-tittle {
   font-size: 4vw;
   color: rgb(212, 212, 212);
   text-align: center;
   display: flex;
   justify-content: center; /* Centrar horizontalmente (opcional) */
-  align-items: center;     /* Centrar verticalmente */
+  align-items: center; /* Centrar verticalmente */
   height: 100%;
   z-index: 2;
   &::before {
     content: attr(data-text);
- 
+
     position: absolute;
-    transform: translate(
-      -50%,
-      -50%
-    );
+    transform: translate(-50%, -50%);
     top: 51.7%;
     left: 50.3%;
     color: rgb(116, 0, 0);
     z-index: -1;
     white-space: nowrap; /* Evitar que se parta el texto en el pseudo-elemento */
-  }   
+  }
 }
 .section2 {
   background-color: white;
-  height: 130vh;
+  height: 150vh;
   position: relative;
 }
 .s2head {
@@ -290,7 +286,7 @@ br {
 }
 
 .s2-img {
-  width: 100%; 
+  width: 100%;
   height: 40vh;
   max-width: 80%;
   position: absolute;
@@ -308,23 +304,22 @@ br {
   &::before {
     content: attr(data-text);
     position: absolute;
-    transform: translate(
-      -50%,
-      -50%
-    );
+    transform: translate(-50%, -50%);
     top: 52.7%;
     left: 50.1%;
     color: rgb(116, 0, 0);
     z-index: -1;
     white-space: nowrap; /* Evitar que se parta el texto en el pseudo-elemento */
-  } 
+  }
 }
 
-.section3{
-  background-color: rgb(241, 241, 241);
-  height: 100vh;
+.section3 {
+  height: auto;
+  background-color: rgb(23, 23, 23);
   position: relative;
   overflow: hidden;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 .sucio3 {
   position: absolute;
@@ -332,5 +327,96 @@ br {
   height: 140%;
   opacity: 0.3;
   margin-top: -2vh;
+}
+.salpicon-arriba2 {
+  position: absolute;
+  bottom: 100;
+  left: 0;
+  width: 100%;
+  height: 13%;
+  object-position: center bottom;
+  opacity: 1;
+  z-index: 1;
+  filter: invert(1) brightness(9%); 
+}
+.salpicon-abajo2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 13%;
+  object-position: center bottom;
+  opacity: 0.91;
+  z-index: 1;
+}
+.section4 {
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
 
+.s4head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.s4-img {
+  width: 100%;
+  height: 30vh;
+  max-width: 50%;
+  position: absolute;
+  margin-top: 50vh;
+  opacity: 1;
+  filter: invert(1);
+}
+
+.s4tittle {
+  position: absolute;
+  margin-top: 49vh;
+  z-index: 1; /* Esto asegura que el texto esté por encima de la imagen */
+  color: rgb(240, 240, 240); /* Cambia el color según tu diseño */
+  font-size: 3vw;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 100%; /* Asegura que el texto ocupe todo el ancho y se centre adecuadamente */
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 52.7%;
+    left: 50.1%;
+    color: rgb(116, 0, 0);
+    z-index: -1;
+    white-space: nowrap; /* Evitar que se parta el texto en el pseudo-elemento */
+  }
+}
+.studiofuera {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  filter: brightness(60%) blur(5px);
+}
+.imagen-abajo3 {
+  position: absolute;
+  bottom: 0; /* Esto alinea la imagen en la parte inferior del contenedor .jarallax */
+  left: 0; /* Alinea la imagen a la izquierda del contenedor */
+  width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
+  height: 13%; /* Permite que la imagen determine su propia altura basada en el ancho */
+  object-position: center bottom; /* Centra la imagen y la alinea con el borde inferior */
+  filter: brightness(98%) invert(1);
+  z-index: 1;
+}
+.contacto{
+  background-color: #161616;
+  height: 50vh;
+position: relative;
+}
+.suciosb {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
 }

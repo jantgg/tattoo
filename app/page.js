@@ -3,6 +3,8 @@ import Image from "next/image";
 import "./page.css";
 import Studio from "images/estudio.jpg";
 import Sucio from "images/sucio.png";
+import SucioSB from "images/fondo-sinblanco.png";
+import StudioF from "images/studiofuera.jpg";
 import Sucio3 from "images/sucio3.png";
 import Logo from "images/logo.png";
 import Tinta from "images/tintaroja3.png";
@@ -11,10 +13,16 @@ import BlancoArriba from "images/paint-light-top.png";
 import Tatuando from "images/tatuando1.jpg";
 import Tatuando2 from "images/tatuando2.jpg";
 import Tbanner from "images/header.png";
-import AnimatedDivUp from "components/animateddiv/animateddivup.js";
-import AnimatedDivRight from "components/animateddiv/animateddivright.js";
+import SalpiconA from "images/salpiconarriba.png";
+import SalpiconAb from "images/salpiconabajo.png";
 import Sliderv from "components/sliderv/sliderv.js";
 import Footer from "components/footer/footer.js";
+import GalleryHome from "components/galleryhome/galleryhome.js";
+import dynamic from "next/dynamic";
+const Reviews = dynamic(() => import("components/reviews/reviews.js"), {
+  ssr: false,
+  loading: () => <p>Cargando...</p>,
+});
 import { useState, useEffect } from "react";
 import { TbArrowDownRhombus } from "react-icons/tb";
 
@@ -109,7 +117,7 @@ export default function Home() {
         </div>
       </section>
       <section id="interlude1" className="">
-        <div className="jarallax2" data-jarallax data-speed="0.2">
+        <div className="jarallax2 vh30" data-jarallax data-speed="0.2">
           <Image className="jarallax-img j2-filter" src={Tatuando} alt="" />
           <Image className="imagen-abajo2" src={BlancoAbajo} />
           <Image className="imagen-arriba2" src={BlancoArriba} />
@@ -119,24 +127,39 @@ export default function Home() {
       <section className="section2">
         <Image className="sucio" src={Sucio} />
         <header className="s2head">
-          <h1 className="s2tittle rocker" data-text="CONOCE A NUESTRO EQUIPO">
-            CONOCE A NUESTRO EQUIPO
+          <h1 className="s2tittle rocker" data-text="Conoce a nuestro equipo">
+            Conoce a nuestro equipo
           </h1>
           <Image className="s2-img" src={Tbanner} />
         </header>
         <Sliderv />
+        <Image className="salpicon-abajo2" src={SalpiconA} />
       </section>
-      <section id="interlude1" className="">
+
+      <section className="section3">
+        <GalleryHome />
+      </section>
+  
+      <section id="interlude1" className="section4">
         <div className="jarallax2" data-jarallax data-speed="0.2">
-          <Image className="jarallax-img j2-filter" src={Tatuando2} alt="" />
-          <Image className="imagen-abajo2" src={BlancoAbajo} />
-          <Image className="imagen-arriba2" src={BlancoArriba} />
-          <h1 className="interlude-tittle rocker"></h1>
+          <Image className="jarallax-img j2-filter" src={StudioF} alt="" />
+          <Image className="imagen-abajo3" src={BlancoAbajo} />
+          <header className="s4head">
+          <h1 className="s4tittle rocker" data-text=" Reseñas de clientes">
+            Reseñas de clientes
+          </h1>
+          <Image className="s4-img" src={Tbanner} />
+        </header>
+          <Image className="salpicon-arriba2" src={SalpiconAb} />
+          <Reviews />
         </div>
       </section>
-      <section className="section3">
-      <Image className="sucio3" src={Sucio} />
+      <section className="contacto">
+      <Image className="suciosb" src={SucioSB} />
+<Footer/>
       </section>
+    
+
     </main>
   );
 }

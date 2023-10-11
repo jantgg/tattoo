@@ -5,6 +5,9 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import Script from "next/script";
 
+
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -30,6 +33,8 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Allura&family=Gabarito&family=Merriweather:wght@300;400;700;900&family=New+Rocker&family=Poppins:wght@100;200;300;400;500;600;700;900&family=UnifrakturCook:wght@700&display=swap"
           rel="stylesheet"
         ></link>
+        <link rel="stylesheet" as="style" href="https://unpkg.com/flickity@2/dist/flickity.min.css"></link>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
       </head>
       <body>
         <Navbar />

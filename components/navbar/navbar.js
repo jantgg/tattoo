@@ -161,16 +161,6 @@ export default function Navbar() {
                 >
                   Trabajos
                 </a>
-
-                <a
-                  href="/cuidados"
-                  className={` deco-none col-12 text-r mt-3 ${
-                    selected === 2 && ""
-                  } ${isInView ? " text-white " : "  text-black "}`}
-                >
-                  Cuidados
-                </a>
-
                 <a
                   href="/contacto"
                   className={` deco-none col-12 text-r mt-3  ${
@@ -203,14 +193,6 @@ export default function Navbar() {
                 Trabajos
               </a>
 
-              <a
-                href="/cuidados"
-                className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
-                  isInView ? " text-white " : "  text-white "
-                }`}
-              >
-                Cuidados
-              </a>
 
               <a
                 href="/contacto"

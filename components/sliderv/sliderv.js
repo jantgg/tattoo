@@ -31,27 +31,16 @@ export default function Sliderv() {
     setIsDragging(true);
     setStartY(e.clientY);
     setScrollY(sliderRef.current.scrollTop);
-
-    console.log("Mouse DOWN - Start Y:", e.clientY); // Agregamos registro de consola
   };
 
   const handleMouseMove = (e) => {
     if (!isDragging) return;
-
     const deltaY = startY - e.clientY;
     sliderRef.current.scrollTop = scrollY + deltaY;
-
-    console.log(
-      "Mouse MOVE - Delta Y:",
-      deltaY,
-      "New Scroll Position:",
-      scrollY + deltaY
-    ); // Agregamos registro de consola
   };
 
   const handleMouseUp = () => {
     setIsDragging(false);
-    console.log("Mouse UP"); // Agregamos registro de consola
   };
 
   useEffect(() => {
@@ -82,28 +71,7 @@ export default function Sliderv() {
     };
   }, []);
 
-  useEffect(() => {
-    const checkAspectRatio = () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
 
-      // Calcula la relación de aspecto y verifica si es (aproximadamente) 16:9
-      const aspectRatio = width / height;
-      console.log(aspectRatio);
-      setIsAspectRatio16by9(Math.abs(aspectRatio - 16 / 9) < 0.01); // Un pequeño margen de error
-    };
-
-    // Verifica la relación de aspecto inicial
-    checkAspectRatio();
-
-    // Escucha los cambios de tamaño de la ventana
-    window.addEventListener("resize", checkAspectRatio);
-
-    // Limpia el evento cuando el componente se desmonta
-    return () => {
-      window.removeEventListener("resize", checkAspectRatio);
-    };
-  }, []);
 
   return (
     <div id="sliderv" className="sliderv">
@@ -128,9 +96,9 @@ export default function Sliderv() {
 
         <Image className="sombra-img" src={Sombraroja} />
 
-        <div class="example example--2">
-          <span class="scroll-icon">
-            <span class="scroll-icon__dot"></span>
+        <div className="example example--2">
+          <span className="scroll-icon">
+            <span className="scroll-icon__dot"></span>
           </span>
         </div>
       </div>
