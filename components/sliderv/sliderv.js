@@ -76,7 +76,7 @@ export default function Sliderv() {
   return (
     <div id="sliderv" className="sliderv">
       <Image className="deco-esquina" src={Decoesquina} />
-      <div className="img-section-slider col-5">
+      <div className="img-section-slider col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-5">
         <div className="img-slider-container">
           {" "}
           <Image
@@ -104,7 +104,7 @@ export default function Sliderv() {
       </div>
 
       <div
-        className="text-section-slider col-5"
+        className="text-section-slider col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-5"
         ref={sliderRef}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}

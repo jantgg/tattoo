@@ -20,7 +20,7 @@ export default function Navbar() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setIsMobile(window.innerWidth < 700);
+      setIsMobile(window.innerWidth < 850);
     }
   }, []);
 
@@ -112,10 +112,10 @@ export default function Navbar() {
         {isMobile ? (
           <>
             {" "}
-            <div className="collap-nav myrow col-2">
+            <div className="collap-nav myrow col-2 me-4">
               <div
                 className={` ms-auto ${
-                  isInView ? " text-white " : "  text-black "
+                  isInView ? " text-white " : "  text-white "
                 }`}
               >
                 <input
@@ -126,17 +126,17 @@ export default function Navbar() {
                 />
                 <label htmlFor="checkbox" className="toggle">
                   <div
-                    className={`bars ${isInView ? "bg-w" : "bg-b"}`}
+                    className={`bars ${isInView ? "bg-w" : "bg-w"}`}
                     id="bar1"
                   ></div>
 
                   <div
-                    className={`bars ${isInView ? "bg-w" : "bg-b"}`}
+                    className={`bars ${isInView ? "bg-w" : "bg-w"}`}
                     id="bar2"
                   ></div>
 
                   <div
-                    className={`bars ${isInView ? "bg-w" : "bg-b"}`}
+                    className={`bars ${isInView ? "bg-w" : "bg-w"}`}
                     id="bar3"
                   ></div>
                 </label>
@@ -146,26 +146,26 @@ export default function Navbar() {
               <div className="collap-content myrow">
                 <a
                   href="/artistas"
-                  className={` deco-none col-12 text-r mt-3  ${
+                  className={` deco-none col-12 text-r mt-3 me-5  ${
                     selected === 1 && ""
-                  } ${isInView ? " text-white " : "  text-black "}`}
+                  } ${isInView ? " text-white " : "  text-white "}`}
                 >
                   Artistas
                 </a>
 
                 <a
                   href="/trabajos"
-                  className={` deco-none col-12 text-r mt-3 ${
+                  className={` deco-none col-12 text-r mt-3 me-5 ${
                     selected === 2 && ""
-                  } ${isInView ? " text-white " : "  text-black "}`}
+                  } ${isInView ? " text-white " : "  text-white "}`}
                 >
                   Trabajos
                 </a>
                 <a
                   href="/contacto"
-                  className={` deco-none col-12 text-r mt-3  ${
+                  className={` deco-none col-12 text-r mt-3 me-5  ${
                     selected === 0 && ""
-                  } ${isInView ? " text-white " : "  text-black "}`}
+                  } ${isInView ? " text-white " : "  text-white "}`}
                 >
                   Contacto
                 </a>

@@ -49,7 +49,7 @@ body {
   height: 100vh; /* o la altura que desees */
   overflow: hidden;
 }
-.vh30{
+.vh30 {
   height: 30vh !important;
 }
 /* ANIMACIONES --------------------------------------ANIMACIONES-------------------------------ANIMACIONES------------------------------------ANIMACIONES--------------------------------- */
@@ -279,6 +279,7 @@ br {
   position: relative;
 }
 .s2head {
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,7 +338,7 @@ br {
   object-position: center bottom;
   opacity: 1;
   z-index: 1;
-  filter: invert(1) brightness(9%); 
+  filter: invert(1) brightness(9%);
 }
 .salpicon-abajo2 {
   position: absolute;
@@ -409,14 +410,162 @@ br {
   filter: brightness(98%) invert(1);
   z-index: 1;
 }
-.contacto{
+.contacto {
   background-color: #161616;
-  height:auto;
-position: relative;
+  height: auto;
+  position: relative;
 }
 .suciosb {
   position: absolute;
   width: 100%;
   height: 100%;
   opacity: 0.2;
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .section1-text {
+    padding-left: 10vw;
+  }
+  .maquina {
+    width: 60%;
+  }
+  .tittle1 {
+    font-size: 4vw;
+    &::before {
+      content: attr(data-text);
+      padding-left: 10vw;
+    }
+  }
+  .tittle2 {
+    font-size: 2vw;
+  }
+  .parrafo1 {
+    font-size: 1.5vw;
+  }
+  .section2 {
+    height: 160vh;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1200px) {
+  .section1-text {
+    padding-left: 5vw;
+  }
+  .maquina {
+    margin-left: 5vw;
+    margin-top: 10vh;
+    width: 80%;
+  }
+  .tittle1 {
+    font-size: 6vw;
+    &::before {
+      content: attr(data-text);
+      padding-left: 5vw;
+    }
+  }
+  .tittle2 {
+    font-size: 3vw;
+  }
+  .parrafo1 {
+    font-size: 2.1vw;
+  }
+  .section2 {
+    height: 160vh;
+  }
+  .firma {
+    font-size: 4vw;
+  }
+  .s2tittle {
+    font-size: 5.6vw;
+  }
+  .s2-img {
+    object-fit: cover;
+    height: 25vh;
+    width: 100%;
+    max-width: 100%;
+  }
+  .salpicon-abajo2 {
+    margin-bottom: -1px;
+  }
+  .s4tittle {
+    margin-top: 48vh;
+    font-size: 6vw;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .logo-header {
+    width: 70%;
+    height: 70%;
+  }
+  .section1-text {
+    padding-left: 5vw;
+    width: 100% !important;
+  }
+  .section1-img {
+    position: absolute;
+    height: 100vh;
+  }
+  .maquina {
+    display: none;
+  }
+  .tinta1 {
+    top: -30%;
+    right: -100%;
+  }
+  .tittle1 {
+    font-size: 8vw;
+    &::before {
+      content: attr(data-text);
+      padding-left: 5vw;
+    }
+  }
+  .tittle2 {
+    font-size: 5vw;
+  }
+  .parrafo1 {
+    padding-right: 5vw;
+    font-size: 4vw;
+  }
+  .section2 {
+    height: 108vh;
+  }
+  .firma {
+    font-size: 8vw;
+  }
+  .s2tittle {
+    display: none !important;
+    color: rgb(0, 0, 0);
+    font-size: 8.6vw;
+    text-align: center;
+    margin-top: 20vh;
+    white-space: nowrap; /* Esto evitará que el texto se parta */
+    width: max-content; /* Esto hará que el contenedor tenga el ancho exacto del contenido */
+
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      
+      top: 55%;
+      left: 50.5%;
+      color: rgba(116, 0, 0, 0.402);
+      z-index: -1;
+      white-space: nowrap; /* Evitar que se parta el texto en el pseudo-elemento */
+    }
+  }
+  .s2-img {
+    display: none;
+  }
+  .salpicon-abajo2 {
+    margin-bottom: -1px;
+  }
+  .s4tittle {
+    margin-top: 48vh;
+    font-size: 7vw;
+  }
+  .arrow-icon{
+    font-size: 10vw;
+  }
 }

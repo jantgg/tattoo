@@ -89,7 +89,7 @@ export default function Home() {
         {/* <div className="fondo-letras allura">Ink</div> */}
         <div className="section1-content">
           {" "}
-          <div className="section1-text col-6">
+          <div className="section1-text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             {" "}
             <h1 className="tittle1 rocker" data-text="Bienvenidos a Inkredible">
               Bienvenidos a Inkredible
@@ -139,27 +139,25 @@ export default function Home() {
       <section className="section3">
         <GalleryHome />
       </section>
-  
+
       <section id="interlude1" className="section4">
         <div className="jarallax2" data-jarallax data-speed="0.2">
           <Image className="jarallax-img j2-filter" src={StudioF} alt="" />
           <Image className="imagen-abajo3" src={BlancoAbajo} />
           <header className="s4head">
-          <h1 className="s4tittle rocker" data-text=" Reseñas de clientes">
-            Reseñas de clientes
-          </h1>
-          <Image className="s4-img" src={Tbanner} />
-        </header>
+            <h1 className="s4tittle rocker" data-text=" Reseñas de clientes">
+              Reseñas de clientes
+            </h1>
+            <Image className="s4-img" src={Tbanner} />
+          </header>
           <Image className="salpicon-arriba2" src={SalpiconAb} />
           <Reviews />
         </div>
       </section>
       <section className="contacto">
-      <Image className="suciosb" src={SucioSB} />
-<Footer/>
+        <Image className="suciosb" src={SucioSB} />
+        <Footer />
       </section>
-    
-
     </main>
   );
 }

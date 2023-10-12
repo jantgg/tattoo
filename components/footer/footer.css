@@ -51,3 +51,58 @@
   font-size: 1vw;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1200px) {
+.redfont{
+  font-size: 4vw;
+}
+.parrafo-f{
+  font-size: 2vw;
+}
+.enlaces{
+  font-size: 2vw;
+}
+.icons{
+  font-size: 5vw;
+}
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .footer {
+    display: flex;
+    position: relative;
+flex-direction: column;
+    height: auto;
+    padding-top: 3vh;
+    padding-bottom:5vh;
+  }
+  .description{
+  text-align: center;
+  }
+  .contacts{
+text-align: center;
+padding-left: 0;
+  }
+  .socialmedia{
+    text-align: center;
+  }
+  .redfont{
+    font-size: 8vw;
+  }
+  .parrafo-f{
+    font-size: 5vw;
+  }
+  .enlaces{
+    font-size: 5vw;
+  }
+  .icons{
+    text-align: center;
+    font-size: 10vw;
+  }
+}

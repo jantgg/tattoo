@@ -23,7 +23,7 @@ export default function Galleryhome() {
   return (
     <div>
       <div className="gallery">
-        <div className="tittle-gallery-container col-3">
+        <div className="tittle-gallery-container col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 ">
         <Image className="marco" src={Sucio3} />
           <h1 className="tittle-gallery rocker" data-text="Nuestros trabajos">Nuestros trabajos</h1>
         </div>
@@ -31,7 +31,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
              <Image className="marco" src={Grunge} />
           <Image src={Jose} alt="Imagen 2" className="img-gallery bordecito" />
@@ -40,7 +40,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 3" className="img-gallery" />
         </a>
@@ -48,7 +48,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 4" className="img-gallery" />
         </a>
@@ -56,7 +56,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 5" className="img-gallery" />
         </a>
@@ -64,7 +64,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 5" className="img-gallery" />
         </a>
@@ -72,7 +72,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 5" className="img-gallery" />
         </a>
@@ -80,7 +80,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 5" className="img-gallery" />
         </a>
@@ -88,7 +88,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 5" className="img-gallery" />
         </a>
@@ -96,7 +96,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 5" className="img-gallery" />
         </a>
@@ -104,7 +104,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 5" className="img-gallery" />
         </a>
@@ -112,7 +112,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 5" className="img-gallery" />
         </a>
@@ -120,7 +120,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 5" className="img-gallery" />
         </a>
@@ -128,7 +128,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 5" className="img-gallery" />
         </a>
@@ -136,7 +136,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 5" className="img-gallery" />
         </a>
@@ -144,7 +144,7 @@ export default function Galleryhome() {
           href="/_next/static/media/jose.66c66803.jpg"
           data-fancybox
           data-caption="Single image"
-          className="col-3 img-gallery-container"
+          className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
           <Image src={Jose} alt="Imagen 5" className="img-gallery" />
         </a>

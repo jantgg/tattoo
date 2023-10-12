@@ -29,7 +29,7 @@
   top: 0;
   transition: padding 0.5s ease, background-color 0.5s ease, opacity 0.3s ease;
   width: 100%;
-  overflow-x: hidden;
+ 
   height: 10vh;
 }
 .no-deco {
@@ -251,6 +251,7 @@
   }
   .mynav {
     font-size: 7vw;
+    display: none !important;
   }
   ::-webkit-scrollbar {
     display: none;
