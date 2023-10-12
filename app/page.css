@@ -411,7 +411,7 @@ br {
 }
 .contacto{
   background-color: #161616;
-  height: 50vh;
+  height:auto;
 position: relative;
 }
 .suciosb {
