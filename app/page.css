@@ -304,7 +304,7 @@ br {
   width: 100%; /* Asegura que el texto ocupe todo el ancho y se centre adecuadamente */
   &::before {
     content: attr(data-text);
-    position: absolute;
+    position: absolute !important;
     transform: translate(-50%, -50%);
     top: 52.7%;
     left: 50.1%;
@@ -384,7 +384,7 @@ br {
   width: 100%; /* Asegura que el texto ocupe todo el ancho y se centre adecuadamente */
   &::before {
     content: attr(data-text);
-    position: absolute;
+    position: absolute !important;
     transform: translate(-50%, -50%);
     top: 52.7%;
     left: 50.1%;
@@ -546,8 +546,7 @@ br {
 
     &::before {
       content: attr(data-text);
-      position: absolute;
-      
+      position: absolute !important;
       top: 55%;
       left: 50.5%;
       color: rgba(116, 0, 0, 0.402);

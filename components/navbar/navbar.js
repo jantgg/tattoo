@@ -149,7 +149,7 @@ export default function Navbar() {
             <div className={`collap-wrapper col-12 ${isOpen ? "open" : ""}`}>
               <div className="collap-content myrow">
                 <a
-                  href="/artistas"
+              
                   className={` deco-none col-12 text-r mt-3 me-5  ${
                     selected === 1 && ""
                   } ${isInView ? " text-white " : "  text-white "}`}
@@ -158,7 +158,7 @@ export default function Navbar() {
                 </a>
 
                 <a
-                  href="/trabajos"
+                
                   className={` deco-none col-12 text-r mt-3 me-5 ${
                     selected === 2 && ""
                   } ${isInView ? " text-white " : "  text-white "}`}
@@ -180,7 +180,7 @@ export default function Navbar() {
           <div className={`navbar-nav ms-auto  ${isInView ? " " : " "}`}>
             <div className={`navbar-content ${isOpenDesk ? "opened" : ""}`}>
               <a
-                href="/artistas"
+           
                 className={`mx-2 me-5 px-2 deco-none  ${selected === 1 && ""} ${
                   isInView ? " text-white " : "  text-white "
                 }`}
@@ -189,7 +189,7 @@ export default function Navbar() {
               </a>
 
               <a
-                href="/trabajos"
+            
                 className={` mx-2 me-5 px-2 deco-none ${selected === 2 && ""} ${
                   isInView ? " text-white " : "  text-white "
                 }`}
@@ -199,7 +199,7 @@ export default function Navbar() {
 
 
               <a
-                href="/contacto"
+            
                 className={`mx-2 me-5 px-2 deco-none  ${selected === 0 && ""} ${
                   isInView ? " text-white " : "  text-white "
                 }`}
