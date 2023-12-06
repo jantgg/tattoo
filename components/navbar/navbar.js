@@ -37,14 +37,13 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    // Agregar un event listener para el evento de scroll al elemento window
     window.addEventListener("scroll", handleScroll);
 
-    // Eliminar el event listener cuando se desmonte el componente para evitar pérdidas de memoria
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos]);
+}, [handleScroll]); // Incluir handleScroll aquí
+
 
   const scrollToBottom = () => {
     window.scrollTo({
@@ -93,7 +92,7 @@ export default function Navbar() {
         ${scrollDirection === "down" ? "hided" : ""}
         `}
     >
-      {isInView ? <></> :    <Image className="bg-tinta" src={Bgtinta}/>}
+      {isInView ? <></> :    <Image className="bg-tinta" src={Bgtinta} alt="Descripción de la imagen"/>}
    
       <div className={`container-fluid  ${isInView ? "col-12" : "col-12"}`}>
         <a

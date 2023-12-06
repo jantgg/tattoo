@@ -63,27 +63,27 @@ export default function Home() {
     <main>
       <header id="header1">
         <div className="jarallax" data-jarallax data-speed="0.2">
-          <Image
+          <Image alt="Descripción de la imagen"
             className={`jarallax-img animated-img ${
               isLoaded ? "is-visible" : ""
             }`}
             src={Studio}
-            alt=""
+         
             onLoad={handleImageLoaded}
           />
 
           <div className="logo-container">
             {" "}
-            <Image className="logo-header" src={Logo} />
+            <Image alt="Descripción de la imagen" className="logo-header" src={Logo} />
           </div>
 
-          <Image className="sucio" src={Sucio} />
-          <Image className="imagen-abajo" src={BlancoAbajo} />
+          <Image alt="Descripción de la imagen" className="sucio" src={Sucio} />
+          <Image alt="Descripción de la imagen" className="imagen-abajo" src={BlancoAbajo} />
           <TbArrowDownRhombus className="arrow-icon" />
         </div>
       </header>
       <section className="section1">
-        <Image className="sucio2" src={Sucio} />
+        <Image alt="Descripción de la imagen" className="sucio2" src={Sucio} />
         {/* <div className="fondo-letras allura">Ink</div> */}
         <div className="section1-content">
           {" "}
@@ -109,29 +109,29 @@ export default function Home() {
             <p className="firma allura">Sebastián Román</p>
           </div>
           <div className="section1-img col-6">
-            <Image className="maquina" src={Logo} />
-            <Image className="tinta1" src={Tinta} />
+            <Image alt="Descripción de la imagen" className="maquina" src={Logo} />
+            <Image alt="Descripción de la imagen" className="tinta1" src={Tinta} />
           </div>{" "}
         </div>
       </section>
       <section id="interlude1" className="">
         <div className="jarallax2 vh30" data-jarallax data-speed="0.2">
-          <Image className="jarallax-img j2-filter" src={Tatuando} alt="" />
-          <Image className="imagen-abajo2" src={BlancoAbajo} />
-          <Image className="imagen-arriba2" src={BlancoArriba} />
+          <Image alt="Descripción de la imagen" className="jarallax-img j2-filter" src={Tatuando} />
+          <Image alt="Descripción de la imagen" className="imagen-abajo2" src={BlancoAbajo} />
+          <Image alt="Descripción de la imagen" className="imagen-arriba2" src={BlancoArriba} />
           <h1 className="interlude-tittle rocker"></h1>
         </div>
       </section>
       <section className="section2">
-        <Image className="sucio" src={Sucio} />
+        <Image alt="Descripción de la imagen" className="sucio" src={Sucio} />
         <header className="s2head">
           <h1 className="s2tittle rocker" data-text="Conoce a nuestro equipo">
             Conoce a nuestro equipo
           </h1>
-          <Image className="s2-img" src={Tbanner} />
+          <Image alt="Descripción de la imagen" className="s2-img" src={Tbanner} />
         </header>
         <Sliderv />
-        <Image className="salpicon-abajo2" src={SalpiconA} />
+        <Image alt="Descripción de la imagen" className="salpicon-abajo2" src={SalpiconA} />
       </section>
 
       <section className="section3">
@@ -140,20 +140,20 @@ export default function Home() {
 
       <section id="interlude1" className="section4">
         <div className="jarallax2" data-jarallax data-speed="0.2">
-          <Image className="jarallax-img j2-filter" src={StudioF} alt="" />
-          <Image className="imagen-abajo3" src={BlancoAbajo} />
+          <Image alt="Descripción de la imagen" className="jarallax-img j2-filter" src={StudioF}  />
+          <Image alt="Descripción de la imagen" className="imagen-abajo3" src={BlancoAbajo} />
           <header className="s4head">
             <h1 className="s4tittle rocker" data-text=" Reseñas de clientes">
               Reseñas de clientes
             </h1>
-            <Image className="s4-img" src={Tbanner} />
+            <Image alt="Descripción de la imagen" className="s4-img" src={Tbanner} />
           </header>
-          <Image className="salpicon-arriba2" src={SalpiconAb} />
+          <Image alt="Descripción de la imagen" className="salpicon-arriba2" src={SalpiconAb} />
           <Reviews />
         </div>
       </section>
       <section className="contacto">
-        <Image className="suciosb" src={SucioSB} />
+        <Image alt="Descripción de la imagen" className="suciosb" src={SucioSB} />
         <Footer />
       </section>
     </main>

@@ -24,7 +24,7 @@ export default function Galleryhome() {
     <div>
       <div className="gallery">
         <div className="tittle-gallery-container col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 ">
-        <Image className="marco" src={Sucio3} />
+        <Image alt="Descripción de la imagen" className="marco" src={Sucio3} />
           <h1 className="tittle-gallery rocker" data-text="Nuestros trabajos">Nuestros trabajos</h1>
         </div>
         <a
@@ -33,8 +33,8 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-             <Image className="marco" src={Grunge} />
-          <Image src={Jose} alt="Imagen 2" className="img-gallery bordecito" />
+             <Image alt="Descripción de la imagen" className="marco" src={Grunge} />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery bordecito" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -42,7 +42,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 3" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -50,7 +50,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 4" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -58,7 +58,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 5" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -66,7 +66,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 5" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -74,7 +74,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 5" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -82,7 +82,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 5" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -90,7 +90,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 5" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -98,7 +98,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 5" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -106,7 +106,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 5" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -114,7 +114,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 5" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -122,7 +122,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 5" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -130,7 +130,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 5" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -138,7 +138,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 5" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
         <a
           href="/_next/static/media/jose.66c66803.jpg"
@@ -146,7 +146,7 @@ export default function Galleryhome() {
           data-caption="Single image"
           className="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 img-gallery-container"
         >
-          <Image src={Jose} alt="Imagen 5" className="img-gallery" />
+          <Image alt="Descripción de la imagen" src={Jose} className="img-gallery" />
         </a>
       </div>
     </div>

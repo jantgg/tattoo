@@ -74,26 +74,26 @@ export default function Sliderv() {
 
   return (
     <div id="sliderv" className="sliderv">
-      <Image className="deco-esquina" src={Decoesquina} />
+      <Image alt="Descripción de la imagen" className="deco-esquina" src={Decoesquina} />
       <div className="img-section-slider col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-5">
         <div className="img-slider-container">
           {" "}
-          <Image
+          <Image alt="Descripción de la imagen"
             className={`img-slide ${currentSlide === 0 ? "active" : ""}`}
             src={Paco}
           />
-          <Image
+          <Image alt="Descripción de la imagen"
             className={`img-slide ${currentSlide === 1 ? "active" : ""}`}
             src={Jose}
           />
-          <Image
+          <Image alt="Descripción de la imagen"
             className={`img-slide ${currentSlide === 2 ? "active" : ""}`}
             src={Maria}
           />
-          <Image className="img-grunge" src={GrungeSlider} />
+          <Image alt="Descripción de la imagen" className="img-grunge" src={GrungeSlider} />
         </div>
 
-        <Image className="sombra-img" src={Sombraroja} />
+        <Image alt="Descripción de la imagen" className="sombra-img" src={Sombraroja} />
 
         <div className="example example--2">
           <span className="scroll-icon">
