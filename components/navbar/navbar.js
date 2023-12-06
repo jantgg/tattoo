@@ -37,12 +37,15 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
 
-    return () => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+  
+      return () => {
         window.removeEventListener("scroll", handleScroll);
-    };
-}, [handleScroll]); // Incluir handleScroll aquí
+      };
+    }
+  }, [handleScroll]);
 
 
   const scrollToBottom = () => {

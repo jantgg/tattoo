@@ -3,8 +3,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Navbar from "@/components/navbar/navbar";
 import "bootstrap/dist/css/bootstrap.css";
 
-import Script from "next/script";
-
 
 
 
