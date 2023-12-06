@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import "./navbar.css";
 import Bgtinta from "images/fondotintalargo2.png"
 import "bootstrap/dist/css/bootstrap.css";
@@ -87,6 +87,8 @@ export default function Navbar() {
       });
     }
   }, []);
+
+
   return (
     <nav
       style={{ zIndex: "99" }}
