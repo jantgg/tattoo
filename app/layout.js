@@ -32,7 +32,10 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         ></link>
         <link rel="stylesheet" as="style" href="https://unpkg.com/flickity@2/dist/flickity.min.css"></link>
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script
+  src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"
+  async 
+></script>
       </head>
       <body>
         <Navbar />

@@ -29,12 +29,13 @@ export default function Navbar() {
   const toggleCollapDesk = () => {
     setIsOpenDesk((prevIsOpenDesk) => !prevIsOpenDesk);
   };
-  const handleScroll = () => {
+
+  const handleScroll = useCallback(() => {
     const currentScrollPos =
-      window.scrollY || document.documentElement.scrollTop;
-    setScrollDirection(currentScrollPos > prevScrollPos ? "down" : "up");
-    setPrevScrollPos(currentScrollPos);
-  };
+    window.scrollY || document.documentElement.scrollTop;
+  setScrollDirection(currentScrollPos > prevScrollPos ? "down" : "up");
+  setPrevScrollPos(currentScrollPos);
+  }, [prevScrollPos]);
 
   useEffect(() => {
 
