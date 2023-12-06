@@ -6,7 +6,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useMediaQuery } from "react-responsive";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {

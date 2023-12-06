@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
 import "./sliderv.css";
-import Bgtinta from "images/fondotintalargo2.png";
 import "bootstrap/dist/css/bootstrap.css";
 import Image from "next/image";
 import Jose from "images/jose.jpg";
@@ -12,7 +11,7 @@ import GrungeSlider from "images/grungeslider.png";
 import Sombraroja from "images/rojocuadrao.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import $ from "jquery";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Sliderv() {
