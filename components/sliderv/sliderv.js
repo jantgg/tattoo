@@ -118,14 +118,14 @@ export default function Sliderv() {
           <p className="tsp gabarito">
             Sebastián Román, con el Mediterráneo como musa, ha convertido
             Marbella en el epicentro de su pasión por el tatuaje.
-            <br></br> En 2010 fundó "Inkredible Tattoo Studio", convirtiendo
+            <br></br> En 2010 fundó <strong>Inkredible Tattoo Studio</strong>, convirtiendo
             rápidamente este rincón de la Costa del Sol en un emblema del arte
             corporal, especialmente en el estilo blackwork.
             <br></br>
             Con raíces en los murales marbellíes y tras un periplo de
             aprendizaje por España, Sebastián combinó tradición y vanguardia,
             destacándose por sus intensos y detallados diseños en negro,
-            consolidando "Inkredible" como la referencia en blackwork en todo
+            consolidando Inkredible como la referencia en blackwork en todo
             Marbella y más allá.
           </p>
           <p className="tsf allura">Sebastián Román</p>
@@ -152,12 +152,12 @@ export default function Sliderv() {
         </div>
         <div className="text-inner-slide text-inner-slide-last">
           {" "}
-          <h1 className="tsh1 rocker" data-text="Maria Becerra">
-            Maria Becerra
+          <h1 className="tsh1 rocker" data-text="Maria Castañeda">
+            Maria Castañeda
           </h1>
           <h2 className="tsh2 gabarito">TATUADORA TRADICIONAL</h2>
           <p className="tsp gabarito">
-            María Becerra, con un profundo respeto por las raíces y la historia
+            María Castañeda, con un profundo respeto por las raíces y la historia
             del tatuaje, se ha consagrado como una de las figuras más destacadas
             en Marbella en el arte del estilo tradicional. <br></br>Su paleta,
             rica en colores vibrantes y trazos audaces, rememora la época dorada
@@ -167,7 +167,7 @@ export default function Sliderv() {
             estilo tradicional, perpetuando la esencia clásica del tatuaje en
             cada pulso de su máquina.
           </p>
-          <p className="tsf allura">Maria Becerra</p>
+          <p className="tsf allura">Maria Castañeda</p>
         </div>{" "}
       </div>
     </div>

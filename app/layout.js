@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
         <title>Tattoo</title>
         <meta
           name="description"
-          content="The best restaurant in Puerto Banus and the only with terrace"
+          content="The best tattoo studio in Marbella"
         ></meta>
         <meta name="theme-color" content="red"></meta>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
