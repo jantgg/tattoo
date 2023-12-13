@@ -6,6 +6,9 @@ h5,
 h6 {
   font-family: "Poppins", cursive;
 }
+main{
+  width: 100vw;
+}
 .poppins {
   font-family: "Poppins", cursive !important;
 }
@@ -26,6 +29,7 @@ h6 {
 }
 
 body {
+  overflow-x: hidden;
   background-color: black;
   font-family: "Merriweather", serif;
 }

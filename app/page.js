@@ -84,7 +84,7 @@ export default function Home() {
       </header>
       <section className="section1">
         <Image alt="Descripción de la imagen" className="sucio2" src={Sucio} />
-        {/* <div className="fondo-letras allura">Ink</div> */}
+  
         <div className="section1-content">
           {" "}
           <div className="section1-text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">

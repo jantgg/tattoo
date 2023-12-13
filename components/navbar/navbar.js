@@ -92,15 +92,15 @@ export default function Navbar() {
   return (
     <nav
       style={{ zIndex: "99" }}
-      className={`navbar mynav navbar-expand-lg rocker navbar-scrolled   ${
-        isInView ? " py-3 col-12" : " mt-3 mynav2"
+      className={`mynav navbar-expand-lg rocker navbar-scrolled   ${
+        isInView ? " py-3" : " mt-3 mynav2"
       }
         ${scrollDirection === "down" ? "hided" : ""}
         `}
     >
-      {isInView ? <></> :    <Image className="bg-tinta" src={Bgtinta} alt="Descripción de la imagen"/>}
+      {/* {isInView ? <></> :    <Image className="bg-tinta" src={Bgtinta} alt="Descripción de la imagen"/>}
    
-      <div className={`container-fluid  ${isInView ? "col-12" : "col-12"}`}>
+     */}
         <a
           href="/"
           className={`navbar-tittle mx-auto text-white no-deco  ${
@@ -177,7 +177,7 @@ export default function Navbar() {
             </div>
           </>
         ) : (
-          <div className={`navbar-nav ms-auto  ${isInView ? " " : " "}`}>
+          <div className={`navbar-nav ${isInView ? " " : " "}`}>
             <div className={`navbar-content ${isOpenDesk ? "opened" : ""}`}>
               <a
            
@@ -234,7 +234,7 @@ export default function Navbar() {
             </div>
           </div>
         )}
-      </div>
+     
     </nav>
   );
 }
