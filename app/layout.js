@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
           name="description"
           content="The best tattoo studio in Marbella"
         ></meta>
+        <meta property="og:image" content="https://res.cloudinary.com/dsbp8pqdb/image/upload/v1703068872/tattoometa_o1lic4.png" />
         <meta name="theme-color" content="red"></meta>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
